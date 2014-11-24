@@ -1,0 +1,70 @@
+.boxgrid{ 
+	width: 200px; 
+	height: 120px; 
+	margin: 5px 15px 10px 0; 
+	float:left; 
+	background: url(../images/web-dtp/dark_leather-mod.jpg) #000000; 
+	border: none;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	box-shadow: 0px 1px 3px #555555;
+}
+	.boxgrid img{ 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		border: 0; 
+	}
+	.boxgrid p{ 
+		padding: 0 10px; 
+		color:#afafaf; 
+		font-weight:bold; 
+		font:10pt "Lucida Grande", Arial, sans-serif; 
+	}
+	
+.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000; 
+	width: 100%; 
+	opacity: .7; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+	.captionfull .boxcaption {
+		top: 120;
+		left: 0;
+	}
+	.caption .boxcaption {
+		top: 80;
+		left: 0;
+	}
+	
+.boxgrid {
+	font-family: 'Abel', Arial, Helvetica, sans-serif;
+}
+.boxgrid h3{
+	margin: 7px 10px 5px 10px;
+	font-size: 22px; 
+	color:#FFFFFF;
+	font-weight: normal;
+	line-height: 20px;
+}
+.boxgrid p{
+	font-family: 'Abel', Arial, Helvetica, sans-serif;
+	margin: 0 0 10px 0;
+	font-size: 14px; 
+	line-height: 14px;
+	color:#f5f5f5;
+} 
+.boxgrid a{
+	font-size: 16px;
+	line-height: 16px; 
+	color:#35acff;
+}
+.boxgrid a:hover{
+	color:#ffffff;
+}
