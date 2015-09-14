@@ -929,7 +929,7 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 	background-image:url(img/btn-blue-w220@2x.png);
     background-repeat:no-repeat;
 	background-size:100%;
-	margin-top:20px;
+	margin-top:10px;
 	font-style:italic;
 	font-size:14px;
 	padding-top:15px;
@@ -938,6 +938,7 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 	display:inline-block;
 }
 .contact_btn:hover {
+	margin-top:11px;
 	background-image:url(img/btn-yellow-w220@2x.png);
 }
 

@@ -208,6 +208,11 @@ ul#menu3 li a {
 	font-size:14px;
 	padding-top:13px;
 }
+.desk_btn:hover {
+	width:160px;
+	font-size:14px;
+	padding-top:13px;
+}
 
 
 .meet_left {
@@ -236,7 +241,7 @@ ul#menu3 li a {
 }
 
 .meet_img {
-	width:800px;
+	width:100%;
 }
 
 #testi .flex-direction-nav a {
@@ -583,6 +588,11 @@ ul#menu3 li a {
 }
 
 .desk_btn {
+	width:140px;
+	font-size:13px;
+	padding-top:11px;
+}
+.desk_btn:hover {
 	width:140px;
 	font-size:13px;
 	padding-top:11px;
