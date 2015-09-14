@@ -707,6 +707,11 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 	padding-left:28px;
 	display:inline-block;
 }
+.video_text_btn:hover {
+	width:162px;
+	height:35px;
+	background-image:url(img/btn-blue-w160@2x.png);
+}
 
 .video_text p {line-height:35px;}
 
@@ -842,6 +847,12 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 	margin-right:auto;
 	display:inline-block;
 }
+.desk_btn:hover {
+	width:180px;
+	height:35px;
+	background-image:url(img/btn-yellow-w160@2x.png);
+	top: 1px;
+}
 
 .meet_left {
 	width:825px;
@@ -925,6 +936,9 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 	margin-left:auto;
 	margin-right:auto;
 	display:inline-block;
+}
+.contact_btn:hover {
+	background-image:url(img/btn-yellow-w220@2x.png);
 }
 
 .copyright {
