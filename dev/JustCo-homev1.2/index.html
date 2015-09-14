@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JustCo</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="flexslider.css" rel="stylesheet" type="text/css" />
+<link href="magnific-popup.css" rel="stylesheet">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+<link href="sidemenu.css" rel="stylesheet" type="text/css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+<!-- Add flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+
+
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider'
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.flexslider1').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider1'
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.video-pop-up').magnificPopup({
+			type: 'iframe',
+		});
+
+		$('a.gallery').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0,1]
+			},
+			image: {
+				titleSrc: 'title',
+				tError: 'The image could not be loaded.',
+			}
+		});
+		
+    });
+</script>
+
+
+<!-- Add sidemenu -->
+<script>
+(function($){
+	// Menu Functions
+	$(document).ready(function(){
+  	$('#menuToggle').click(function(e){
+    	var $parent = $(this).parent('nav');
+      $parent.toggleClass("open");
+      var navState = $parent.hasClass('open') ? "hide" : "show";
+      $(this).attr("title", navState + " navigation");
+			// Set the timeout to the animation length in the CSS.
+			setTimeout(function(){
+				console.log("timeout set");
+				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+			}, 200);
+    	e.preventDefault();
+  	});
+  });
+})(jQuery);
+</script>
+
+
+</head>
+
+<body>
+
+<div id="header">
+    
+        <div class="container">
+            <div class="left_menu">
+            <ul id="menu1">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Story</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Space</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Events</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Community</a></li>
+            </ul>
+        
+            <ul id="menu">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Story</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Space</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Events</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Community</a></li>
+            </ul>
+            </div>
+            
+              <a href="index.html"><div id="logo"></div></a>
+              <a href="index.html"><div id="logo_small"></div></a>
+            
+            <div class="right_menu">  
+                <div class="social">
+                <a href="http://instagram.com/" target="_blank"><div class="instagram"></div></a>
+                <a href="http://www.twitter.com/" target="_blank"><div class="twitter"></div></a>            
+                <a href="http://www.facebook.com/" target="_blank"><div class="facebook"></div></a>
+                </div>
+              
+                <ul id="menu3">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">gallery</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Testimonials</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Journal</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Contact Us</a></li>
+                </ul>
+            
+                <ul id="menu2">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">gallery</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Testimonials</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Journal</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Contact Us</a></li>
+                </ul>
+           </div>
+      
+           
+           <div style="clear:both;"> </div>
+           
+        </div>
+
+</div>
+
+<div id="header1">
+    
+        <div class="container">
+               
+              <a href="index.html"><div id="logo"></div></a>
+      
+           <nav> 
+            <a href="" id="menuToggle" title="show menu"> <span class="navClosed"><i>show menu</i></span> </a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Our Story</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Our Space</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Events</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Community</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Gallery</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Testimonials</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Journal</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Contact Us</a>
+     
+            </nav>
+           
+           <div style="clear:both;"> </div>
+           
+        </div>
+
+</div>
+
+<style>
+html, body { height: 100%; }
+.flexslider .slides img { width: auto; }
+</style>
+<div id="featured" style="height:98%;">
+
+        <div class="flex-container" style=" height:100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; ">
+            <div class="flexslider" style=" height:100%;">
+                <ul class="slides" style="width: 100%; height:100%; overflow: hidden;">
+                
+                    <li style=" height:100%;">
+                    	<div class="" style="position:relative; display:block; width:100%; height:100%; background: url(img/slide1-bg.jpg) no-repeat #000000; background-attachment: fixed; background-size: cover; text-align: center;" >
+                        	<div class="slide_el" style="position: relative; display: inline-block; top: 18%;">
+                            	<img class="slide_el1"  src="img/slide-fr1el1.png" width="100%" />
+                                <a class="slide_el3 tooltip-bottom" data-tooltip="COMING SOON" href="javascript:void(0);"><div class="contact_btn">How to become a member?</div></a>
+                                
+                            </div>
+                        	<div style="position: relative; display: inline-block;"></div>
+                        </div>
+                    </li>
+                    
+                    <li style=" height:100%;">
+                    	<div class="" style="position:relative; display:block; width:100%; height:100%; background: url(img/patern1-white@2x.png) repeat center #FFFFFF; background-attachment: fixed; background-size: auto; text-align: center;" >
+                        	<div class="slide_el" style="position: relative; display: inline-block; top: 18%;">
+                            	<img class="slide_el2" src="img/slide-fr2el1.png" width="100%" />
+                                <div class="slide_el4"><a class="tooltip-bottom" data-tooltip="COMING SOON" href=""></a></div>
+                            </div>
+                        	<div style="position: relative; display: inline-block;"></div>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        
+
+<div style="clear:both;"> </div>    
+</div>
+
+
+<div id="content">
+
+    <div class="container">
+    
+        <div class="community_left">
+        
+            <div class="community_icon"><img src="img/g-joinourcommunity@2x.png" / width="100%"></div>
+            
+            <div class="community_text">
+            <p>Bacon ipsum dolor amet filet mignon meatball chuck, hamburger turkey tri-tip tail porchetta. Jerky pork belly chuck porchetta, fatback salami bacon.</p>
+            <br />
+            <p>Ribeye tail drumstick, short ribs bacon pork belly turkey porchetta venison rump kielbasa jowl jerky.</p>
+            </div>
+            
+            
+        </div>
+        
+		<style>
+        html, body { height: 100%; }
+        .flexslider .slides img { width: auto; }
+        </style>
+        <div class="community_right">
+        
+           <a href="javascript:void(0);"><div class="freelance"><div class="hover"></div><div class="img_title">freelance</div></div></a>
+           <a href="javascript:void(0);"><div class="starting"><div class="hover"></div><div class="img_title">just starting</div></div></a>
+           <a href="javascript:void(0);"><div class="smallbusiness"><div class="hover"></div><div class="img_title">small business</div></div></a>
+           <a href="javascript:void(0);"><div class="nonprofit"><div class="hover"></div><div class="img_title">non profit</div></div></a>
+           <a href="javascript:void(0);"><div class="bigbusiness"><div class="hover"></div><div class="img_title">big business</div></div></a>
+        
+        </div>
+    
+    </div>
+<div style="clear:both;"> </div>
+</div>
+
+
+<div id="content2">
+    
+    <div class="container">
+    
+        <div class="movement"><img src="img/bepartofthemovement@2x.png" /></div>
+        <a href="https://www.youtube.com/watch?v=FbwYARgdD3Y" class="video-pop-up"><div class="video"><img src="img/sec-video-2@2x.png" /></div></a>
+        <div class="video_text">
+            <p>How can co-working make a difference to your business, whether you work on your own or are part of an organisation?</p>
+            <a class="tooltip-bottom" data-tooltip="COMING SOON"  href="javascript:void(0);"><div class="video_text_btn">find out more</div></a>
+            
+        </div>
+    
+    </div>
+<div style="clear:both;"> </div>
+</div>
+
+
+<div id="content3">
+
+    <div class="container">
+    
+        <div class="whats_right"><img src="img/whatsrightforyou@2x.png" width="100%" /></div>
+        
+        <div class="desk_container">
+        
+        <div class="desk">
+            <div class="desk_img"><img src="img/desk-1@2x.png" width="100%" /></div>
+            <div class="dotted"></div>
+            <div class="desk_text"><p>Just join up, plug in and play. You get a desk for the day with the use of all our shared facilities.</p></div>
+            <div class="desk_bottom">
+                <div class="calendar"><img src="img/i-cal@2x.png" width="100%" /></div>
+                <div style="padding:0px 20px 0 20px;"><p><span style="text-transform:uppercase;"><b>1 day</b></span><br />8.30am-6.00pm</p></div>
+                <a href="justdesk-basic.html"><div class="desk_btn">find out more</div></a>
+            </div>
+            
+        </div>
+        
+        <div class="desk_plus">
+            <div class="desk_img"><img src="img/desk-2@2x.png" width="100%" /></div>
+            <div class="dotted"></div>
+            <div class="desk_text"><p>Just join up and get a fifteen-day pass. You choose any desk or space that's free with all our shared facilities thrown in.</p></div>
+            <div class="desk_bottom">
+                <div class="calendar"><img src="img/i-cal@2x.png" width="100%" /></div>
+                <div style="padding:0px 20px 0 20px;"><p><span style="text-transform:uppercase;"><b>15 day</b></span><br />8.30am-6.00pm</p></div>
+                <a href="justdesk-plus.html"><div class="desk_btn">find out more</div></a>
+            </div>
+        </div>
+        
+        <div class="desk_unlimited">
+            <div class="desk_img"><img src="img/desk-3@2x.png" width="100%" /></div>
+            <div class="dotted"></div>
+            <div class="desk_text"><p>Just join the community and you get unlimited access 24-7 to work wherever a desk or space is available throughout the month.</p></div>
+            <div class="desk_bottom">
+                <div class="calendar"><img src="img/i-cal@2x.png" width="100%" /></div>
+                <div style="padding:0px 20px 0 20px;"><p><span style="text-transform:uppercase;"><b>unlimited</b></span><br />24 Hours</p></div>
+                <a href="justdesk-unlimited.html"><div class="desk_btn">find out more</div></a>
+            </div>
+        </div>
+        
+        <div class="desk_dedicated">
+            <div class="desk_img"><img src="img/desk-4@2x.png" width="100%" /></div>
+            <div class="dotted"></div>
+            <div class="desk_text"><p>Join up and you get your own desk and storage in a communal work -space that's yours 24-7 for as long as you want it. Be part of the community and share all the benefits.</p></div>
+            <div class="desk_bottom">
+                <div class="calendar"><img src="img/i-cal@2x.png" width="100%" /></div>
+                <div style="padding:0px 20px 0 20px;"><p><span style="text-transform:uppercase;"><b>unlimited</b></span><br />24 Hours</p></div>
+                <a href="justdesk-dedicated.html"><div class="desk_btn">find out more</div></a>
+            </div>
+        </div>
+        
+        <div class="desk_studios">
+            <div class="desk_img"><img src="img/desk-5@2x.png" width="100%" /></div>
+            <div class="dotted"></div>
+            <div class="desk_text"><p>Bring your colleagues and be part of our community with a dedicated and secure studio space that's yours, and with access to all the benefits of our shared facilities.</p></div>
+            <div class="desk_bottom">
+                <div class="calendar"><img src="img/i-cal@2x.png" width="100%" /></div>
+                <div style="padding:0px 20px 0 20px;"><p><span style="text-transform:uppercase;"><b>unlimited</b></span><br />24 Hours</p></div>
+                <a href="justdesk-studio.html"><div class="desk_btn">find out more</div></a>
+            </div>
+        </div>
+        
+        </div>
+        
+        <div style="clear:both;"> </div>
+        <br />
+        <div style="clear:both;" class="desk_note">*Visiting Hours Access - 8:30am-6.00pm</div>
+    
+    </div>
+<div style="clear:both;"> </div>
+</div>
+
+
+<div id="content4">
+
+    <div class="container">
+        
+        <div class="meet_left">
+            <div class="community_icon"><img src="img/meetourcommunity@2x.png" / width="100%"></div>
+            
+            <div class="meet_img"><img src="img/meetourcommunity-1@2x.jpg" / width="100%" ></div>
+        </div>
+        
+        <div class="meet_right">
+          <div class="meet_dotted"></div>
+          <div class="testimonial_title"><img src="img/whattheysay@2x.png" / width="100%"></div>
+          
+          <div id="testi" class="flexslider1">
+                <ul class="slides">
+                
+                    <li>
+                        <div class="testimonial_img"><img src="img/team-1@2x.jpg" width="100%" /></div>
+                        <div class="testimonial_text">
+                            <p style="font-size:16px;"><b>"Being part of JustCo has transformed the way I think about my business"</b></p>
+                            <br />    
+                            <br />  
+                            <br />
+                            <p style="font-style:italic;"><b>Louise Lima, Designer</b></p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="testimonial_img"><img src="img/team-2@2x.jpg" width="100%" /></div>
+                        <div class="testimonial_text">
+                            <p style="font-size:16px;"><b>"Being part of JustCo has transformed the way I think about my business too."</b></p>
+                            <br />    
+                            <br />  
+                            <br />
+                            <p style="font-style:italic;"><b>Cappu Lim Koh Pie, Manager</b></p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="testimonial_img"><img src="img/team-3@2x.jpg" width="100%" /></div>
+                        <div class="testimonial_text">
+                            <p style="font-size:16px;"><b>"Being part of JustCo has transformed the way I think about my business, also."</b></p>
+                            <br />    
+                            <br />  
+                            <br />
+                            <p style="font-style:italic;"><b>Antoinette Jordan, Architech</b></p>
+                        </div>
+                    </li>
+                    
+                </ul>
+          </div>
+        
+        </div>
+        
+    </div>
+<div style="clear:both;"> </div>
+</div>
+
+<div id="contact_page">
+
+    <div class="container">
+    
+        <div class="contact_text">
+        
+            <div class="get_in_touch"><img src="img/getintouchwithus@2x.png" width="100%" /></div>
+            <p>Pork picanha pork chop, ball tip pig alcatra porchetta beef ribs ribeye cow chuck turkey swine.</p><br /><br /><br />
+            <h2>JUST CO</h2>
+            <p>12 Marina View,<br />#23-01 Asia Square Tower 2,<br />Singapore 018961<br /><br />
+            T: +65 6317 8888<br />D: +65 6317 8865<br />F: +65 6317 8889<br />M: +65 9766 3514</p>
+            
+            <a href="mailto:email@just.co"><div class="contact_btn">Email Us at email@just.co</div></a>
+            
+        
+        </div>
+    
+    </div>
+
+</div>
+
+
+<div id="footer">
+
+    <div class="container">
+    
+        <div class="copyright"><p>Copyright 2015 JUSTCO. All rights reserved.</p></div>
+        <div class="social_footer">
+                <a href="http://instagram.com/" target="_blank"><div class="instagram"></div></a>
+                <a href="http://www.twitter.com/" target="_blank"><div class="twitter"></div></a>            
+                <a href="http://www.facebook.com/" target="_blank"><div class="facebook"></div></a>
+                </div>
+    
+    </div>
+
+</div>
+
+
+<script>
+var $logo = $('#logo');
+$(document).scroll(function() {
+    $logo.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $logo_small = $('#logo_small');
+$(document).scroll(function() {
+    $logo_small.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $menu = $('#menu');
+$(document).scroll(function() {
+    $menu.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $menu1 = $('#menu1');
+$(document).scroll(function() {
+    $menu1.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $menu2 = $('#menu2');
+$(document).scroll(function() {
+    $menu2.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $menu3 = $('#menu3');
+$(document).scroll(function() {
+    $menu3.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $social = $('.social');
+$(document).scroll(function() {
+    $social.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+
+
+
+<script>
+
+    $(function(){
+      var navStatesInPixelHeight = [68,124];
+        
+      var changeNavState = function(nav, newStateIndex) {
+        nav.data('state', newStateIndex).stop().animate({
+          height : navStatesInPixelHeight[newStateIndex] + 'px'
+        }, 600);    
+      };
+        
+      var boolToStateIndex = function(bool) {
+        return bool * 1;    
+      };
+        
+      var maybeChangeNavState = function(nav, condState) {
+        var navState = nav.data('state');
+        if (navState === condState) {
+          changeNavState(nav, boolToStateIndex(!navState));
+        }
+      };
+        
+      $('#header').data('state', 1);
+        
+      $(window).scroll(function(){
+        var $nav = $('#header');
+            
+        if ($(document).scrollTop() > 0) {
+          maybeChangeNavState($nav, 1);
+        } else {
+          maybeChangeNavState($nav, 0); 
+        }
+      });
+    });
+
+</script>
+
+
+
+</body>
+</html>
