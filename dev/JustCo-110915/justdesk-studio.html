@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JustCo</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="flexslider.css" rel="stylesheet" type="text/css" />
+<link href="magnific-popup.css" rel="stylesheet">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+<link href="sidemenu.css" rel="stylesheet" type="text/css" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+<!-- Add flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+
+
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider'
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.flexslider1').flexslider({
+            animation: 'fade',
+            controlsContainer: '.flexslider1'
+        });
+    });
+</script>
+
+
+<!-- Add sidemenu -->
+<script>
+(function($){
+	// Menu Functions
+	$(document).ready(function(){
+  	$('#menuToggle').click(function(e){
+    	var $parent = $(this).parent('nav');
+      $parent.toggleClass("open");
+      var navState = $parent.hasClass('open') ? "hide" : "show";
+      $(this).attr("title", navState + " navigation");
+			// Set the timeout to the animation length in the CSS.
+			setTimeout(function(){
+				console.log("timeout set");
+				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+			}, 200);
+    	e.preventDefault();
+  	});
+  });
+})(jQuery);
+</script>
+
+
+</head>
+
+<body>
+
+<div id="header">
+    
+        <div class="container">
+            <div class="left_menu">
+            <ul id="menu1">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Story</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Space</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Events</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Community</a></li>
+            </ul>
+        
+            <ul id="menu">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Story</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Our Space</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Events</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Community</a></li>
+            </ul>
+            </div>
+            
+              <a href="index.html"><div id="logo"></div></a>
+              <a href="index.html"><div id="logo_small"></div></a>
+            
+            <div class="right_menu">  
+                <div class="social">
+                <a href="http://instagram.com/" target="_blank"><div class="instagram"></div></a>
+                <a href="http://www.twitter.com/" target="_blank"><div class="twitter"></div></a>            
+                <a href="http://www.facebook.com/" target="_blank"><div class="facebook"></div></a>
+                </div>
+              
+                <ul id="menu3">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">gallery</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Testimonials</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Journal</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Contact Us</a></li>
+                </ul>
+            
+                <ul id="menu2">
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">gallery</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Testimonials</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Journal</a></li>
+                <li><a href="javascript:void(0);" class="tooltip-bottom" alt="COMING SOON"  title="COMING SOON">Contact Us</a></li>
+                </ul>
+           </div>
+      
+           
+           <div style="clear:both;"> </div>
+           
+        </div>
+
+</div>
+
+<div id="header1">
+    
+        <div class="container">
+               
+              <a href="index.html"><div id="logo"></div></a>
+      
+           <nav> 
+            <a href="" id="menuToggle" title="show menu"> <span class="navClosed"><i>show menu</i></span> </a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Our Story</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Our Space</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Events</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Community</a> 
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Gallery</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Testimonials</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Journal</a>
+            <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON">Contact Us</a>
+     
+            </nav>
+           
+           <div style="clear:both;"> </div>
+           
+        </div>
+
+</div>
+
+
+<div id="desk_content">
+
+    <div class="container">
+    
+        <div class="desk_left">
+            
+            <div id="desk" class="flexslider">
+                <ul class="slides">
+                    <li> <div class="desk-studio_frame1"></div></li>
+                    <li> <div class="desk-basic_frame1"></div></li>
+                    <li> <div class="desk-plus_frame1"></div></li>
+                    <li> <div class="desk-unlimited_frame1"></div></li>
+                </ul>
+            </div>
+          
+        
+        </div>
+        
+        <div class="desk_right">
+        
+            <div class="desk_img"><img src="img/desk-5@2x.png" width="100%" /></div>
+            <br />
+            <p style="text-align:center;">Bring your colleagues and be part of our community with a dedicated and secure studio space that’s yours, and with access to all the benefits of our shared facilities.</p>
+            
+            
+            <div class="desk_bottom">
+                <div class="desk_bottom_left">
+            
+                    <div class="desk_row">Rate</div>
+                    <div class="desk_row">Commons - Level 15</div>
+                    <div class="desk_row">Meeting Room</div>
+                    <div class="desk_row">Business Address</div>
+                    <div class="desk_row">High Speed Internet</div>
+                    <div class="desk_row">Access to Community Portal</div>
+                    <div class="desk_row">Guest Reception</div>
+                    <div class="desk_row">Kitchen w/Coffee & Tea</div>
+                    <div class="desk_row">Fax Line</div>
+                    <div class="desk_row">Access to Events</div>
+                    <div class="desk_row">Members Perks</div>
+            
+                </div>
+                <div class="desk_bottom_right">
+                
+                    <div class="desk_row">from $800/Pax</div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row">1 hr complimentary</div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
+                
+                </div>
+                
+                <div style="clear:both;" class="desk_note"><br />*Visiting Hours Access - 8:30am-6.00pm</div>
+                <br />
+                <a href="javascript:void(0);" data-tooltip="COMING SOON"><div class="desk-inner_btn">Sign Up</div></a>
+            </div>
+        
+        </div>
+
+    
+    </div>
+<div style="clear:both;"> </div>
+</div>
+
+
+<div id="footer">
+
+    <div class="container">
+    
+        <div class="copyright"><p>Copyright 2015 JUSTCO. All rights reserved.</p></div>
+        <div class="social_footer">
+                <a href="javascript:void(0);" data-tooltip="COMING SOON" target="_blank"><div class="instagram"></div></a>
+                <a href="javascript:void(0);" data-tooltip="COMING SOON" target="_blank"><div class="twitter"></div></a>            
+                <a href="javascript:void(0);" data-tooltip="COMING SOON" target="_blank"><div class="facebook"></div></a>
+                </div>
+    
+    </div>
+
+</div>
+
+
+<script>
+var $logo = $('#logo');
+$(document).scroll(function() {
+    $logo.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $logo_small = $('#logo_small');
+$(document).scroll(function() {
+    $logo_small.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $menu = $('#menu');
+$(document).scroll(function() {
+    $menu.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $menu1 = $('#menu1');
+$(document).scroll(function() {
+    $menu1.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $menu2 = $('#menu2');
+$(document).scroll(function() {
+    $menu2.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+<script>
+var $menu3 = $('#menu3');
+$(document).scroll(function() {
+    $menu3.css({display: $(this).scrollTop() > 1? "block":"none"});
+});
+</script>
+
+<script>
+var $social = $('.social');
+$(document).scroll(function() {
+    $social.css({display: $(this).scrollTop() > 1? "none":"block"});
+});
+</script>
+
+
+
+
+<script>
+
+    $(function(){
+      var navStatesInPixelHeight = [68,124];
+        
+      var changeNavState = function(nav, newStateIndex) {
+        nav.data('state', newStateIndex).stop().animate({
+          height : navStatesInPixelHeight[newStateIndex] + 'px'
+        }, 600);    
+      };
+        
+      var boolToStateIndex = function(bool) {
+        return bool * 1;    
+      };
+        
+      var maybeChangeNavState = function(nav, condState) {
+        var navState = nav.data('state');
+        if (navState === condState) {
+          changeNavState(nav, boolToStateIndex(!navState));
+        }
+      };
+        
+      $('#header').data('state', 1);
+        
+      $(window).scroll(function(){
+        var $nav = $('#header');
+            
+        if ($(document).scrollTop() > 0) {
+          maybeChangeNavState($nav, 1);
+        } else {
+          maybeChangeNavState($nav, 0); 
+        }
+      });
+    });
+
+</script>
+
+
+
+</body>
+</html>
