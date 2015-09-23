@@ -283,7 +283,7 @@ html[xmlns] .slides { display: block; }
 	bottom:100px;
 	position:relative;
 	left:500px;
-	border: 2px solid rgba(200,200,205,.9);
+	border: 2px solid #FFF;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
