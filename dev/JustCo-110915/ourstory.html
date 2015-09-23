@@ -44,6 +44,28 @@
     });
 </script>
 
+<script>
+    $(document).ready(function () {
+        $('.video-pop-up').magnificPopup({
+			type: 'iframe',
+		});
+
+		$('a.gallery').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0,1]
+			},
+			image: {
+				titleSrc: 'title',
+				tError: 'The image could not be loaded.',
+			}
+		});
+		
+    });
+</script>
+
 
 <!-- Add sidemenu -->
 <script>
@@ -148,84 +170,46 @@
 </div>
 
 
-<div id="desk_content">
+
+<div id="our_story">
 
     <div class="container">
     
-        <div class="desk_left">
+        <div class="our_story_left">
+        
+         <div style="width:320px;"><img src="img/ourstory@2x.png" / width="90%"></div>
+         <div class="our_story_img"><img src="img/ourstory-photo@2x.jpg" / width="100%"></div>
             
-            <div id="desk" class="flexslider">
-                <ul class="slides">
-                    <li> <div class="desk_slide_img"><img src="img/desk-slide-1@2x.jpg"  /></div></li>
-                    <li> <div class="desk_slide_img"><img src="img/desk-slide-2@2x.jpg" width="100%" /></div></li>
-                    <li> <div class="desk_slide_img"><img src="img/desk-slide-3@2x.jpg" width="100%" /></div> </li>
-                    <li> <div class="desk_slide_img"><img src="img/desk-slide-4@2x.jpg" width="100%" /></div> </li>
-                </ul>
-            </div>
-          
+            
+        </div>
+        
+        <div class="our_story_right">
+        
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           <br /><br />
+           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+           <br /><br />
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           <br /><br />
+           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </p>
         
         </div>
         
-        <div class="desk_right">
+         <div class="our_story_right">
         
-            <div class="desk_img"><img src="img/desk-1@2x.png" width="100%" /></div>
-            <br />
-            <p style="text-align:center;">Just join up, plug in and play. You get a desk for the day with the use of all our shared facilities.</p>
-            
-            
-            <div class="desk-inner_bottom">
-                <div class="desk_bottom_left">
-            
-                    <div class="desk_row">Rate</div>
-                    <div class="desk_row">Commons - Level 15</div>
-                    <div class="desk_row">Meeting Room</div>
-                    <div class="desk_row">Business Address</div>
-                    <div class="desk_row">High Speed Internet</div>
-                    <div class="desk_row">Access to Community Portal</div>
-                    <div class="desk_row">Guest Reception</div>
-                    <div class="desk_row">Kitchen w/Coffee & Tea</div>
-                    <div class="desk_row">Fax Line</div>
-                    <div class="desk_row">Access to Events</div>
-                    <div class="desk_row">Members Perks</div>
-            
-                </div>
-                <div class="desk_bottom_right">
-                
-                    <div class="desk_row">$98</div>
-                    <div class="desk_row">1 Day *</div>
-                    <div class="desk_row">Charged as per booking</div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                    <div class="desk_row"><div style="margin: 0 auto; position:relative; bottom:8px;"><img src="img/tick@2x.png" height="25px" width="25px" /></div></div>
-                
-                </div>
-                
-                <div style="clear:both;" class="desk_note"><br />*Visiting Hours Access - 8:30am-6.00pm</div>
-                <br />
-                <a class="slide_el3 tooltip-bottom" data-tooltip="be right back!" href="javascript:void(0);"><div class="desk-inner_btn">Sign Up</div></a>
-            </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        <br /><br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <br />
+        
+        <div class="rocket"><img src="img/ourstory-rocket@2x.png" / width="80%"></div>
         
         </div>
-
     
     </div>
 <div style="clear:both;"> </div>
-
-<div class="desk-link-container" >
-	<ul class="desk-link">
-    	<li><a class="active" href="justdesk-basic.html">JUST DESK <strong>Basic</strong></a></li>&bull;
-    	<li><a class="" href="justdesk-plus.html">JUST DESK <strong>Plus</strong></a></li>&bull;
-    	<li><a class="" href="justdesk-unlimited.html">JUST DESK <strong>Unlimited</strong></a></li>&bull;
-    	<li><a class="" href="justdesk-dedicated.html">JUST DESK <strong>Dedicated</strong></a></li>&bull;
-    	<li><a class="" href="justdesk-studio.html">JUST DESK <strong>Studio</strong></a></li>
-    </ul>
-</div>
-
 </div>
 
 
@@ -235,9 +219,9 @@
     
         <div class="copyright"><p>Copyright 2015 JUSTCO. All rights reserved.</p></div>
         <div class="social_footer">
-                <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON" target="_blank"><div class="instagram"></div></a>
-                <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON" target="_blank"><div class="twitter"></div></a>            
-                <a href="javascript:void(0);" alt="COMING SOON"  title="COMING SOON" target="_blank"><div class="facebook"></div></a>
+                <a href="http://instagram.com/" target="_blank"><div class="instagram"></div></a>
+                <a href="http://www.twitter.com/" target="_blank"><div class="twitter"></div></a>            
+                <a href="http://www.facebook.com/" target="_blank"><div class="facebook"></div></a>
                 </div>
     
     </div>
