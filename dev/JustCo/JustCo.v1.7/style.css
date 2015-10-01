@@ -1163,7 +1163,7 @@ ul.desk-link li a.active {
 	width:1240px;
 }
 
-.getonboard {width:350px; margin-bottom:20px;}
+.getonboard {width:400px; margin-bottom:20px;margin-left:0; margin-right: auto}
 
 .board-1 {
 	width:295px;

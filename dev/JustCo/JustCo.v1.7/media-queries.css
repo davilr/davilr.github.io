@@ -510,6 +510,8 @@ ul#menu3 li a {
 
 .video_text p {line-height:30px;}
 
+.getonboard {width:380px; margin-left:auto; margin-right: auto;}
+
 .desk_container {
 	width:720px;
 }
@@ -1282,7 +1284,7 @@ ul#menu3 li a {
 	margin-right:auto;
 }
 
-.getonboard {width:270px; margin-left:20px;}
+.getonboard {width:270px; margin-left:auto; margin-right: auto;}
 
 .board-2 {
 	width:157.5px;
