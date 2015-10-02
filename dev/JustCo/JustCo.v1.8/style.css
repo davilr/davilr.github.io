@@ -804,7 +804,7 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 .desk_2 {
 	width:212px;
 	height:615px;
-	background-color:#0077a4;
+	background-color:rgba(0,119,164,1);
 	float:left;
 	padding:0 10px;
 	text-align:center;
@@ -814,12 +814,13 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 }
 .desk_2:hover {
 	background-color:rgba(20,139,184,1);
+	opacity: 1;
 }
 
 .desk_3 {
 	width:212px;
 	height:615px;
-	background-color:#0a5282;
+	background-color:rgba(10,82,130,1);
 	float:left;
 	padding:0 10px;
 	text-align:center;
@@ -829,12 +830,13 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 }
 .desk_3:hover {
 	background-color:rgba(30,102,150,1);
+	opacity: 1;
 }
 
 .desk_4 {
 	width:212px;
 	height:615px;
-	background-color:#04415f;
+	background-color:rgba(4,65,95,1);
 	float:left;
 	padding:0 10px;
 	text-align:center;
@@ -844,12 +846,13 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 }
 .desk_4:hover {
 	background-color:rgba(24,85,115,1);
+	opacity: 1;
 }
 
 .desk_5 {
 	width:212px;
 	height:615px;
-	background-color:#789f66;
+	background-color:rgba(120,159,102,1);
 	float:left;
 	padding:0 10px;
 	text-align:center;
@@ -859,6 +862,7 @@ ul#menu3 li a.active, ul#menu3 li a:hover {
 }
 .desk_5:hover {
 	background-color:rgba(140,179,122,1);
+	opacity: 1;
 }
 .desk_note {
 	color: rgba(205,205,210,.7);
