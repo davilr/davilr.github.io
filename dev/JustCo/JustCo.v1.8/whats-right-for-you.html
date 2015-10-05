@@ -164,8 +164,7 @@
         <div class="whats_right"><img src="img/whatsrightforyou@2x.png" width="100%" /></div>
         
         <div class="desk_container">
-        	<div>
-                <div id="daily" class="desk_1">
+                <div id="daily-" class="desk_1">
                     <div class="desk_img"><img src="img/desk-1@2x.png" width="100%" /></div>
                     <div class="dotted"></div>
                     <div class="desk_text"><p>Just join up, plug in and play. You get a desk for the day with the use of all our shared facilities.</p></div>
@@ -175,9 +174,7 @@
                         <a href="justdesk-daily.html"><div class="desk_btn">find out more</div></a>
                     </div>
                 </div>
-            </div>
         
-        	<div>
                 <div id="basic" class="desk_2">
                     <div class="desk_img"><img src="img/desk-2@2x.png" width="100%" /></div>
                     <div class="dotted"></div>
@@ -210,9 +207,7 @@
                         <a href="justdesk-dedicated.html"><div class="desk_btn">find out more</div></a>
                     </div>
                 </div>
-            </div>
         
-        	<div >
                 <div id="studio" class="desk_5">
                     <div class="desk_img"><img src="img/desk-5@2x.png" width="100%" /></div>
                     <div class="dotted"></div>
@@ -223,7 +218,6 @@
                         <a href="justdesk-studio.html"><div class="desk_btn">find out more</div></a>
                     </div>
                 </div>
-            </div>
         
         </div>
         
@@ -357,21 +351,21 @@ $(document).scroll(function() {
 			}
 			
 			function showDaily() {
-				document.getElementById('daily').className = "desk_1";
+				document.getElementById('daily-').className = "desk_1";
 				document.getElementById('basic').className = "desk_2 inactive";
 				document.getElementById('unlimited').className = "desk_3 inactive";
 				document.getElementById('dedicated').className = "desk_4 inactive";
 				document.getElementById('studio').className = "desk_5 inactive";
 			}
 			function showDesks() {
-				document.getElementById('daily').className = "desk_1 inactive";
+				document.getElementById('daily-').className = "desk_1 inactive";
 				document.getElementById('basic').className = "desk_2";
 				document.getElementById('unlimited').className = "desk_3";
 				document.getElementById('dedicated').className = "desk_4";
 				document.getElementById('studio').className = "desk_5 inactive";
 			}
 			function showStudio() {
-				document.getElementById('daily').className = "desk_1 inactive";
+				document.getElementById('daily-').className = "desk_1 inactive";
 				document.getElementById('basic').className = "desk_2 inactive";
 				document.getElementById('unlimited').className = "desk_3 inactive";
 				document.getElementById('dedicated').className = "desk_4 inactive";
