@@ -101,6 +101,44 @@
   	});
   });
 })(jQuery);
+
+(function($){
+	// Menu Functions
+	$(document).ready(function(){
+  	$('#testimonial').click(function(e){
+    	var $parent = $(this).parent('nav');
+      $parent.toggleClass("open");
+      var navState = $parent.hasClass('open') ? "hide" : "show";
+      $(this).attr("title", navState + " navigation");
+	  
+			// Set the timeout to the animation length in the CSS.
+			setTimeout(function(){
+				console.log("timeout set");
+				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+			}, 200);
+    	e.preventDefault();
+  	});
+  });
+})(jQuery);
+
+(function($){
+	// Menu Functions
+	$(document).ready(function(){
+  	$('#contact').click(function(e){
+    	var $parent = $(this).parent('nav');
+      $parent.toggleClass("open");
+      var navState = $parent.hasClass('open') ? "hide" : "show";
+      $(this).attr("title", navState + " navigation");
+	  
+			// Set the timeout to the animation length in the CSS.
+			setTimeout(function(){
+				console.log("timeout set");
+				$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+			}, 200);
+    	e.preventDefault();
+  	});
+  });
+})(jQuery);
 </script>
 
 
@@ -174,9 +212,9 @@
             <a href="javascript:void(0);" alt="be right back!"  title="be right back!">Events</a> 
             <a href="javascript:void(0);" alt="be right back!"  title="be right back!">Community</a> 
             <a href="javascript:void(0);" alt="be right back!"  title="be right back!">Gallery</a>
-            <a href="#sec-testimonials">Testimonials</a>
+            <a href="#sec-testimonials" id="testimonial">Testimonials</a>
             <a href="javascript:void(0);" alt="be right back!"  title="be right back!">Journal</a>
-            <a href="#sec-contact">Contact Us</a>
+            <a href="#sec-contact" id="contact">Contact Us</a>
      
             </nav>
            
