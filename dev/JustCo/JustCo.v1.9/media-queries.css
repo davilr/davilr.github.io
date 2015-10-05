@@ -980,6 +980,15 @@ ul#menu3 li a {
 
 .testimonial_title {width:250px;}
 
+.testimonial_text {
+	width:300px;
+	padding:10px;
+	text-align:center;
+	color:black;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 #testi .flex-direction-nav a {
     margin: -17px 80px 0 80px;
 }
