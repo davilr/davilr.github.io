@@ -371,7 +371,7 @@ ul#menu {
 }
 
 ul#menu li {
-    display:inline;
+    display: inline-block;
 	margin-left:50px;
 }
 
