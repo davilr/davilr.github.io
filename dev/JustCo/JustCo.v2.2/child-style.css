@@ -236,6 +236,7 @@ h6 {margin: 7px 0 7px; padding:0; font-size:16px; font-weight:700; letter-spacin
 	padding:15px; 
 	line-height:22px;
 	position: relative;
+	margin-top: 10px;
 }
 
 .bubble-speech .name {
@@ -256,6 +257,8 @@ h6 {margin: 7px 0 7px; padding:0; font-size:16px; font-weight:700; letter-spacin
 .testimonial-img {
     width: 150px;
     height: 150px;
+	background-image: url(img/face-00.jpg) ;
+	background-color: #808080 ;
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 200px;
