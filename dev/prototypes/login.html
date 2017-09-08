@@ -76,7 +76,7 @@
         </nav>
     </div>
 </header>	
-<div class="layout-body">
+<div class="layout-body" style="padding-bottom: 180px;">
     <div class="container-fluid">
 
         <div class="layout-content">
@@ -176,7 +176,7 @@
                     <div class="panel-collapse collapse in" id="example-bpanel-1">
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-xs-6 col-md-4" style="height:170px">
+                                <div class="col-xs-6 col-md-4" style="height:150px">
                                     <div id="chart"></div>
                                 </div>
                                 <div class="col-xs-6 col-md-8" style="vertical-align: middle;">
@@ -200,11 +200,11 @@
                                     </div>
                                     <div class="row pt20">
                                         <div class="balance-item col-xs-12">
-                                            CURRENT: <b>18 RUNS</b>
-                                            </div>
-                                            <div class="balance-item col-xs-12 pt10">
-                                            UPCOMING: <b>12 RUNS</b>
+                                            CURRENT: <b>18 RUNS</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  UPCOMING: <b>12 RUNS</b>
                                         </div>
+                                        <!--div class="balance-item col-xs-12 pt10">
+                                            UPCOMING: <b>12 RUNS</b>
+                                        </div-->
                                     </div>
                                     <!--br><br>
                                     <button class="btn btn-icon-left btn-default mb10" type="button" onclick="location.href='index.html';">Go to Payroll <i class="fa fa-chevron-right"></i></button>
@@ -232,7 +232,7 @@
                         <h3 class="panel-title">Latest Uploaded Documents </h3>
                     </div>
                     <div class="panel-collapse collapse in" id="example-bpanel-c-1">
-                        <div class="panel-body" style="padding: 0 8px; max-height: 190px; overflow: scroll;">
+                        <div class="panel-body" style="padding: 0 8px; max-height: 170px; overflow: scroll;">
                             <ol class="list-group">
                                 <li class="list-item">
                                     <div class="row">
@@ -355,14 +355,14 @@
         
 	function createChart() {
 		$("#chart").kendoChart({
-            chartArea: {background:"transparent", height:170},
+            chartArea: {background:"transparent", height:150},
 			title: {
 				position: "bottom",
 				text: "Payroll Runs Deadlines",
 				visible: false
 			},
 			legend: {
-				position: "bottom",
+				position: "left",
 				visible: true
 			},
 			seriesDefaults: {
@@ -416,6 +416,8 @@
             $(".switchboardH-bot ").css({opacity: 0,display: 'block'}).stop().delay(555).animate({opacity: 1}, {duration: 555});
             $("header ").css({opacity: 0,display: 'block',top: "-=30"}).stop().delay(555).animate({opacity: 1,top: "0"}, {duration: 555});
             //$(".vt-2-l.l5 ").delay(1100).animate({opacity:1,height:"197px",top:"-=197px"},400);
+
+            $(document).ready(createChart);
         });
 
 </script>
