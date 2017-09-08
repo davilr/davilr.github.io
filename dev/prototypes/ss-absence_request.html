@@ -1,0 +1,763 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vacation Request | SelfService</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body>
+
+	
+	
+
+<header class="layout-header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+                <div class="switchboard">
+                	<div class="switch c-hand"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div>
+                	<div class="board">
+                		<h3><button class="btn btn-small btn-plain btn-icon-right btn-icon" style="vertical-align: text-bottom;" type="submit" onclick="location.href='switchboard.html';"><i class="fa fa-chevron-left"></i></button> Switchboard</h3>
+                		<div class="app c-hand " onclick="location.href='index.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg"></div><label>Payroll</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg"></div><label>Analytics</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg"></div><label>Calendar</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg"></div><label>Collaborate</label></div>
+                		<div class="app c-hand active" onclick="location.href='ss-home.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div><label>Self-Service</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-crypta-teal.svg"></div><label>Crypta</label></div>
+					</div>
+	            </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-center" id="main-menu">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="ss-home.html">Dashboard <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle">Employee</a>
+						<ul class="dropdown-menu">
+							<li class=""><a href="ss-my_details.html">My Details</a></li>
+							<li class=""><a href="ss-my_bank_details.html">My Bank Details</a></li>
+							<li class=""><a href="ss-vacation_request.html">Vacation Request</a></li>
+							<li class=""><a href="ss-vacation_cancel.html">Vacation Cancel</a></li>
+							<li class=""><a href="ss-vacation_details.html">Vacation Details</a></li>
+							<li class="active"><a href="ss-absence_request.html">Absence Request</a></li>
+							<li class=""><a href="ss-payslip_display.html">Payslip Display</a></li>
+							<li class=""><a href="ss-year_end_report.html">Year End Report</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="ss-event_logs.html">Event Logs </a></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-nav-user">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-capitalize">
+							John Cloud <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">My Profile</a></li>
+							<li><a href="#">My Favourites</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-submenu">
+								<a href="#">More Options</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Submit a Request</a></li>
+									<li><a href="#">Read Documentation</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+<div class="layout-body">
+    <div class="container-fluid">
+        <div class="layout-sidebar sidebar-left">
+           
+           
+			<div class="panel panel-app-payroll">
+    <!-- company cluster -->
+    <div class="panel-heading" id="payroll-drawer-company" data-toggle="cp-drawer">
+        <a class="panel-icon" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+        <h3 class="panel-title">
+            Profile
+        </h3>
+    </div>
+    <div class="panel-body">
+        <span class="app-selfservice-dispic"><img src="props/img/dispic-1.jpg" border="0"></span>
+        <span class="app-payroll-orgname">John Cloud</span>
+        <span class="app-payroll-orgcode">R067Y</span>
+        <span class="app-payroll-orgcountry">
+            <span class="flag gb"></span>
+            <span class="name">United Kingdom</span>
+        </span>
+        <span class="app-payroll-orgcode">CloudPay, Inc.</span>
+    </div>
+</div>
+           
+
+        </div>
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--span class="dropdown pull-right">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Available Actions</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="selected"><a href="#">Selected action</a></li>
+                            <li class="active"><a href="#">Active action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                        </ul>
+                    </span-->
+                    
+                    <ol class="breadcrumb">
+					  <li><a href="ss-home.html"><i class="fa fa-home fz16"></i></a></li>
+					  <li><a href="#">Employee</a></li>
+					  <li class="active">Absence Request</li>
+					</ol>
+                    
+                    <h1>Absence Request <!--small>R067Y</small--></h1>
+					<div class="tab-pane fade active in" id="pane-1">
+
+							<div class="row">
+							
+								<div class="col-xs-12 col-md-6">
+									<div class="panel panel-primary">
+										<div class="panel-heading"> <!--panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-1"-->
+											<h3 class="panel-title">Enter Absence Request Details</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-1">
+											<div class="panel-body drop-padding" style=" border: 0;">
+												
+												<form id="example-form" class="form-horizontal form-tabulate" style="width: 100%;">
+													<div class="form-group">
+														<label for="exampleInputDobDate" class="col-sm-2 form-tabulate-label">Absence Type</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<select class="form-control" id="exampleInputDobDate" required>
+																<option value="">Unpaid Absence</option>
+																<option value="">Unpaid Absence - Child Sickness</option>
+																<option value="">Work From Home</option>
+															</select>
+															<p class="help-block">Example block-level help text here.</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputFile" class="col-sm-2 form-tabulate-label">Date</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<input type="date" name="bday"> to <input type="date" name="bday">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputComments" class="col-sm-2 form-tabulate-label">Manager</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<select class="form-control form-control-inline" id="exampleInputDobDate" required>
+
+																<option value="">James Johnson</option>
+																<option value="">Alan Jefferson</option>
+															</select>
+															<p class="help-block">Example block-level help text here.</p>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 form-tabulate-label">Half Day</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<div class="radio">
+																<label class="add-margin-r">
+																	<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+																	Yes
+																</label> &nbsp;
+																<label class="add-margin-l">
+																	<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+																	No
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 form-tabulate-label">Allowance taken in hours</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<div class="checkbox dis-ib add-margin-r">
+																<label>
+																	<input type="checkbox"> Yes 
+																</label>
+															</div> &nbsp;
+															<div class="dis-ib add-margin-l">
+																<input type="number" class="form-control" placeholder="00" maxlength="2" max="99" min="1" required>
+															</div>
+																.
+															<div class="dis-ib">
+															<input type="number" class="form-control" placeholder="00" maxlength="2" max="99" min="1" required>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputFile" class="col-sm-2 form-tabulate-label">Medical Certificate (if any)</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<input type="file" id="exampleInputFile">
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputComments" class="col-sm-2 form-tabulate-label">Employee Comments</label>
+														<div class="col-sm-10 form-tablulate-field">
+															<textarea class="form-control" id="exampleInputComments" placeholder="Comments" rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+												<div class="mt10">
+													<button class="btn btn-small btn-icon-left" type="reset" form="example-form">Clear</button>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								<div class="col-xs-12 col-md-6">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-4">
+											<h3 class="panel-title">Absence Requests</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-4">
+											<div class="panel-body">
+												<ol class="list-group">
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-1">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 29 Jan 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-success">Approved</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse in" id="example-bpanel-2-1">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Please finalise work hand-over properly before leaving office. Janice will also be on leave, please do consider bringing souvenirs back to the office. </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal">Cancel Request</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-2">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 30 Jan 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-success">Approved</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse " id="example-bpanel-2-2">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Please finalise work hand-over properly before leaving office. Janice will also be on leave, please do consider bringing souvenirs back to the office. </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal-2">Cancel Request</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-3">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 31 Jan 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-success">Approved</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse " id="example-bpanel-2-3">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Please finalise work hand-over properly before leaving office. Janice will also be on leave, please do consider bringing souvenirs back to the office. </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal-3">Cancel Request</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-4">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 1 Feb 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-danger">Rejected</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse " id="example-bpanel-2-4">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Nobody WORKS FROM HOME on the 1st day of the month! </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal-4">Delete</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-5">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 2 Feb 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-success">Approved</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse " id="example-bpanel-2-5">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Please finalise work hand-over properly before leaving office. Janice will also be on leave, please do consider bringing souvenirs back to the office. </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal-5">Cancel Request</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list-item ">
+														<div class="panel panel-clean drop-margin">
+															<div class="panel-heading drop-padding row" data-toggle="collapse" data-target="#example-bpanel-2-6">
+																<div class="col-xs-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 3 Feb 2017</div>
+																<div class="col-xs-4 list-item-r" align="right">
+																	<span class="label label-success">Approved</span>
+																</div>
+															</div>
+															<div class="panel-collapse collapse " id="example-bpanel-2-6">
+																<div class="row calendar-list-details p5 pb10">
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12"><label class="title">Work From Home</label></div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">All I want is just to go for a short holiday.</div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<label class="col-xs-4">Employer Comment</label>
+																		<div class="col-xs-8">Please finalise work hand-over properly before leaving office. Janice will also be on leave, please do consider bringing souvenirs back to the office. </div>
+																	</div>
+																	<div class="row col-xs-12 col-md-12 col-lg-6">
+																		<div class="col-md-12 mt5">
+																			<button class="btn btn-small btn-icon-left" data-toggle="modal" data-target="#demoModal-6">Cancel Request</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+												</ol>
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+							</div>
+
+					</div>
+               
+               
+                </div>
+            </div>
+
+			<div class="controlsbar-wrapper">
+				<div class="controlsbar row">
+					<div class="col-sm-6">
+					</div>
+					<div class="col-sm-6" align="right">
+						<button class="btn btn-default" type="button" data-toggle="modal" data-target="#demoModal-0">Submit</button>
+					</div>
+				</div>
+			</div>
+			
+			<!-- modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>29 Jan 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-2" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>30 Jan 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-3" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>31 Jan 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-4" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>1 Feb 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-5" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>2 Feb 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-6" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Absence Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Absence Request: <b>3 Feb 20178</b> - Work From Home?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-0" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Submit Absence Request</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to submit Absence Request:</p>
+																<div class="calendar-list-details p10 ">
+																	<div class="row">
+																		<div class="col-md-12"><label class="title">Unpaid Leave</label></div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Date</label>
+																		<div class="col-xs-8">1 Feb 2017 - 2 Feb 2020</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Manager</label>
+																		<div class="col-xs-8">James Johnson</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Days/Hours</label>
+																		<div class="col-xs-8">2 Days</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Half Day</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Allowance taken in hours</label>
+																		<div class="col-xs-8">No</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Medical Certificate</label>
+																		<div class="col-xs-8">Nick-Van-Wildt-medical-29iwy98uh.pdf</div>
+																	</div>
+																	<div class="row">
+																		<label class="col-xs-4">Employee Comment</label>
+																		<div class="col-xs-8">Work from home blah blah blah blah...</div>
+																	</div>
+																</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+
+	<script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    position: "bottom",
+                    text: "Vacation Balance",
+                    visible: false
+                },
+                legend: {
+                    position: "bottom",
+                    visible: true
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category # \n #= value# DAYS"
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0} Days"
+                },
+                series: [{
+                    type: "pie",
+                    startAngle: 90,
+					padding: 10,
+                    data: [{
+                        category: "BALANCE",
+                        value: 13,
+                        color: "#f59a3f"
+                    },{
+                        category: "USED",
+                        value: 5,
+                        color: "#67686b"
+                    }],
+					overlay: {
+						gradient: "none"
+					}
+                }]
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+	</script>
+
+</body>
+</html>`

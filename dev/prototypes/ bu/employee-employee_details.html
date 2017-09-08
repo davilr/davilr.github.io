@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>John Cloud : Employee Details</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+	
+	
+
+<header class="layout-header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-center" id="main-menu">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle">Employee</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Employee Search</a></li>
+							<li role="separator" class="divider"></li>
+                            <li class="dropdown-header" style="text-align: left;">John CLoud <small style="float: right">R067Y</small></li>
+							<li class="active"><a href="employee-employee_details.html">Employee Details </a></li>
+							<li class="dropdown-submenu">
+								<a href="#">Personal Details</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Personal Details</a></li>
+									<li><a href="#">Address Details</a></li>
+									<li><a href="#">Bank Account Management</a></li>
+									<li><a href="#">Employee Qualifications</a></li>
+									<li><a href="#">Emergency Contacts</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Employee Payroll Information</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Employment Details</a></li>
+									<li><a href="#">General Ledger Options</a></li>
+									<li><a href="#">Local Payroll Information</a></li>
+									<li><a href="#">Payments &amp; Deductions</a></li>
+									<li><a href="#">Payments and Deductions (Time-Based)</a></li>
+									<li><a href="#">Payslip Calculator</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Employee Documents</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Manage Documents</a></li>
+									<li><a href="#">Payslip Display</a></li>
+									<li><a href="#">Year End Display</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Benefits Details</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Life Insurance</a></li>
+									<li><a href="#">Loans</a></li>
+									<li><a href="#">Pension</a></li>
+									<li><a href="#">Other</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">HR Information</a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#">Employee Calendar</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Vacation Details</a></li>
+											<li><a href="#">Training Details</a></li>
+											<li><a href="#">Absence Details</a></li>
+											<li><a href="#">Employee Calendar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Employee Events</a></li>
+									<li><a href="#">Employee Status History</a></li>
+									<li><a href="#">Manage Payment After Separation</a></li>
+									<li><a href="#">Dependents</a></li>
+									<li><a href="#">Pension</a></li>
+									<li><a href="#">Manage Suspension</a></li>
+									<li><a href="#">Manage Separation</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Other</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Agency Details</a></li>
+									<li><a href="#">Disciplinary Details</a></li>
+									<li><a href="#">Manpower</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle">Payroll</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Company Payrolls</a></li>
+							<li role="separator" class="divider"></li>
+                            <li class="dropdown-header" style="text-align: left;">3001510 <small style="float: right">Monthly Payroll</small></li>
+							<li class="active"><a href="payroll-payroll_information.html">Payroll Information</a></li>
+							<li><a href="#">Data Validation Dashboard</a></li>
+							<li><a href="#">Originator Bank Details</a></li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Administration</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Create Payroll</a></li>
+									<li><a href="#">Edit Payroll</a></li>
+									<li><a href="#">Notifications</a></li>
+									<li><a href="#">Payroll Processing Options</a></li>
+									<li><a href="#">Payroll Run Administration</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Data</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">CPF Voluntary Contribution Rates</a></li>
+									<li><a href="#">Company Paycode Details</a></li>
+									<li><a href="#">Cost Centre Splitting</a></li>
+									<li><a href="#">GL Paycode Mappings</a></li>
+									<li><a href="#">GL Posting Key Mappings</a></li>
+									<li><a href="#">Manage Pending Timesheets</a></li>
+									<li><a href="#">Payment Configuration</a></li>
+									<li><a href="#">Payment Type Groups</a></li>
+									<li><a href="#">Pension Scheme</a></li>
+									<li><a href="#">ProRata Scheme Configuration</a></li>
+									<li><a href="#">ProRata Type Configuration</a></li>
+									<li><a href="#">Salary Components</a></li>
+									<li><a href="#">Sequence Number</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Input Batch Data</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Loans</a></li>
+									<li><a href="#">Pay Code Stop Details</a></li>
+									<li><a href="#">Payment After Separation</a></li>
+									<li><a href="#">Payments &amp; Deductions</a></li>
+									<li><a href="#">Payments and Deductions (Time-Based)</a></li>
+									<li><a href="#">Salary</a></li>
+									<li><a href="#">Terminations</a></li>
+									<li><a href="#">Vacations</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Outputs</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Year End Forms</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Collaborate</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Go To CloudPay Collaborate <i class="fa fa-external-link-square add-margin-l dropdown-fa-link"></i></a></li>
+							<li><a href="#">Start New Collaboration</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Admin</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Employee Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Course Types</a></li>
+									<li><a href="#">Employee Alterations</a></li>
+									<li><a href="#">Employee Grades</a></li>
+									<li><a href="#">Employee Groups</a></li>
+									<li class="dropdown-submenu">
+										<a href="#">Employee Status</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Employee Status Definitions</a></li>
+											<li><a href="#">Transfer Search</a></li>
+											<li><a href="#">Re-hire Search</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Payroll Starter Wizard</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Qualification Types</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Benefit Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Loan Scheme Setup</a></li>
+									<li><a href="#">Pension Programs</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Organizational Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">User Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">CloudPay Self-Service</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Vacation Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Tools</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Reports</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Workflow Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li class="dropdown-submenu">
+										<a href="#">5</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">4</a></li>
+										</ul>
+									</li>
+									<li><a href="#">6</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">System Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+
+
+							
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Documents</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">CloudPay Connect</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Extract</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Upload</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager Administration</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager History</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Tools</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Control Panel</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Test Workbench</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Workflow Engine</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-nav-user">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-capitalize">
+							John Cloud <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">My Profile</a></li>
+							<li><a href="#">My Favourites</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-submenu">
+								<a href="#">More Options</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Submit a Request</a></li>
+									<li><a href="#">Read Documentation</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+<div class="layout-body">
+    <div class="container-fluid">
+        <div class="layout-sidebar sidebar-left">
+           
+           
+			<div class="panel panel-app-payroll">
+    <!-- company cluster -->
+    <div class="panel-heading" id="payroll-drawer-company" data-toggle="cp-drawer">
+        <a class="panel-icon" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+        <h3 class="panel-title">
+            CloudPay, Inc.
+        </h3>
+    </div>
+    <div class="panel-body">
+        <span class="app-payroll-orgname">CloudPay, Inc.</span>
+        <span class="app-payroll-orgcode">CP002</span>
+        <span class="app-payroll-orgcountry">
+            <span class="flag gb"></span>
+            <span class="name">United Kingdom</span>
+        </span>
+    </div>
+    <!-- drawer template for company heading -->
+    <div class="drawer-template" id="payroll-drawer-company-template">
+        <span class="component-heading">Company Search</span>
+        <form>
+            <div class="form-group">
+                <div class="justified-search-input">
+                    <input class="form-control" type="text" placeholder="Company Number or Company Search Criteria">
+                </div>
+                <div class="justified-search-button">
+                    <input type="button" class="btn btn-default" value="Company Search" id="search-company">
+                </div>
+            </div>
+        </form>
+        <div class="drawer-content"><!-- content will be loaded via AJAX --></div>
+    </div>
+    <div class="sub-panel">
+        <!-- payroll cluster -->
+        <div class="panel-heading" id="payroll-drawer-payroll" data-toggle="cp-drawer">
+            <h4 class="panel-title">
+                <span class="badge">4</span>
+                Payrolls
+            </h4>
+        </div>
+        <div class="panel-collapse collapse ">
+            <ul class="panel-list">
+                <li class="panel-list-item active">
+                    <span class="list-item-heading">3001510</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Standard main run</div>
+                        <div>(970 - 28/11/2017)</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001511</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Standard main run</div>
+                        <div>(971 - 28/11/2017)</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001512</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Standard main run</div>
+                        <div>(972 - 28/11/2017)</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001513</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Standard main run</div>
+                        <div>(973 - 28/11/2017)</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- drawer content for payroll heading -->
+        <div class="drawer-template" id="payroll-drawer-payroll-template">
+            <span class="component-heading">Available Payrolls</span>
+            <div class="drawer-content payrolls-available"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> <em>Loading... Please wait.</em><!-- content will be loaded via AJAX --></div>
+            <span class="component-heading">Favourite Payrolls <i class="fa fa-star color-favourite"></i></span>
+            <div class="drawer-content payrolls-favourite"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> <em>Loading... Please wait.</em><!-- content will be loaded via AJAX --></div>
+        </div>
+    </div>
+    <div class="sub-panel">
+        <!-- employee cluster -->
+        <div class="panel-heading" id="payroll-drawer-employee" data-toggle="cp-drawer">
+            <h4 class="panel-title">
+                <span class="badge">102</span>
+                Employees
+            </h4>
+        </div>
+        <div class="panel-collapse collapse in">
+            <ul class="panel-list">
+                <li class="panel-list-item active">
+                    <span class="list-item-heading">John Cloud</span>
+                    <div class="list-item-body">
+                        <span class="item-field">
+                            <span class="item-field-label">Sys No.</span>
+                            <span class="item-field-value">65118</span>
+                        </span>
+                        <span class="item-field">
+                            <span class="item-field-label">Emp No.</span>
+                            <span class="item-field-value">J923D</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- drawer content for employee heading -->
+        <div class="drawer-template" id="payroll-drawer-employee-template">
+            <span class="component-heading">Employee Search</span>
+            <div class="btn-group btn-group-small btn-group-justified" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Current Payroll
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Current Company
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Current Customer
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> All Companies
+                </label>
+            </div>
+            <form>
+                <div class="form-group">
+                    <div class="justified-search-input">
+                        <input type="text" class="form-control" placeholder="Enter search criteria: Employee No, Last Name or System No.">
+                    </div>
+                    <div class="justified-search-button">
+                        <input type="button" class="btn btn-default" value="Employee Search" id="search-employee">
+                    </div>
+                </div>
+            </form>
+            <div class="drawer-content"><!-- content will be loaded via AJAX --></div>
+        </div>
+    </div>
+</div>
+           
+
+        </div>
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <span class="dropdown pull-right">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Available Actions</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="selected"><a href="#">Selected action</a></li>
+                            <li class="active"><a href="#">Active action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                        </ul>
+                    </span>
+                    
+                    <ol class="breadcrumb">
+					  <li><a href="#">Capsule Corp.</a></li>
+					  <li><a href="#">Employee</a></li>
+					  <li class="active">John Cloud</li>
+					</ol>
+                    
+                    <h1>John Cloud <small>R067Y</small></h1>
+						<div class="tab-pane fade active in" id="pane-1">
+						
+							<div class="grid-3">
+							
+								<div class="grid-item">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-1">
+											<h3 class="panel-title">PERSONAL DETAILS</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-1">
+											<div class="panel-body drop-padding" style=" border: 0;">
+												<table class="table-detail" width="100%">
+													<tbody>
+														<tr>
+															<th width="25%">Employee Number</th>
+															<td>R007Y</td>
+														</tr>
+														<tr>
+															<th width="25%">First Name</th>
+															<td>John</td>
+														</tr>
+														<tr>
+															<th>Middle Name</th>
+															<td>Grey</td>
+														</tr>
+														<tr>
+															<th>Last Name</th>
+															<td>Cloud</td>
+														</tr>
+														<tr>
+															<th>Date of Birth</th>
+															<td>01 Jan 1945</td>
+														</tr>
+														<tr>
+															<th>Maiden or Previous Name</th>
+															<td>Bean</td>
+														</tr>
+														<tr>
+															<th>Marital Status</th>
+															<td>Single</td>
+														</tr>
+														<tr>
+															<th>Known as</th>
+															<td>Cloudster</td>
+														</tr>
+														<tr>
+															<th>Emergency Contact </th>
+															<td>Jean Beam</td>
+														</tr>
+														<tr>
+															<th>Emergency Contact Number</th>
+															<td>+31 1234 5678</td>
+														</tr>
+														<tr>
+															<th>Nationality</th>
+															<td>United Kingdom</td>
+														</tr>
+													</tbody>
+												</table>
+												<button class="btn btn-small btn-icon-left btn-default" type="button"><i class="fa fa-pencil"></i> Edit</button>
+												<button class="btn btn-small btn-icon-left btn-default" type="button"><i class="fa fa-pencil"></i> Edit Emergency Contact</button>
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								<div class="grid-item">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-2">
+											<h3 class="panel-title">ID Number</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-2">
+											<div class="panel-body drop-padding" style="border: 0;">
+												<div style="margin-bottom: 10px;">
+													<div class="panel panel-default drop-margin">
+														<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-2-1" style="border-radius: 0; background: #F2F2F2; border: 1px  solid #CCCCCC; border-width: 0 1px 0 1px; color: #67686B;">
+															<h3 class="panel-title">United Kingdom</h3>
+														</div>
+														<div class="panel-collapse collapse in" id="example-bpanel-2-1">
+															<div class="panel-body drop-padding" style="border: 0;">
+																<table class="table-detail" width="100%" style="margin-bottom: 0;">
+																	<tbody>
+																		<tr>
+																			<th width="25%">Passport Number </th>
+																			<td>UKZ837920038Y</td>
+																		</tr>
+																		<tr>
+																			<th width="25%">Identification Number</th>
+																			<td>A887647282BZ</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+
+													<div class="panel panel-default" style="margin: 0;">
+														<div class="panel-heading panel-collapse-indicate-left" data-toggle="collapse" data-target="#example-bpanel-2-2" style="border-radius: 0; background: #F2F2F2; border: 1px  solid #CCCCCC; border-width: 0 1px 0 1px; color: #67686B;">
+															<h3 class="panel-title">Singapore</h3>
+														</div>
+														<div class="panel-collapse collapse in" id="example-bpanel-2-2">
+															<div class="panel-body drop-padding" style=" border: 0;">
+																<table class="table-detail" width="100%" style="margin-bottom: 0;">
+																	<tbody>
+																		<tr>
+																			<th width="25%">FIN</th>
+																			<td>SGZ837920038Y</td>
+																		</tr>
+																		<tr>
+																			<th width="25%">Driving License</th>
+																			<td>UIS827499383KL</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+												<button class="btn btn-small btn-icon-left btn-default" type="button"><i class="fa fa-pencil"></i> Edit</button>
+												
+												
+												
+												
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								<div class="grid-item">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-3">
+											<h3 class="panel-title">ADDRESS DETAILS</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-3">
+											<div class="panel-body drop-padding" style=" border: 0;">
+												<table class="table-detail" width="100%">
+													<tbody>
+														<tr>
+															<th width="25%">Address 1</th>
+															<td>99 Ang Mo Kio Avenue 9</td>
+														</tr>
+														<tr>
+															<th width="25%">Town</th>
+															<td>Singapore</td>
+														</tr>
+														<tr>
+															<th>Postcode</th>
+															<td>987654</td>
+														</tr>
+														<tr>
+															<th>Country</th>
+															<td>Singapore</td>
+														</tr>
+														<tr>
+													</tbody>
+												</table>
+												<button class="btn btn-small btn-icon-left btn-default" type="button"><i class="fa fa-pencil"></i> Edit</button>
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								<div class="grid-item">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-4">
+											<h3 class="panel-title">STATUS DETAILS</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-4">
+											<div class="panel-body drop-padding" style=" border: 0;">
+												<table class="table-detail" width="100%" >
+													<tbody>
+														<tr>
+															<th width="25%">Original Hire Date</th>
+															<td>-</td>
+														</tr>
+														<tr>
+															<th width="25%">Hire Date</th>
+															<td>1 Dec 2016</td>
+														</tr>
+														<tr>
+															<th>Leave Date</th>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+												<button class="btn btn-small btn-icon-left btn-default" type="button"><i class="fa fa-pencil"></i> Edit</button>
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								
+							</div>
+																	
+							
+						</div>
+                </div>
+            </div>
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+<script type="text/javascript" src="js/scripts.min.js"></script>
+</body>
+</html>`
