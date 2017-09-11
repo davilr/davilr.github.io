@@ -22,6 +22,8 @@
 .opa80 {opacity: .8;}
 .opa100 {opacity: 1;}
 
+.transall {transition: .0s all;}
+
 .m5 	{margin: 		5px !important;}
 .mt5 	{margin-top: 	5px !important;}
 .mr5 	{margin-right: 	5px !important;}
@@ -219,7 +221,7 @@ ol.list-group li:last-child {
 
 .directory .directory-url {
 	float: left;
-	width: calc(100% - 20px);
+	width: calc(100% - 25px);
 	font-size: 11px;
 	line-height: 15px;
 	color: #8A8C8E;
@@ -544,7 +546,7 @@ ol.list-group li:last-child {
 .reverse-ellipsis {
   text-overflow: clip;
   position: relative;
-  background-color: white;
+  background-color: white;text-overflow: ellipsis;
 }
 
 .reverse-ellipsis:before {
@@ -565,6 +567,7 @@ ol.list-group li:last-child {
   overflow: visible;
   background-color: inherit;
   text-indent: 0.5em;
+  text-overflow: ellipsis;
 }
 
 .reverse-ellipsis span:before {
@@ -791,18 +794,31 @@ video {
 	text-align: left;
 }
 
+.panel.panel-transparent {
+}
+
 .panel.panel-transparent .panel-heading {
-	background: rgba(255,255,255,.3);
+	background: rgba(255,255,255,.2);
+	border-top: 1px solid rgba(255,255,255,.3);
+	border-right: 1px solid rgba(255,255,255,.3);
+	border-left: 1px solid rgba(255,255,255,.3);
 }
 	.panel.panel-transparent .panel-heading .panel-title {
 		color: #FFFFFF;
 	}
 	.panel.panel-transparent .panel-body {
-		background: rgba(255,255,255,.5);
+		background: rgba(255,255,255,.6);
+		border-right: 1px solid rgba(255,255,255,.5);
+		border-left: 1px solid rgba(255,255,255,.5);
 	}
 .panel.panel-transparent .panel-footer {
-	background: rgba(255,255,255,.7);
+	background: rgba(255,255,255,.4);
+	border-right: 1px solid rgba(255,255,255,.5);
+	border-bottom: 1px solid rgba(255,255,255,.5);
+	border-left: 1px solid rgba(255,255,255,.5);
 }
+	.panel.panel-transparent .panel-footer a {
+	}
 
 
 .switchboardH-bot {
