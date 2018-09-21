@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vacation Request | SelfService</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body>
+
+	
+	
+
+<header class="layout-header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+                <div class="switchboard">
+                	<div class="switch c-hand"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div>
+                	<div class="board">
+                		<h3><button class="btn btn-small btn-plain btn-icon-right btn-icon" style="vertical-align: text-bottom;" type="submit" onclick="location.href='home.html';"><i class="fa fa-chevron-left"></i></button> Switchboard</h3>
+                		<div class="app c-hand " onclick="location.href='index.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg"></div><label>Payroll</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg"></div><label>Analytics</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg"></div><label>Calendar</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg"></div><label>Collaborate</label></div>
+                		<div class="app c-hand active" onclick="location.href='ss-home.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div><label>Self-Service</label></div>
+                		<div class="app c-hand" onclick="location.href='ts-list.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg"></div><label>Test Sites</label></div>
+					</div>
+	            </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-center" id="main-menu">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="ss-home.html">Dashboard <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle">Employee</a>
+						<ul class="dropdown-menu">
+							<li class=""><a href="ss-my_details.html">My Details</a></li>
+							<li class=""><a href="ss-my_bank_details.html">My Bank Details</a></li>
+							<li class=""><a href="ss-vacation_request.html">Vacation Request</a></li>
+							<li class=""><a href="ss-vacation_cancel.html">Vacation Cancel</a></li>
+							<li class="active"><a href="ss-vacation_details.html">Vacation Details</a></li>
+							<li class=""><a href="ss-absence_request.html">Absence Request</a></li>
+							<li class=""><a href="ss-payslip_display.html">Payslip Display</a></li>
+							<li class=""><a href="ss-year_end_report.html">Year End Report</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="ss-event_logs.html">Event Logs </a></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-nav-user">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-capitalize">
+							John Cloud <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="401.html">My Profile</a></li>
+							<li><a href="404.html">My Favourites</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-submenu">
+								<a href="#">More Options</a>
+								<ul class="dropdown-menu">
+									<li><a href="500.html">Submit a Request</a></li>
+									<li><a href="500.html">Read Documentation</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="login.html">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+<div class="layout-body">
+    <div class="container-fluid">
+        <div class="layout-sidebar sidebar-left">
+           
+           
+			<div class="panel panel-app-payroll">
+    <!-- company cluster -->
+    <div class="panel-heading" id="payroll-drawer-company" data-toggle="cp-drawer">
+        <a class="panel-icon" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+        <h3 class="panel-title">
+            Profile
+        </h3>
+    </div>
+    <div class="panel-body">
+        <span class="app-selfservice-dispic"><img src="props/img/dispic-1.jpg" border="0"></span>
+        <span class="app-payroll-orgname">John Cloud</span>
+        <span class="app-payroll-orgcode">R067Y</span>
+        <span class="app-payroll-orgcountry">
+            <span class="flag gb"></span>
+            <span class="name">United Kingdom</span>
+        </span>
+        <span class="app-payroll-orgcode">CloudPay, Inc.</span>
+    </div>
+</div>
+           
+
+        </div>
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--span class="dropdown pull-right">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Available Actions</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="selected"><a href="#">Selected action</a></li>
+                            <li class="active"><a href="#">Active action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                        </ul>
+                    </span-->
+                    
+                    <ol class="breadcrumb">
+					  <li><a href="ss-home.html"><i class="fa fa-home fz16"></i></a></li>
+					  <li><a href="#">Employee</a></li>
+					  <li class="active">Vacation Details</li>
+					</ol>
+                    
+                    <h1>Vacation Details <!--small>R067Y</small--></h1>
+					<div class="tab-pane fade active in" id="pane-1">
+
+							<div class="row">
+								
+								<div class="col-xs-12 col-md-12">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-1">
+											<h3 class="panel-title">Vacation Calendar</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-1">
+											<div class="panel-body">
+												<div class="">
+													<div class="vacation-calendar-wrapper">
+										                <div id="calendar" class="vacation-calendar"></div>
+														<div class="vacation-calendar-legend">
+															<div class="today"><div class="symbol"></div> Today</div>
+															<div class="vacation"><div class="symbol"></div> Vacation</div>
+															<div class="holiday"><div class="symbol"></div> Holiday</div>
+															<div class="absence"><div class="symbol"></div> Absence</div>
+															<div class="restday"><div class="symbol"></div> Rest Day</div>
+
+														</div>
+													</div>
+<script>
+    $(document).ready(function() {
+        $("#calendar").kendoCalendar();
+    });
+</script>
+												</div>											
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+								<div class="col-xs-12 col-md-12">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-2">
+											<h3 class="panel-title">Entitlement Year</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-2">
+											<div class="panel-body drop-padding" style="border: 0;">
+												<div class="">
+													<table class="table">
+														<thead>
+															<tr>
+																<th>Year</th>
+																<th>Scheme</th>
+																<th>Entitlement</th>
+																<th>Rollover</th>
+																<th>Taken</th>
+																<th>Left</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>2017</td>
+																<td>2017 AL within 1st 12 months of service</td>
+																<td>19</td>
+																<td>1.5</td>
+																<td>1.5</td>
+																<td>19</td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>Child Care Leave (NSG)</td>
+																<td>3</td>
+																<td>0</td>
+																<td>0</td>
+																<td>3</td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>Extended ChildCare Leave</td>
+																<td>3</td>
+																<td>0</td>
+																<td>0</td>
+																<td>3</td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>PH Replacement</td>
+																<td>1</td>
+																<td>0</td>
+																<td>0</td>
+																<td>1</td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>Paternity Leave	</td>
+																<td>10</td>
+																<td>0</td>
+																<td>9</td>
+																<td>1</td>
+															</tr>
+															<tr>
+																<td>2017</td>
+																<td>Sick Leave	</td>
+																<td>14</td>
+																<td>0</td>
+																<td>9</td>
+																<td>13</td>
+															</tr>
+														</tbody>
+														<tfoot>
+															<tr>
+																<td colspan="6">Total: 6 schemes</td>
+															</tr>
+														</tfoot>
+													</table>
+												
+												</div>											
+											</div>
+										</div>
+									</div>	
+								</div>	
+								
+							</div>
+
+					</div>
+               
+               
+                </div>
+            </div>
+
+			<!--div class="controlsbar-wrapper">
+				<div class="controlsbar row">
+					<div class="col-sm-6">
+					</div>
+					<div class="col-sm-6" align="right">
+						<button class="btn btn-default" type="button">Submit</button>
+					</div>
+				</div>
+			</div-->
+           
+           
+			<!-- modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Vacation Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Vacation Request: <b>22 - 29 Jan 2018</b> - 2017 AL within 1st 12 months of service?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-2" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Confirm Vacation Cancel</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to cancel Vacation Request: <b>1 Feb - 29 Jan 2018</b> - 2017 AL within 1st 12 months of service?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			<div class="modal fade" tabindex="-1" id="demoModal-3" data-backdrop="false">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"></button>
+							<h4 class="modal-title">Delete Vacation Request</h4>
+						</div>
+						<div class="modal-body">
+							<p>Are you sure to delete Vacation Request: <b>22 Feb 2018 - 29 March 2018</b> - 2017 AL within 1st 12 months of service?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-default">Confirm</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+           
+           
+           
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+
+	<script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    position: "bottom",
+                    text: "Vacation Balance",
+                    visible: false
+                },
+                legend: {
+                    position: "bottom",
+                    visible: true
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category # \n #= value# DAYS"
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0} Days"
+                },
+                series: [{
+                    type: "pie",
+                    startAngle: 90,
+					padding: 10,
+                    data: [{
+                        category: "BALANCE",
+                        value: 13,
+                        color: "#f59a3f"
+                    },{
+                        category: "USED",
+                        value: 5,
+                        color: "#67686b"
+                    }],
+					overlay: {
+						gradient: "none"
+					}
+                }]
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+	</script>
+
+</body>
+</html>`

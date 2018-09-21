@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | SelfService</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/self-service/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/self-service/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body>
+
+	
+	
+
+<header class="layout-header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+                <div class="switchboard">
+                	<div class="switch c-hand"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div>
+                	<div class="board">
+                		<h3><button class="btn btn-small btn-plain btn-icon-right btn-icon" style="vertical-align: text-bottom;" type="submit" onclick="location.href='home.html';"><i class="fa fa-chevron-left"></i></button> Switchboard</h3>
+                		<div class="app c-hand " onclick="location.href='index.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg"></div><label>Payroll</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg"></div><label>Analytics</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg"></div><label>Calendar</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg"></div><label>Collaborate</label></div>
+                		<div class="app c-hand active" onclick="location.href='ss-home.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div><label>Self-Service</label></div>
+                		<div class="app c-hand" onclick="location.href='ts-list.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg"></div><label>Test Sites</label></div>
+					</div>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-center" id="main-menu">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="ss-home.html">Dashboard <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown ">
+						<a href="#" class="dropdown-toggle">Employee</a>
+						<ul class="dropdown-menu">
+							<li class=""><a href="ss-my_details.html">My Details</a></li>
+							<li class=""><a href="ss-my_bank_details.html">My Bank Details</a></li>
+							<li class=""><a href="ss-vacation_request.html">Vacation Request</a></li>
+							<li class=""><a href="ss-vacation_cancel.html">Vacation Cancel</a></li>
+							<li class=""><a href="ss-vacation_details.html">Vacation Details</a></li>
+							<li class=""><a href="ss-absence_request.html">Absence Request</a></li>
+							<li class=""><a href="ss-payslip_display.html">Payslip Display</a></li>
+							<li class=""><a href="ss-year_end_report.html">Year End Report</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="ss-event_logs.html">Event Logs </a></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-nav-user">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-capitalize">
+							John Cloud <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="401.html">My Profile</a></li>
+							<li><a href="404.html">My Favourites</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-submenu">
+								<a href="#">More Options</a>
+								<ul class="dropdown-menu">
+									<li><a href="500.html">Submit a Request</a></li>
+									<li><a href="500.html">Read Documentation</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+<div class="layout-body">
+    <div class="container-fluid">
+        <div class="layout-sidebar sidebar-left">
+           
+           
+			<div class="panel panel-app-payroll">
+    <!-- company cluster -->
+    <div class="panel-heading" id="payroll-drawer-company" data-toggle="cp-drawer">
+        <a class="panel-icon" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+        <h3 class="panel-title">
+            Profile
+        </h3>
+    </div>
+    <div class="panel-body">
+        <span class="app-selfservice-dispic"><img src="props/img/dispic-1.jpg" border="0"></span>
+        <span class="app-payroll-orgname">John Cloud</span>
+        <span class="app-payroll-orgcode">R067Y</span>
+        <span class="app-payroll-orgcountry">
+            <span class="flag gb"></span>
+            <span class="name">United Kingdom</span>
+        </span>
+        <span class="app-payroll-orgcode">CloudPay, Inc.</span>
+    </div>
+</div>
+           
+
+        </div>
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--span class="dropdown pull-right">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Available Actions</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="selected"><a href="#">Selected action</a></li>
+                            <li class="active"><a href="#">Active action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                        </ul>
+                    </span-->
+                    
+                    <!--ol class="breadcrumb">
+					  <li><a href="#">Capsule Corp.</a></li>
+					  <li><a href="#">Employee</a></li>
+					  <li class="active">John Cloud</li>
+					</ol-->
+                    
+                    <h1>DashBoard <!--small>R067Y</small--></h1>
+					<div class="tab-pane fade active in" id="pane-1">
+
+						<div class="row">
+
+							<div class="col-xs-12 col-md-6">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-1">
+										<h3 class="panel-title">Overview</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-1">
+										<div class="panel-body">
+											<div style="min-height: 220px;">
+												<span class="ss-overview-name">John Danton Cloud <span class="label label-success">Active</span></span>
+												<span class="ss-overview-title"><strong>Senior Back-end Engineer</strong></span>
+												<br>
+												<div class="row  drop-margin">
+													<span class="ss-overview-item col-xs-6 col-md-6">
+														<div class="col-s-12 col-md-4 drop-padding">Company:</div>
+														<div class="col-s-12 col-md-8 drop-padding"><strong>CloudPay UK, Inc.</strong></div>
+													</span>
+													<span class="ss-overview-item col-xs-6 col-md-6">
+														<div class="col-s-12 col-md-4 drop-padding">Employee No.:</div>
+														<div class="col-s-12 col-md-8 drop-padding"><strong>PA9283NE</strong></div>
+													</span>
+													<span class="ss-overview-item col-xs-6 col-md-6">
+														<div class="col-s-12 col-md-4 drop-padding">Joining date:</div>
+														<div class="col-s-12 col-md-8 drop-padding"><strong>1 Dec 2016</strong></div>
+													</span>
+													<span class="ss-overview-item col-xs-6 col-md-6">
+														<div class="col-s-12 col-md-4 drop-padding">System No.:</div>
+														<div class="col-s-12 col-md-8 drop-padding"><strong>R067Y</strong></div>
+													</span>
+													<span class="ss-overview-item col-xs-6 col-md-6">
+														<div class="col-s-12 col-md-4 drop-padding">Location.:</div>
+														<div class="col-s-12 col-md-8 drop-padding"><strong>Singapore</strong></div>
+													</span>
+												</div>
+												<div class="clearfix"></div><br>
+												<button class="btn btn-small btn-icon-right btn-default " type="button" onclick="location.href='ss-my_details.html';">My Details <i class="fa fa-chevron-right"></i></button>
+												<button class="btn btn-small btn-icon-right btn-default" type="button" onclick="location.href='ss-my_bank_details.html';">My Bank Details <i class="fa fa-chevron-right"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>	
+
+							<div class="col-xs-12 col-md-6">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-2">
+										<h3 class="panel-title">Vacation Balance</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-2">
+										<div class="panel-body">
+											<div class="row">
+												<div class="col-xs-6 col-md-6" style="min-height: 220px;">
+													<div id="chart" style="height: 220px"></div>
+												</div>
+												<div class="col-xs-6 col-md-6" style="vertical-align: middle;">
+													<div class="row" style="padding-top: 20px;">
+														<div class="ss-balance-item col-xs-6 col-md-6">
+															<label>BALANCE</label>
+															<span class="ss-balance-number balance">13</span>
+														</div>
+														<div class="ss-balance-item col-xs-6 col-md-6">
+															<label>USED</label>
+															<span class="ss-balance-number used">5</span>
+														</div>
+													</div>
+													<br><br>
+													<button class="btn btn-icon-left btn-default mb10" type="button" onclick="location.href='ss-vacation_request.html';"><i class="fa fa-plane"></i> Vacation Request</button>
+													<br>
+													<a class="p5" href="ss-vacation_details.html">Vacation Details</a>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>	
+							</div>	
+
+
+							<div class="col-xs-12 col-md-12">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-3">
+										<h3 class="panel-title">Latest Payslips</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-3">
+										<div class="panel-body" style="padding: 0 8px;">
+											<ol class="list-group">
+												<li class="list-item row">
+													<div class="col-xs-10 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> Payslip-File-9273923-johncloud-897.pdf</div>
+													<div class="col-xs-2 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> Payslip-File-9273923-johncloud-897.pdf</div>
+													<div class="col-xs-2 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> Payslip-File-9273923-johncloud-897.pdf</div>
+													<div class="col-xs-2 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> Payslip-File-9273923-johncloud-897.pdf</div>
+													<div class="col-xs-2 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> Payslip-File-9273923-johncloud-897.pdf</div>
+													<div class="col-xs-2 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+											</ol>
+										</div>
+										<div class="panel-footer">
+											<a href="ss-payslip_display.html">View All <i class="fa fa-chevron-right add-margin-l"></i></a>
+										</div>
+									</div>
+								</div>	
+							</div>	
+
+							<div class="col-xs-6 col-md-4">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-4">
+										<h3 class="panel-title">Vacation Request</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-4">
+										<div class="panel-body" style="padding: 0 8px;">
+											<ol class="list-group">
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 22 - 29 Jan 2018</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-success">Approved</span>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 1 Feb - 29 March 2018</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-warning">Pending</span>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 22 Feb 2018 - 29 March 2019</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-danger">Rejected</span>
+													</div>
+												</li>
+											</ol>
+										</div>
+										<div class="panel-footer">
+											<a href="ss-vacation_request.html">View All <i class="fa fa-chevron-right add-margin-l"></i></a>
+										</div>
+									</div>
+								</div>	
+							</div>	
+							
+							<div class="col-xs-6 col-md-4">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-5">
+										<h3 class="panel-title">Absence Request</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-5">
+										<div class="panel-body" style="padding: 0 8px;">
+											<ol class="list-group">
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 22 - 29 Jan 2018</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-success">Approved</span>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 1 Feb - 29 March 2018</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-warning">Pending</span>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-12 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-calendar add-margin-r fblue fz16"></i> 22 Feb 2018 - 29 March 2019</div>
+													<div class="col-xs-12 col-lg-4 col-xl-4 list-item-r" align="right">
+														<span class="label label-danger">Rejected</span>
+													</div>
+												</li>
+											</ol>
+										</div>
+										<div class="panel-footer">
+											<a href="ss-absence_request.html">View All <i class="fa fa-chevron-right add-margin-l"></i></a>
+										</div>
+									</div>
+								</div>	
+							</div>	
+							
+							<div class="col-xs-6 col-md-4">
+								<div class="panel panel-primary">
+									<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-6">
+										<h3 class="panel-title">Year End Report</h3>
+									</div>
+									<div class="panel-collapse collapse in" id="example-bpanel-6">
+										<div class="panel-body" style="padding: 0 8px;">
+											<ol class="list-group">
+												<li class="list-item row">
+													<div class="col-xs-10 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> NOA-82893-file-iu92j.pdf</div>
+													<div class="col-xs-2 col-lg-4 col-xl-4 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 col-lg-8 col-xl-8 list-item-l"><i class="fa fa-file-o add-margin-r fblue fz16"></i> NOA-82893-file-iu93k.pdf</div>
+													<div class="col-xs-2 col-lg-4 col-xl-4 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+												<li class="list-item row">
+													<div class="col-xs-10 col-lg-8 col-xl-8 list-item-l "><i class="fa fa-file-o add-margin-r fblue fz16"></i> NOA-82893-file-iu94l.pdf</div>
+													<div class="col-xs-2 col-lg-4 col-xl-4 list-item-r" align="right">
+														<button class="btn btn-small btn-icon-right btn-icon" type="submit"><i class="fa fa-download"></i></button>
+													</div>
+												</li>
+											</ol>
+										</div>
+										<div class="panel-footer">
+											<a href="ss-year_end_report.html">View All <i class="fa fa-chevron-right add-margin-l"></i></a>
+										</div>
+									</div>
+								</div>	
+							</div>	
+
+						</div>
+
+
+					</div>
+                </div>
+            </div>
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+
+	<script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    position: "bottom",
+                    text: "Vacation Balance",
+                    visible: false
+                },
+                legend: {
+                    position: "bottom",
+                    visible: true
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: false,
+                        background: "transparent",
+                        template: "#= category # \n #= value# DAYS"
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0} Days"
+                },
+                series: [{
+                    type: "pie",
+                    startAngle: 90,
+					padding: 10,
+                    data: [{
+                        category: "BALANCE",
+                        value: 13,
+                        color: "#f59a3f"
+                    },{
+                        category: "USED",
+                        value: 5,
+                        color: "#67686b"
+                    }],
+					overlay: {
+						gradient: "none"
+					}
+                }]
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+		
+	</script>
+
+</body>
+</html>`
