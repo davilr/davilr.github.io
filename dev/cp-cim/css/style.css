@@ -557,7 +557,7 @@ ol.list-group li:last-child {
 }
 	
 	.panel.panel-transparent .panel-heading {
-		background: rgba(255,255,255,.2);
+		background: rgba(95,95,95,.2);
 		border-top: 1px solid rgba(255,255,255,.3);
 		border-right: 1px solid rgba(255,255,255,.3);
 		border-left: 1px solid rgba(255,255,255,.3);
@@ -566,12 +566,12 @@ ol.list-group li:last-child {
 			color: #FFFFFF;
 		}
 		.panel.panel-transparent .panel-body {
-			background: rgba(255,255,255,.6);
+			background: rgba(255,255,255,.8);
 			border-right: 1px solid rgba(255,255,255,.5);
 			border-left: 1px solid rgba(255,255,255,.5);
 		}
 	.panel.panel-transparent .panel-footer {
-		background: rgba(255,255,255,.4);
+		background: rgba(255,255,255,.6);
 		border-right: 1px solid rgba(255,255,255,.5);
 		border-bottom: 1px solid rgba(255,255,255,.5);
 		border-left: 1px solid rgba(255,255,255,.5);
