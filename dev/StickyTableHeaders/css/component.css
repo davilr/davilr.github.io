@@ -173,6 +173,7 @@ tr.row-run td {
 div.run-name {
 	display: inline-block;
 	min-width: 300px;
+	color: #FFFFFF;
 }
 div.run-control {
 	display: inline-block;
