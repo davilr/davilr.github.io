@@ -163,3 +163,20 @@ th.time-utc div {
 	min-width: 170px;
 }
 
+tr.row-run th {
+	background: #1A1A1A !important;
+}
+
+tr.row-run td {
+	background: #1A1A1A !important;
+}
+div.run-name {
+	display: inline-block;
+	min-width: 300px;
+}
+div.run-control {
+	display: inline-block;
+	position: absolute;
+	left: 320px;
+}
+
