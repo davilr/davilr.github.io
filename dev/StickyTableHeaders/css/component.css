@@ -15,6 +15,7 @@
 	width: 90%;
 	max-width: 100%;
 	overflow: hidden;
+	font-size: 12px;
 }
 .component .filler {
 	font-family: "Blokk", Arial, sans-serif;
@@ -144,8 +145,17 @@ th.time-tz-none, td.time-tz-none {
 	background: rgba(0,0,0,.05);
 }
 
-th.time-utc div {
+td.offset div {
 	background: #CCC;
+	padding: 2px 8px;
+	margin: -2px -8px;
+	max-width: 40px;
+}
+td.time-utc div {
+	background: #CCC;
+	padding: 2px 8px;
+	margin: -2px -8px;
+	max-width: 50px;
 }
 
 .dp-none {
