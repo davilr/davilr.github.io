@@ -1,0 +1,18 @@
+{
+  "name": "cp-wizard",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "3.3.7",
+    "font-awesome": "4.7.0",
+    "jquery": "3.2.1",
+    "twitter-bootstrap-wizard": "git+https://github.com/VinceG/twitter-bootstrap-wizard.git#1.4.2"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-plumber": "1.1.0",
+    "gulp-sass": "3.1.0"
+  }
+}

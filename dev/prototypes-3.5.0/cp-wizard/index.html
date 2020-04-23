@@ -1,0 +1,486 @@
+<html>
+    <head>
+        <title>Wizard Widget</title>
+        <!-- dependencies -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Oswald|Roboto:300,300i,400,400i,700,700i">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+        <!-- end: dependencies -->
+        <script src="js/jquery.feature.cp-wizard.js"></script>
+        <style>
+            body {
+                font-family: "Roboto";
+                max-width: 992px;
+                margin: 0 auto;
+            }
+            section.example {
+                margin: 50px 0;
+                border-top: 1px solid #ccc;
+                padding: 30px 15px;
+            }
+            .remote-pager-container {
+                padding: 15px;
+                margin: 15px 0;
+                border: 1px solid #ccc;
+            }
+            #remote-pager-title {
+                float: left;
+                line-height: 1.3em;
+                margin: 0 10px 0 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            #remote-pager-desc {
+                float: left;
+                clear: left;
+            }
+            #remote-pager {
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                float: right;
+            }
+            #remote-pager > li {
+                display: inline-block;
+            }        
+        </style>
+    </head>
+    <body>
+        <h1>Multistep &amp; Wizard</h1>
+        <p>This a demo of the Multistep component when used as static display or as a wizard.</p>
+        <p><strong>Examples:</strong></p>
+        <ol>
+            <li><a href="#ex-1">Multistep using Original style (Static)</a></li>
+            <li><a href="#ex-2">Multistep using Wizard style (Static)</a></li>
+            <li><a href="#ex-3">Multistep Wizard using Wizard style (JS-driven)</a>
+                <ol>
+                    <li><a href="#ex-3-1">Remote Control</a></li>
+                </ol>
+            </li>
+            <li><a href="#ex-4">Multistep Wizard using Original style (JS-driven)</a></li>
+        </ol>
+    
+        <section class="example">
+            <h2 id="ex-1">1. Multistep using Original style (Static)</h2>
+            <div class="multistep multistep-6">
+                <div id="bar" class="progress">
+                    <!-- the current progress is controlled via inline style as with Bootstrap -->
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                </div>
+                <ul class="steps">
+                    <li class="step passed">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-upload"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Data In</span>
+                        <span class="step-desc">15 Feb 2017</span>
+                    </li>
+                    <li class="step passed">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Freeze</span>
+                        <span class="step-desc">Step 2</span>
+                    </li>
+                    <li class="step active">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-lock"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Payroll Locked</span>
+                        <span class="step-desc">Step 3</span>
+                    </li>
+                    <li class="step">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-play"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Data Process</span>
+                        <span class="step-desc">Step 4</span>
+                    </li>
+                    <li class="step">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-check"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Approval</span>
+                        <span class="step-desc">Step 5</span>
+                    </li>
+                    <li class="step">
+                        <span class="step-shape">
+                            <span class="step-icon">
+                                <i class="fa fa-calendar-check-o"></i>
+                            </span>
+                        </span>
+                        <span class="step-name">Close Payroll</span>
+                        <span class="step-desc">Step 6</span>
+                    </li>
+                </ul>
+            </div>        
+        </section>
+        <section class="example active">
+            <h2 id="ex-2">2. Multistep using Wizard style (Static)</h2>
+            <div class="multistep-wizard">
+                <div class="multistep multistep-6">
+                    <div id="bar" class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                    </div>
+                    <ul class="steps">
+                        <li class="step passed">
+                            <span class="step-shape">
+                                <span class="step-index">1</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-upload"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Data In</span>
+                            <span class="step-desc">15 Feb 2017</span>
+                        </li>
+                        <li class="step passed">
+                            <span class="step-shape">
+                                <span class="step-index">2</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-clock-o"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Freeze</span>
+                            <span class="step-desc">Step 2</span>
+                        </li>
+                        <li class="step active">
+                            <span class="step-shape">
+                                <span class="step-index">3</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Payroll Locked</span>
+                            <span class="step-desc">Step 3</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-shape">
+                                <span class="step-index">4</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-play"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Data Process</span>
+                            <span class="step-desc">Step 4</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-shape">
+                                <span class="step-index">5</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Approval</span>
+                            <span class="step-desc">Step 5</span>
+                        </li>
+                        <li class="step">
+                            <span class="step-shape">
+                            <span class="step-index">6</span>
+                                <span class="step-icon">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Close Payroll</span>
+                            <span class="step-desc">Step 6</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="example">
+            <h2 id="ex-3">3. Multistep Wizard using Wizard style (JS-driven)</h2>
+            <p class="lead">We can customise to behave like this...</p>
+            <div id="my-wizard" class="multistep-wizard">
+                <div class="multistep multistep-3">
+                    <div id="bar" class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    </div>
+                    <ul class="steps">
+                        <li class="step">
+                            <a href="#cp-tab1" data-toggle="tab">
+                                <span class="step-shape">
+                                    <span class="step-index">1</span>
+                                    <span class="step-icon">
+                                        <i class="fa fa-check-square-o"></i>
+                                    </span>
+                                </span>
+                                <span class="step-name">Select Data</span>
+                            </a>
+                        </li>
+                        <li class="step">
+                            <a href="#cp-tab2" data-toggle="tab">
+                                <span class="step-shape">
+                                    <span class="step-index">2</span>
+                                    <span class="step-icon">
+                                        <i class="fa fa-users"></i>
+                                    </span>
+                                </span>
+                                <span class="step-name">Review Connect Batch</span>
+                                <span class="step-desc">5 Items</span>
+                            </a>
+                        </li>
+                        <li class="step">
+                            <a href="#cp-tab3" data-toggle="tab">
+                                <span class="step-shape">
+                                    <span class="step-index">3</span>
+                                    <span class="step-icon">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                </span>
+                                <span class="step-name">Summary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
+                <div class="tab-content">
+                    <div class="tab-pane" id="cp-tab1">
+                        <p><b>Step 1</b> - Data comes in...</p>
+                        <p>
+                            <input type='text' name='name' id='name' placeholder='Enter Your Name' class="form-control">
+                        </p>
+                    </div>
+                    <div class="tab-pane" id="cp-tab2">
+                        <p><b>Step 2</b> - Display data snapshot. No more changes.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-tab3">
+                        <p><b>Step 3</b> - Show the state of payroll.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-tab4">
+                        <p><b>Step 4</b> - Data being processed.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-tab5">
+                        <p><b>Step 5</b> - Awaiting stackholders to provide sign-off.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-tab6">
+                        <p><b>Step 6</b> - All done. Close the payroll.</p>
+                    </div>
+                </div>
+                <ul class="pager wizard">
+                    <li class="previous first" style="display:none;">
+                        <a href="javascript:void(0);">First</a>
+                    </li>
+                    <li class="previous">
+                        <a href="javascript:void(0);">Previous</a>
+                    </li>
+                    <li class="next last" style="display:none;">
+                        <a href="javascript:void(0);">Last</a>
+                    </li>
+                    <li class="next">
+                        <a href="javascript:void(0);">Next</a>
+                    </li>
+                    <li class="finish">
+                        <a href="javascript:void(0);">Finish</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="my-button">I'm here for show</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <h3 id="ex-3-1">3.1 Remote Control</h3>
+            <div class="remote-pager-container clearfix">
+                <h4 id="remote-pager-title">Custom Buttons As Controls</h4>
+                <p id="remote-pager-desc">You can also use your own buttons for remote control.</p>
+                <ul id="remote-pager" class="clearfix">
+                    <li class="previous">
+                        <a href="javascript:void(0);" class="btn btn-primary">Previous</a>
+                    </li>
+                    <li class="next">
+                        <a href="javascript:void(0);" class="btn btn-primary">Next</a>
+                    </li>
+                    <li class="finish">
+                        <a href="javascript:void(0);" class="btn btn-primary">Finish</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="example">
+            <h2 id="ex-4">4. Multistep Wizard using Original style (JS-driven)</h2>
+            <p class="lead">Let's see what happens when the 2 styles mate...</p>
+            <div id="my-timeline-wizard" class="multistep-wizard multistep multistep-6">
+                <div id="bar" class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                </div>
+                <ul class="steps">
+                    <li class="step">
+                        <a href="#cp-t-tab1" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-upload"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Data In</span>
+                            <span class="step-desc">15 Feb 2017</span>
+                        </a>
+                    </li>
+                    <li class="step">
+                        <a href="#cp-t-tab2" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-clock-o"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Freeze</span>
+                            <span class="step-desc">Step 2</span>
+                        </a>
+                    </li>
+                    <li class="step">
+                        <a href="#cp-t-tab3" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Payroll Locked</span>
+                            <span class="step-desc">Step 3</span>
+                        </a>
+                    </li>
+                    <li class="step">
+                        <a href="#cp-t-tab4" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-play"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Data Process</span>
+                            <span class="step-desc">Step 4</span>
+                        </a>
+                    </li>
+                    <li class="step">
+                        <a href="#cp-t-tab5" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Approval</span>
+                            <span class="step-desc">Step 5</span>
+                        </a>
+                    </li>
+                    <li class="step">
+                        <a href="#cp-t-tab6" data-toggle="tab">
+                            <span class="step-shape">
+                                <span class="step-icon">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                </span>
+                            </span>
+                            <span class="step-name">Close Payroll</span>
+                            <span class="step-desc">Step 6</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" id="cp-t-tab1">
+                        <p><b>Step 1</b> - Data comes in...</p>
+                    </div>
+                    <div class="tab-pane" id="cp-t-tab2">
+                        <p><b>Step 2</b> - Display data snapshot. No more changes.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-t-tab3">
+                        <p><b>Step 3</b> - Show the state of payroll.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-t-tab4">
+                        <p><b>Step 4</b> - Data being processed.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-t-tab5">
+                        <p><b>Step 5</b> - Awaiting stackholders to provide sign-off.</p>
+                    </div>
+                    <div class="tab-pane" id="cp-t-tab6">
+                        <p><b>Step 6</b> - All done. Close the payroll.</p>
+                    </div>
+                </div>
+                <ul class="pager wizard">
+                    <li class="previous first" style="display:none;">
+                        <a href="javascript:void(0);">First</a>
+                    </li>
+                    <li class="previous">
+                        <a href="javascript:void(0);">Previous</a>
+                    </li>
+                    <li class="next last" style="display:none;">
+                        <a href="javascript:void(0);">Last</a>
+                    </li>
+                    <li class="next">
+                        <a href="javascript:void(0);">Next</a>
+                    </li>
+                    <li class="finish">
+                        <a href="javascript:void(0);">Finish</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="my-button">I'm here for show</a>
+                    </li>
+                </ul>
+            </div>                
+        </section>
+                    
+        <script>                    
+            (function($) {
+                // invoke when ready
+                $(function() {
+                    var myWizardOpts = {
+                        onNext: function(tab, navigation, index) {
+                            if (index == 1) {
+                                // Make sure we entered the name
+                                if (!$('#name').val()) {
+                                    alert('You must enter your name');
+                                    $('#name').focus();
+                                    return false;
+                                } 
+                            }
+                        },
+                        onTabShow: function(tab, navigation, index) {
+                            // IMPORTANT: If "onTabShow" is overridden, must manually call the following line:
+                            $("#my-wizard").trigger("tabShow", [tab, navigation, index]);
+                        },
+                        onTabClick: function(tab, navigation, currIndex, targetIndex) {
+                            if (targetIndex > 0) {
+                                // Make sure we entered the name
+                                if (!$('#name').val()) {
+                                    alert('You must enter your name');
+                                    $('#name').focus();
+                                    return false;
+                                } 
+                            }
+                        },
+                        onFinish: function() {
+                            alert("Ooooh yeah...");
+                        }
+                    };
+        
+                    // invocation here
+                    var wiz1 = $("#my-wizard").cpWizard(myWizardOpts);
+                    var wiz2 = $("#my-timeline-wizard").cpWizard();
+        
+                    // remote control
+                    var remotePagerSelector = '#remote-pager';
+                    $(remotePagerSelector + ' li.previous').on('click', function() {
+                        wiz1.invokeAction('previous');
+                    });
+                    $(remotePagerSelector + ' li.next').on('click', function() {
+                        wiz1.invokeAction('next');
+                    });
+                    $(remotePagerSelector + ' li.finish').on('click', function() {
+                        wiz1.invokeAction('finish');
+                    });
+                });
+            })(jQuery);
+        
+        </script>        
+    </body>
+</html>
+
+

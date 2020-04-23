@@ -1,0 +1,245 @@
+/**************************************************
+Multistep
+
+_Multipstep_ is used to represent the present step in a series of steps.
+
+It uses `.multistep` in combination with a mandatory companion selector, 
+`.multistep-n` (where n is a number 2 through 10, representing number of total steps).
+The `.multistep-n` selector is used to adjust the display of the _multistep_ component 
+and must correspond to the actual number of steps.
+
+Dependencies:
+- scss:base:tabs
+- scss:base:progress
+
+markup:
+<div class="multistep multistep-3">
+    <!-- progress bar -->
+    <div id="bar" class="progress">
+        <!-- the current progress is controlled via inline style as with Bootstrap -->
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+    </div>
+    <!-- steps -->
+    <ul class="steps">
+        <li class="passed">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-upload"></i>
+                    </span>
+                </span>
+                <span class="step-name">Data In</span>
+                <span class="step-desc">15 Feb 2017</span>
+            </span>
+        </li>
+        <li class="passed">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </span>
+                </span>
+                <span class="step-name">Freeze</span>
+                <span class="step-desc">Step 2</span>
+            </span>
+        </li>
+        <li class="active">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </span>
+                <span class="step-name">Payroll Locked</span>
+                <span class="step-desc">Step 3</span>
+            </span>
+        </li>
+    </ul>
+</div>        
+
+**************************************************/
+
+// generates a series of styles for designated step counts
+@for $noOfSteps from 2 through 10 {
+    $stepWidth          : floor(100 / $noOfSteps);
+    $progressSideMargin : floor($stepWidth / 2);
+    
+    // outputs a list of classes from 2 to 10, e.g. multistep-3 for 3-step indicator
+    .multistep-#{$noOfSteps} {
+        & .steps > li {
+            width   : $stepWidth + %;
+        }
+        & > .progress {
+            left    : $progressSideMargin + %;
+            width   : (($noOfSteps - 1) * $stepWidth) + %;
+        }
+    }
+}
+
+//== multistep
+.multistep {
+    position            : relative;
+    font-size           : $cp-multistep-font-size;
+    background-color    : #fff;
+    margin-bottom       : 20px;
+
+    //== progress line
+    & > .progress {
+        position            : absolute;
+        top                 : ($cp-multistep-tab-height - $cp-multistep-progress-height) / 2;
+        height              : $cp-multistep-progress-height;
+        background-color    : $cp-multistep-bg-color-default;
+        box-shadow          : none;
+
+        & .progress-bar {
+            background-color    : $cp-multistep-progress-color;
+            box-shadow          : none; // unset
+        }
+    }
+
+    //== steps
+    & .steps {
+        @extend %clearfix;
+        position    : relative;
+        padding     : 0;
+        margin      : 0 0 20px;
+        
+        & > li {
+            text-align          : center;
+            display             : inline-block;
+            float               : left;
+            background-color    : transparent;        
+        }
+
+        & a {
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration : none;
+            }
+        }
+    }
+
+    //== step
+    & .step {
+        @extend %clearfix;
+        display     : inline-block;
+        max-width   : 100%;     
+    }
+    & .step a {
+        cursor  : not-allowed;
+    }
+    
+    //== step shape
+    & .step-shape {
+        @extend %cp-multistep-transition-out;
+        display             : inline-block;
+        height              : $cp-multistep-tab-height;
+        width               : $cp-multistep-tab-width;
+        background-color    : $cp-multistep-bg-color-default;
+        border-style        : solid;
+        border-color        : $cp-multistep-border-color-default;
+        border-width        : $cp-multistep-shape-border-width;
+        border-radius       : 50%;
+        color               : $cp-multistep-color;
+        transform   : scale(0.25, 0.25);
+
+        //== step icon
+        & .step-icon {
+            @extend %cp-multistep-text-constraint;
+            @extend %cp-multistep-transition-in;
+            font-size   : 0.4 * $cp-multistep-tab-height;
+            line-height : $cp-multistep-tab-height - ($cp-multistep-shape-border-width * 2);
+            opacity : 0;    // icon is not displayed by default
+            
+            & .fa {
+                line-height : inherit;
+            }
+        }
+        //== step icon: has a preceding index
+        & .step-index ~ .step-icon {
+            line-height : 1;
+        }
+    }
+    
+    //== step name, description
+    .step-name,
+    .step-desc {
+        @extend %cp-multistep-transition-out;
+        @extend %cp-multistep-text-constraint;
+        font-family     : "Noto Sans", sans-serif;
+        font-weight     : bold;
+        text-transform  : uppercase;
+        padding : 0 0.5em;
+    }
+
+    //== step name
+    & .step-name {
+        font-size       : $cp-multistep-name-font-size;
+        color           : $cp-multistep-name-color-default;
+        margin-top      : -(0.15 * $cp-multistep-tab-height);
+    }
+
+    //== step desc
+    & .step-desc {
+        font-size       : $cp-multistep-desc-font-size;
+        color           : $cp-multistep-desc-color-default;
+    }        
+}
+
+// active, passed steps
+.multistep .passed,
+.multistep .active {
+    //== step
+    &.step a {
+        cursor  : pointer;  // if it's a hyperlink, make it look clickable
+    }
+
+    //== step shape
+    & .step-shape,
+    & .step-shape {
+        @extend %cp-multistep-transition-in;
+    }
+}
+
+// passed steps
+.multistep .passed {
+    // step shape
+    & .step-shape {
+        background-color    : $cp-multistep-bg-color-passed;
+        border-color        : $cp-multistep-border-color-passed;    
+    }
+}
+
+// active steps
+.multistep .active {
+    // step shape
+    & .step-shape {
+        background-color    : $cp-multistep-bg-color-active;
+        border-color        : $cp-multistep-border-color-active;
+        box-shadow          : 0 0 3px rgba($cp-multistep-border-color-active, 0.5);
+        transform   : scale(0.5, 0.5);
+
+        //== step icon
+        & .step-icon {
+            @extend %cp-multistep-transition-in;
+            opacity : 1;
+        }
+    }
+
+    //== step name, description
+    & .step-name,
+    & .step-desc {
+        @extend %cp-multistep-transition-in;            
+    }
+
+    //== step name
+    & .step-name {
+        color           : $cp-multistep-name-color-active;
+    }
+
+    //== step desc
+    & .step-desc {
+        color           : $cp-multistep-desc-color-active;
+    }
+}

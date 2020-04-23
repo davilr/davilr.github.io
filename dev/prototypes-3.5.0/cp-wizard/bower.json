@@ -1,0 +1,22 @@
+{
+  "name": "cp-wizard",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Nicholas Ang <nicholas.ang@cloudpay.net>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "twitter-bootstrap-wizard": "1.4.2",
+    "font-awesome": "4.7.0"
+  }
+}

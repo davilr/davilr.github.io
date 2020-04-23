@@ -1,0 +1,23 @@
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+%cp-multistep-transition-in {
+    transition: all 0.15s ease-in 0.25s;    
+}
+%cp-multistep-transition-out {
+    transition: all 0.15s ease-in;    
+}
+%cp-multistep-text-constraint {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

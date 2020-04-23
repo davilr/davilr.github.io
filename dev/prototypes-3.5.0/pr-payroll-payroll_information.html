@@ -1,0 +1,2639 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Payroll Information</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="cp-wizard/css/styles.css">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/payroll/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/payroll/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/payroll/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/payroll/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/payroll/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/payroll/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body>
+
+	
+	
+
+<header class="layout-header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+                <div class="switchboard">
+                	<div class="switch c-hand"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg"></div>
+                	<div class="board">
+                		<h3><button class="btn btn-small btn-plain btn-icon-right btn-icon" style="vertical-align: text-bottom;" type="submit" onclick="location.href='home.html';"><i class="fa fa-chevron-left"></i></button> Switchboard</h3>
+                		<div class="app c-hand active" onclick="location.href='index.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg"></div><label>Payroll</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg"></div><label>Analytics</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg"></div><label>Calendar</label></div>
+                		<div class="app c-hand"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg"></div><label>Collaborate</label></div>
+                		<div class="app c-hand " onclick="location.href='ss-home.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg"></div><label>Self-Service</label></div>
+                		<div class="app c-hand" onclick="location.href='ts-list.html';"><div class="icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg"></div><label>Test Sites</label></div>
+					</div>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-center" id="main-menu">
+				<ul class="nav navbar-nav">
+					<li class=""><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Employee</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Employee Search</a></li>
+							<li role="separator" class="divider"></li>
+                            <li class="dropdown-header" style="text-align: left;">John CLoud <small style="float: right">R067Y</small></li>
+							<li class=""><a href="pr-employee-employee_details.html">Employee Details</a></li>
+							<li class="dropdown-submenu">
+								<a href="#">Personal Details</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Personal Details</a></li>
+									<li><a href="#">Address Details</a></li>
+									<li><a href="#">Bank Account Management</a></li>
+									<li><a href="#">Employee Qualifications</a></li>
+									<li><a href="#">Emergency Contacts</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Employee Payroll Information</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Employment Details</a></li>
+									<li><a href="#">General Ledger Options</a></li>
+									<li><a href="#">Local Payroll Information</a></li>
+									<li><a href="#">Payments &amp; Deductions</a></li>
+									<li><a href="#">Payments and Deductions (Time-Based)</a></li>
+									<li><a href="#">Payslip Calculator</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Employee Documents</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Manage Documents</a></li>
+									<li><a href="#">Payslip Display</a></li>
+									<li><a href="#">Year End Display</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Benefits Details</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Life Insurance</a></li>
+									<li><a href="#">Loans</a></li>
+									<li><a href="#">Pension</a></li>
+									<li><a href="#">Other</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">HR Information</a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#">Employee Calendar</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Vacation Details</a></li>
+											<li><a href="#">Training Details</a></li>
+											<li><a href="#">Absence Details</a></li>
+											<li><a href="#">Employee Calendar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Employee Events</a></li>
+									<li><a href="#">Employee Status History</a></li>
+									<li><a href="#">Manage Payment After Separation</a></li>
+									<li><a href="#">Dependents</a></li>
+									<li><a href="#">Pension</a></li>
+									<li><a href="#">Manage Suspension</a></li>
+									<li><a href="#">Manage Separation</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Other</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Agency Details</a></li>
+									<li><a href="#">Disciplinary Details</a></li>
+									<li><a href="#">Manpower</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle">Payroll</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Company Payrolls</a></li>
+							<li role="separator" class="divider"></li>
+                            <li class="dropdown-header" style="text-align: left;">3001510 <small style="float: right">Monthly Payroll</small></li>
+							<li class="active"><a href="pr-payroll-payroll_information.html">Payroll Information</a></li>
+							<li><a href="#">Data Validation Dashboard</a></li>
+							<li><a href="#">Originator Bank Details</a></li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Administration</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Create Payroll</a></li>
+									<li><a href="#">Edit Payroll</a></li>
+									<li><a href="#">Notifications</a></li>
+									<li><a href="#">Payroll Processing Options</a></li>
+									<li><a href="#">Payroll Run Administration</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Data</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">CPF Voluntary Contribution Rates</a></li>
+									<li><a href="#">Company Paycode Details</a></li>
+									<li><a href="#">Cost Centre Splitting</a></li>
+									<li><a href="#">GL Paycode Mappings</a></li>
+									<li><a href="#">GL Posting Key Mappings</a></li>
+									<li><a href="#">Manage Pending Timesheets</a></li>
+									<li><a href="#">Payment Configuration</a></li>
+									<li><a href="#">Payment Type Groups</a></li>
+									<li><a href="#">Pension Scheme</a></li>
+									<li><a href="#">ProRata Scheme Configuration</a></li>
+									<li><a href="#">ProRata Type Configuration</a></li>
+									<li><a href="#">Salary Components</a></li>
+									<li><a href="#">Sequence Number</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Input Batch Data</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Loans</a></li>
+									<li><a href="#">Pay Code Stop Details</a></li>
+									<li><a href="#">Payment After Separation</a></li>
+									<li><a href="#">Payments &amp; Deductions</a></li>
+									<li><a href="#">Payments and Deductions (Time-Based)</a></li>
+									<li><a href="#">Salary</a></li>
+									<li><a href="#">Terminations</a></li>
+									<li><a href="#">Vacations</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Outputs</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Year End Forms</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Collaborate</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Go To CloudPay Collaborate <i class="fa fa-external-link-square add-margin-l dropdown-fa-link"></i></a></li>
+							<li><a href="#">Start New Collaboration</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Admin</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Employee Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Course Types</a></li>
+									<li><a href="#">Employee Alterations</a></li>
+									<li><a href="#">Employee Grades</a></li>
+									<li><a href="#">Employee Groups</a></li>
+									<li class="dropdown-submenu">
+										<a href="#">Employee Status</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Employee Status Definitions</a></li>
+											<li><a href="#">Transfer Search</a></li>
+											<li><a href="#">Re-hire Search</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Payroll Starter Wizard</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Qualification Types</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Benefit Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Loan Scheme Setup</a></li>
+									<li><a href="#">Pension Programs</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Organizational Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">User Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">CloudPay Self-Service</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Vacation Management</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Tools</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Pay stub reports</a></li>
+									<li><a href="#">Pay stub reports</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Reports</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Payroll Workflow Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li class="dropdown-submenu">
+										<a href="#">5</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">4</a></li>
+										</ul>
+									</li>
+									<li><a href="#">6</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">System Reports</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+
+
+							
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Documents</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">CloudPay Connect</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Extract</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Data Upload</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager Administration</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Document Manager History</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle">Tools</a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Control Panel</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Test Workbench</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Workflow Engine</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right navbar-nav-user">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle text-capitalize">
+							John Cloud <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="401.html">My Profile</a></li>
+							<li><a href="404.html">My Favourites</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-submenu">
+								<a href="#">More Options</a>
+								<ul class="dropdown-menu">
+									<li><a href="500.html">Submit a Request</a></li>
+									<li><a href="500.html">Read Documentation</a></li>
+								</ul>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li><a href="login.html">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+<div class="layout-body">
+    <div class="container-fluid">
+        <div class="layout-sidebar sidebar-left">
+           
+           
+			<div class="panel panel-app-payroll">
+    <!-- company cluster -->
+    <div class="panel-heading" id="payroll-drawer-company" data-toggle="cp-drawer">
+        <a class="panel-icon" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+        <h3 class="panel-title">
+            CloudPay, Inc.
+        </h3>
+    </div>
+    <div class="panel-body">
+        <span class="app-payroll-orgname">CloudPay, Inc.</span>
+        <span class="app-payroll-orgcode">CP002</span>
+        <span class="app-payroll-orgcountry">
+            <span class="flag gb"></span>
+            <span class="name">United Kingdom</span>
+        </span>
+    </div>
+    <!-- drawer template for company heading -->
+    <div class="drawer-template" id="payroll-drawer-company-template">
+        <span class="component-heading">Company Search</span>
+        <form>
+            <div class="form-group">
+                <div class="justified-search-input">
+                    <input class="form-control" type="text" placeholder="Company Number or Company Search Criteria">
+                </div>
+                <div class="justified-search-button">
+                    <input type="button" class="btn btn-default" value="Company Search" id="search-company">
+                </div>
+            </div>
+        </form>
+        <div class="drawer-content"><!-- content will be loaded via AJAX --></div>
+    </div>
+    <div class="sub-panel">
+        <!-- payroll cluster -->
+        <div class="panel-heading" id="payroll-drawer-payroll" data-toggle="cp-drawer">
+            <h4 class="panel-title">
+                <span class="badge">4</span>
+                Payrolls
+            </h4>
+        </div>
+        <div class="panel-collapse collapse in">
+            <ul class="panel-list">
+                <li class="panel-list-item active">
+                    <span class="list-item-heading">3001510</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Payroll Name 1</div>
+                        <div class="text-capitalize">4 Runs</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001511</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Payroll Name 2</div>
+                        <div class="text-capitalize">2 Runs</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001512</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Payroll Name 3</div>
+                        <div class="text-capitalize">1 Run</div>
+                    </div>
+                </li>
+                <li class="panel-list-item">
+                    <span class="list-item-heading">3001513</span>
+                    <div class="list-item-body">
+                        <div class="text-capitalize">Payroll Name 4</div>
+                        <div class="text-capitalize">2 Runs</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- drawer content for payroll heading -->
+        <div class="drawer-template" id="payroll-drawer-payroll-template">
+            <span class="component-heading">Available Payrolls</span>
+            <div class="drawer-content payrolls-available"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> <em>Loading... Please wait.</em><!-- content will be loaded via AJAX --></div>
+            <span class="component-heading">Favourite Payrolls <i class="fa fa-star color-favourite"></i></span>
+            <div class="drawer-content payrolls-favourite"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> <em>Loading... Please wait.</em><!-- content will be loaded via AJAX --></div>
+        </div>
+    </div>
+    <div class="sub-panel">
+        <!-- employee cluster -->
+        <div class="panel-heading" id="payroll-drawer-employee" data-toggle="cp-drawer">
+            <h4 class="panel-title">
+                <span class="badge">102</span>
+                Employees
+            </h4>
+        </div>
+        <div class="panel-collapse collapse">
+            <ul class="panel-list">
+                <li class="panel-list-item active">
+                    <span class="list-item-heading">John Cloud</span>
+                    <div class="list-item-body">
+                        <span class="item-field">
+                            <span class="item-field-label">Sys No.</span>
+                            <span class="item-field-value">65118</span>
+                        </span>
+                        <span class="item-field">
+                            <span class="item-field-label">Emp No.</span>
+                            <span class="item-field-value">J923D</span>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- drawer content for employee heading -->
+        <div class="drawer-template" id="payroll-drawer-employee-template">
+            <span class="component-heading">Employee Search</span>
+            <div class="btn-group btn-group-small btn-group-justified" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Current Payroll
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Current Company
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Current Customer
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> All Companies
+                </label>
+            </div>
+            <form>
+                <div class="form-group">
+                    <div class="justified-search-input">
+                        <input type="text" class="form-control" placeholder="Enter search criteria: Employee No, Last Name or System No.">
+                    </div>
+                    <div class="justified-search-button">
+                        <input type="button" class="btn btn-default" value="Employee Search" id="search-employee">
+                    </div>
+                </div>
+            </form>
+            <div class="drawer-content"><!-- content will be loaded via AJAX --></div>
+        </div>
+    </div>
+</div>
+           
+
+        </div>
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!--span class="dropdown pull-right">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Available Actions</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="selected"><a href="#">Selected action</a></li>
+                            <li class="active"><a href="#">Active action</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                        </ul>
+                    </span-->
+                    
+                    <ol class="breadcrumb">
+					  <li><a href="index.html"><i class="fa fa-home fz16"></i></a></li>
+					  <li><a href="#">CloudPay, Inc.</a></li>
+					  <li class="fgrey2">Payroll</li>
+					  <li><a href="#">Payroll Information</a></li>
+					  <li class="active"><a href="#">3001510</a></li>
+					</ol>
+                    
+					<h1>Payroll Information <small>3001510</small></h1>
+
+                    <ul class="nav nav-tabs">
+						<li class="active"><a href="#pane-1" data-toggle="tab">Overview</a></li>
+						<li class=""><a href="#pane-2" data-toggle="tab">970 | Standard Main Run</a></li>
+						<li class=""><a href="#pane-3" data-toggle="tab">971 | Supplementary Run</a></li>
+						<lI class=""><a href="#pane-4" data-toggle="tab">972 | Bonus Run</a></li>
+						<li class=""><a href="#pane-5" data-toggle="tab">Statutory Filing</a></li>
+						<li class=""><a href="#pane-6" data-toggle="tab">Collaborate</a></li>
+					</ul>
+
+					<div class="tab-content">
+
+						<div class="tab-pane fade active in" id="pane-1">
+							<h2>3001510 <small>Overview</small></h2>
+							
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-a-1">
+											<h3 class="panel-title">GENERAL INFO</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-a-1">
+											<div class="panel-body">
+												<div class="row" style="display: inline-block; width: 100%;">
+													<div class="info-bits col-xs-3">
+														<!--div class="info-label">PAYROLL NAME <a href="#"><i class="fa fa-gear add-margin-l"></i></a></div-->
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">Payroll Name</label>
+																	<input type="text" class="form-control" id="exampleInput" placeholder="Payroll Name 1">
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">Company Number</label>
+																	<input type="text" class="form-control" id="exampleInput" placeholder="AB111C">
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">Processing Mode</label>
+																	<input type="text" class="form-control" id="exampleInput" placeholder="in-house">
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">ISO Country</label>
+																	<select class="form-control" id="exampleSelect">
+																		<option value="">SG</option>
+																		<option value="option1">MY</option>
+																		<option value="option1">GB</option>
+																		<option value="option2">PH</option>
+																		<option value="option2">US</option>
+																	</select>
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">Payroll ID</label>
+																	<input type="text" class="form-control" id="exampleInput" placeholder="3001510">
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-value">
+															<form>
+																<div class="form-group">
+																	<label for="exampleInput">Run Types</label>
+																	<input type="text" class="form-control" id="exampleInput" placeholder="3">
+																</div>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xs-12">
+									<div class="panel panel-primary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-a-2">
+											<h3 class="panel-title">ALL RUNS</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-a-2">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-xs-12">
+														<div class="panel brbot">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-a-2-1">
+																<h3 class="panel-title fgrey4">970 | Standard Main Run</h3>
+															</div>
+															<div class="panel-collapse collapse in" id="example-bpanel-a-2-1">
+																<div class="panel-body brnone">
+																	<div class="row">
+																		<div class="col-xs-12 col-md-10">
+																			<div class="multistep multistep-6">
+																				<div id="bar" class="progress">
+																					<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+																				</div>
+																				<ul class="steps">
+																					<li class="step passed">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-upload"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Data In</span>
+																						<span class="step-desc">15 Feb 2017</span>
+																					</li>
+																					<li class="step passed">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-clock-o"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Freeze</span>
+																						<span class="step-desc">Step 2</span>
+																					</li>
+																					<li class="step active">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-lock"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Payroll Locked</span>
+																						<span class="step-desc">Step 3</span>
+																					</li>
+																					<li class="step">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-play"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Data Process</span>
+																						<span class="step-desc">Step 4</span>
+																					</li>
+																					<li class="step">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-check"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Approval</span>
+																						<span class="step-desc">Step 5</span>
+																					</li>
+																					<li class="step">
+																						<span class="step-shape">
+																							<span class="step-icon">
+																								<i class="fa fa-calendar-check-o"></i>
+																							</span>
+																						</span>
+																						<span class="step-name">Close Payroll</span>
+																						<span class="step-desc">Step 6</span>
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																		<div class="col-xs-12 col-md-2" align="right">
+																			<a class="btn btn-icon-right btn-default mt20" href="#pane-2" type="button" data-toggle="tab">View Run <i class="fa fa-chevron-right"></i></a>
+																		</div>
+																	</div>
+					
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+														<div class="col-xs-12">
+															<div class="panel brbot">
+																<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-a-2-2">
+																	<h3 class="panel-title fgrey4">971 | Supplementary Run</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-a-2-2">
+																	<div class="panel-body brnone">
+																		<div class="row">
+																			<div class="col-xs-12 col-md-10">
+																				<div class="multistep multistep-6">
+																					<div id="bar" class="progress">
+																						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+																					</div>
+																					<ul class="steps">
+																						<li class="step passed">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-upload"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Data In</span>
+																							<span class="step-desc">15 Feb 2017</span>
+																						</li>
+																						<li class="step active">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-clock-o"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Freeze</span>
+																							<span class="step-desc">Step 2</span>
+																						</li>
+																						<li class="step ">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-lock"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Payroll Locked</span>
+																							<span class="step-desc">Step 3</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-play"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Data Process</span>
+																							<span class="step-desc">Step 4</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-check"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Approval</span>
+																							<span class="step-desc">Step 5</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-calendar-check-o"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Close Payroll</span>
+																							<span class="step-desc">Step 6</span>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-xs-12 col-md-2" align="right">
+																				<a class="btn btn-icon-right btn-default mt20" href="#pane-3" type="button" data-toggle="tab">View Run <i class="fa fa-chevron-right"></i></a>
+																			</div>
+																		</div>
+						
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												<div class="row">
+														<div class="col-xs-12">
+															<div class="panel">
+																<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-a-2-3">
+																	<h3 class="panel-title fgrey4">971 | Bonus Run</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-a-2-3">
+																	<div class="panel-body brnone">
+																		<div class="row">
+																			<div class="col-xs-12 col-md-10">
+																				<div class="multistep multistep-6">
+																					<div id="bar" class="progress">
+																						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+																					</div>
+																					<ul class="steps">
+																						<li class="step active">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-upload"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Data In</span>
+																							<span class="step-desc">15 Feb 2017</span>
+																						</li>
+																						<li class="step ">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-clock-o"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Freeze</span>
+																							<span class="step-desc">Step 2</span>
+																						</li>
+																						<li class="step ">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-lock"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Payroll Locked</span>
+																							<span class="step-desc">Step 3</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-play"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Data Process</span>
+																							<span class="step-desc">Step 4</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-check"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Approval</span>
+																							<span class="step-desc">Step 5</span>
+																						</li>
+																						<li class="step">
+																							<span class="step-shape">
+																								<span class="step-icon">
+																									<i class="fa fa-calendar-check-o"></i>
+																								</span>
+																							</span>
+																							<span class="step-name">Close Payroll</span>
+																							<span class="step-desc">Step 6</span>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																			<div class="col-xs-12 col-md-2" align="right">
+																				<a class="btn btn-icon-right btn-default mt20" href="#pane-4" type="button" data-toggle="tab">View Run <i class="fa fa-chevron-right"></i></a>
+																			</div>
+																		</div>
+						
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane fade " id="pane-2">
+
+							<span class="pull-right">
+								<button class="btn btn-icon-left btn-default" type="button" data-toggle="dropdown"><i class="fa fa-play"></i> Process Payroll</button>
+							</span>
+
+							<h2>970 <small>Standard Main Run</small>
+							</h2>
+
+
+							<div class="multistep-wizard pt10">
+								<div class="multistep multistep-6">
+									<div id="bar" class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+									</div>
+									<ul class="steps">
+										<li class="step passed">
+											<span class="step-shape">
+												<span class="step-index">1</span>
+												<span class="step-icon">
+													<i class="fa fa-upload"></i>
+												</span>
+											</span>
+											<span class="step-name">Data In</span>
+											<span class="step-desc">15 Feb 2017</span>
+										</li>
+										<li class="step passed">
+											<span class="step-shape">
+												<span class="step-index">2</span>
+												<span class="step-icon">
+													<i class="fa fa-clock-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Freeze</span>
+											<span class="step-desc">Step 2</span>
+										</li>
+										<li class="step active">
+											<span class="step-shape">
+												<span class="step-index">3</span>
+												<span class="step-icon">
+													<i class="fa fa-lock"></i>
+												</span>
+											</span>
+											<span class="step-name">Payroll Locked</span>
+											<span class="step-desc">Step 3</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">4</span>
+												<span class="step-icon">
+													<i class="fa fa-play"></i>
+												</span>
+											</span>
+											<span class="step-name">Data Process</span>
+											<span class="step-desc">Step 4</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">5</span>
+												<span class="step-icon">
+													<i class="fa fa-check"></i>
+												</span>
+											</span>
+											<span class="step-name">Approval</span>
+											<span class="step-desc">Step 5</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+											<span class="step-index">6</span>
+												<span class="step-icon">
+													<i class="fa fa-calendar-check-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Close Payroll</span>
+											<span class="step-desc">Step 6</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-lg-7">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-1">
+											<h3 class="panel-title">RUN INFO</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-1">
+											<div class="panel-body">
+												<div class="row" style="display: inline-block; width: 100%;">
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN ID <a href="#"><i class="fa fa-gear add-margin-l"></i></a></div>
+														<div class="info-value">970 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN TYPE</div>
+														<div class="info-value">Standard Main Run </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PAY DATE </div>
+														<div class="info-value">15 Feb 2017 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PERIOD NUMBER</div>
+														<div class="info-value">2 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">EMPLOYEES ON RUN</div>
+														<div class="info-value">79 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">STATUS </div>
+														<div class="info-value"><span class="label label-default"><i class="fa fa-unlock"></i> Unlocked</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-secondary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-2">
+											<h3 class="panel-title">
+												PAYROLL PROGRESS
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-2">
+											<div class="panel-body">
+												<b>Data upload is restricted during Freeze Data period. </b>
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#pane-payprogress-1" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Input Data</span></a></li>
+													<li><a href="#pane-payprogress-2" data-toggle="tab">
+														<span class="badge">4</span> <span class="tab-title">Data on Demand</span></a></li>
+													<li><a href="#pane-payprogress-3" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Preprocessed Data</span></a></li>
+													<lI><a href="#pane-payprogress-4" data-toggle="tab">
+														<span class="badge">5</span> <span class="tab-title">Output Data</span></a></li>
+												</ul>
+							
+												<div class="tab-content">
+							
+													<div class="tab-pane fade active in" id="pane-payprogress-1">
+														<div class="row">
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-2-1">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> MASTER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-2-1">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-2-2">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT AND DEDUCTION DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-2-2">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-2-3">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT ELECTIVE DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-2-3">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-2-4">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> OTHER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-2-4">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="col-xs-12 col-lg-6">
+																<button class="btn btn-icon-left" type="button" data-toggle="dropdown"><i class="fa fa-pencil"></i> Edit Data In Categories</button>
+															</div>
+
+														</div>
+
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-2">
+														<h2>Data on Demand <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-3">
+														<h2>Preprocessed Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-4">
+														<h2>Output Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+									
+								<div class="col-xs-12 col-md-12 col-lg-5">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-3">
+											<h3 class="panel-title">
+												COLLABORATION
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-3">
+											<div class="panel-body">
+												
+												<div class="panel panel-clean">
+													<div class="panel-heading panel-collapse-indicate-right drop-padding-l" data-toggle="collapse" data-target="#example-bpanel-3-1" style="border-bottom: 1px solid #CCCCCC";>
+														<h3 class="panel-title fgrey3">INFO</h3>
+													</div>
+													<div class="panel-collapse collapse " id="example-bpanel-3-1">
+														<div class="panel-body pl5 pr5" style="border:0; line-height:1.7;">
+															<div class="row">
+																<div class="col-xs-6">COLLABORATE ID</div>
+																<div class="col-xs-6 txbold"><a href="#">229381</a></div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">STATUS</div>
+																<div class="col-xs-6 txbold">NEW</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">SERVICE TEAM MEMBER</div>
+																<div class="col-xs-6 txbold">-</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">COLLABORATORS</div>
+																<div class="col-xs-6 txbold">
+																	<a href="#">James Atkinson</a>
+																	<br>
+																	<a href="#">Bethlehem Ajin</a>
+																	<br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="tab-group">
+													<ul class="nav nav-tabs">
+														<li class="active"><a href="#pane-collab-1" data-toggle="tab"><span class="badge">3</span> <span class="tab-title">Customer</span></a></li>
+														<li><a href="#pane-collab-2" data-toggle="tab"><span class="badge">11</span> <span class="tab-title">Others</span> </a></li>
+													</ul>
+													<ul class="nav nav-tabs pull-right">
+														<li><button class="btn bgnone brnone" type="submit"><i class="fa fa-refresh"></i></button></li>
+													</ul>
+												</div>
+							
+												<div class="tab-content m0 pt10">
+							
+													<div class="tab-pane fade active in" id="pane-collab-1">
+
+														<div class="panel panel-clean mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l" data-toggle="collapse" data-target="#example-bpanel-3-2" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">COMMENTS</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-3-2">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<div class="collab-item">
+																		<div class="row">
+																			<div class="col-xs-6 collab-item-user">CloudPay Payroll</div>
+																			<div class="col-xs-6 collab-item-timestamp" align="right">2 Aug 2017 &nbsp; 18:29:41 </div>
+																		</div>
+																		<div class="row mt10">
+																			<div class="col-xs-12 collab-item-comment">
+																				<p>Bacon ipsum dolor amet flank landjaeger beef ribs, burgdoggen ham venison shankle tenderloin picanha. Venison swine jowl shankle chuck boudin. </p>
+																				<p>Hamburger doner short loin, turkey salami shankle cupim ham hock spare ribs pastrami burgdoggen biltong tri-tip bacon. Prosciutto pork loin shankle bresaola, beef ribs tri-tip brisket tail capicola andouille boudin burgdoggen turducken picanha. Pig pork kielbasa cupim kevin pancetta tail sausage short ribs jerky ribeye.</p>																				
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="collab-item">
+																		<div class="row">
+																			<div class="col-xs-6 collab-item-user">Jamiraquai James</div>
+																			<div class="col-xs-6 collab-item-timestamp" align="right">3 Aug 2017 &nbsp; 21:13:09 </div>
+																		</div>
+																		<div class="row mt10">
+																			<div class="col-xs-12 collab-item-comment">
+																				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam, inquit, modo? Quae cum essent dicta, discessimus. Duo Reges: constructio interrete. Non potes, nisi retexueris illa.</p>
+																					
+																			</div>
+																		</div>
+																	</div>
+
+																	<div class="collab-item">
+																		<div class="row">
+																			<div class="col-xs-6 collab-item-user">Scattman John</div>
+																			<div class="col-xs-6 collab-item-timestamp" align="right">4 Aug 2017 &nbsp; 8:10:00 </div>
+																		</div>
+																		<div class="row mt10">
+																			<div class="col-xs-12 collab-item-comment">
+																				<p>Papope parrappapa papapa pee porropee. Papope parrappapa papapa pee porropee. Papope parrappapa papope parrappapa papope parrappapa papapa pee porropee.</p>
+																					
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-clean mb0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-3-3" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">ADD NEW COMMENT</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-3-3">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<form>
+																		<div class="form-group mb0">
+																			<!--label for="exampleTextbox">Add new comment</label-->
+																			<textarea class="form-control" id="exampleTextbox" placeholder="Start typing comment..." rows="3"></textarea>
+																			<button class="btn btn-default mt10 mb0" type="submit">Submit</button>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="pane-collab-2">
+														<div class="panel mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-3-2" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">Others</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-3-2">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<table class="table">
+																			<thead>
+																				<tr>
+																					<th>Type</th>
+																					<th>Title</th>
+																					<th>Last Activity</th>
+																					<th>Comments</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>Service Collaboration<br><span class="label label-info">New</span></td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>2</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration<br><span class="label label-info">New</span></td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>1</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>5</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>6</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>5</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>4</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>6</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>7</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>12</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>21</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration</td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>2</td>
+																				</tr>
+																			</tbody>
+																			<!--tfoot>
+																				<tr>
+																					<td colspan="4">Total: 3 records</td>
+																				</tr>
+																			</tfoot-->
+																		</table>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-4">
+											<h3 class="panel-title">
+												Useful links
+											</h3>
+										</div>
+										<div class="panel-collapse collapse" id="example-bpanel-4">
+											<div class="panel-body" style="max-height: 200px; overflow: auto;">
+												<div class="row">
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>DOCUMENTS</b><br>
+														<a href="#">Input Documents</a><br>
+														<a href="#">Output Documents</a>
+													</div>
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>REPORTS</b><br>
+														<span class="opa50">SIGN-OFF REPORTS</span><br>
+														<a href="#">Cash Payments</a><br>
+														<a href="#">Cheque Payments</a><br>
+														<a href="#">General Ledger</a><br>
+														<a href="#">Gross to Net</a><br>
+														<a href="#">Payment Data Report</a><br>
+														<span class="opa50">RECONCILIATION REPORTS</span><br>
+														<a href="#">CPF Reconciliation Report</a><br>
+														<a href="#">Employee Payment Type Report</a><br>
+														<a href="#">Gross to Net Difference</a><br>
+														<a href="#">Payment Type Totals Report</a><br>
+														<a href="#">Payroll Exceptions Report</a><br>
+														<a href="#">Payroll Processing Status</a><br>
+														<a href="#">Payroll Totals</a><br>
+														<a href="#">Permanent Pay Elements</a><br>
+														<a href="#">Processed Temporary Payments and Deductions</a><br>
+														<a href="#">Processed Time-Based Payments & Deductio</a>
+													</div>
+
+												</div>
+												
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							
+						</div>
+						<div class="tab-pane fade" id="pane-3">
+						
+							<h2>971 <small>Supplementary Run</small>
+								<span class="dropdown pull-right">
+									<button class="btn btn-icon-left btn-default" type="button" data-toggle="dropdown"><i class="fa fa-lock"></i> Lock Payroll</button>
+								</span>
+							</h2>
+
+							<div class="multistep-wizard pt10">
+								<div class="multistep multistep-6">
+									<div id="bar" class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+									</div>
+									<ul class="steps">
+										<li class="step passed">
+											<span class="step-shape">
+												<span class="step-index">1</span>
+												<span class="step-icon">
+													<i class="fa fa-upload"></i>
+												</span>
+											</span>
+											<span class="step-name">Data In</span>
+											<span class="step-desc">15 Feb 2017</span>
+										</li>
+										<li class="step active">
+											<span class="step-shape">
+												<span class="step-index">2</span>
+												<span class="step-icon">
+													<i class="fa fa-clock-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Freeze</span>
+											<span class="step-desc">Step 2</span>
+										</li>
+										<li class="step ">
+											<span class="step-shape">
+												<span class="step-index">3</span>
+												<span class="step-icon">
+													<i class="fa fa-lock"></i>
+												</span>
+											</span>
+											<span class="step-name">Payroll Locked</span>
+											<span class="step-desc">Step 3</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">4</span>
+												<span class="step-icon">
+													<i class="fa fa-play"></i>
+												</span>
+											</span>
+											<span class="step-name">Data Process</span>
+											<span class="step-desc">Step 4</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">5</span>
+												<span class="step-icon">
+													<i class="fa fa-check"></i>
+												</span>
+											</span>
+											<span class="step-name">Approval</span>
+											<span class="step-desc">Step 5</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+											<span class="step-index">6</span>
+												<span class="step-icon">
+													<i class="fa fa-calendar-check-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Close Payroll</span>
+											<span class="step-desc">Step 6</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-lg-7">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-c-1">
+											<h3 class="panel-title">RUN INFO</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-c-1">
+											<div class="panel-body">
+												<div class="row" style="display: inline-block; width: 100%;">
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN ID <a href="#"><i class="fa fa-gear add-margin-l"></i></a></div>
+														<div class="info-value">970 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN TYPE</div>
+														<div class="info-value">Standard Main Run </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PAY DATE </div>
+														<div class="info-value">15 Feb 2017 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PERIOD NUMBER</div>
+														<div class="info-value">2 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">EMPLOYEES ON RUN</div>
+														<div class="info-value">79 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">STATUS </div>
+														<div class="info-value"><span class="label label-default"><i class="fa fa-unlock"></i> Unlocked</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-secondary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-c-2">
+											<h3 class="panel-title">
+												PAYROLL PROGRESS
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-c-2">
+											<div class="panel-body">
+												<b>Data upload is restricted during Freeze Data period. </b>
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#pane-payprogress-c-1" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Input Data</span></a></li>
+													<li><a href="#pane-payprogress-c-2" data-toggle="tab">
+														<span class="badge">4</span> <span class="tab-title">Data on Demand</span></a></li>
+													<li><a href="#pane-payprogress-c-3" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Preprocessed Data</span></a></li>
+													<lI><a href="#pane-payprogress-c-4" data-toggle="tab">
+														<span class="badge">5</span> <span class="tab-title">Output Data</span></a></li>
+												</ul>
+							
+												<div class="tab-content">
+							
+													<div class="tab-pane fade active in" id="pane-payprogress-c-1">
+														<div class="row">
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-c-2-1">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> MASTER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-c-2-1">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-c-2-2">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT AND DEDUCTION DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-c-2-2">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-c-2-3">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT ELECTIVE DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-c-2-3">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-c-2-4">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> OTHER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-c-2-4">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="col-xs-12 col-lg-6">
+																<button class="btn btn-icon-left" type="button" data-toggle="dropdown"><i class="fa fa-pencil"></i> Edit Data In Categories</button>
+															</div>
+
+														</div>
+
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-c-2">
+														<h2>Data on Demand <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-c-3">
+														<h2>Preprocessed Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-c-4">
+														<h2>Output Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+									
+								<div class="col-xs-12 col-md-12 col-lg-5">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-c-3">
+											<h3 class="panel-title">
+												COLLABORATION
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-c-3">
+											<div class="panel-body">
+												
+												<div class="panel panel-clean">
+													<div class="panel-heading panel-collapse-indicate-right drop-padding-l" data-toggle="collapse" data-target="#example-bpanel-c-3-1" style="border-bottom: 1px solid #CCCCCC";>
+														<h3 class="panel-title fgrey3">INFO</h3>
+													</div>
+													<div class="panel-collapse collapse " id="example-bpanel-c-3-1">
+														<div class="panel-body pl5 pr5" style="border:0; line-height:1.7;">
+															<div class="row">
+																<div class="col-xs-6">COLLABORATE ID</div>
+																<div class="col-xs-6 txbold"><a href="#">229381</a></div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">STATUS</div>
+																<div class="col-xs-6 txbold">NEW</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">SERVICE TEAM MEMBER</div>
+																<div class="col-xs-6 txbold">-</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">COLLABORATORS</div>
+																<div class="col-xs-6 txbold">
+																	<a href="#">James Atkinson</a>
+																	<br>
+																	<a href="#">Bethlehem Ajin</a>
+																	<br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="tab-group">
+													<ul class="nav nav-tabs">
+														<li class="active"><a href="#pane-collab-c-1" data-toggle="tab"><span class="badge">1</span> <span class="tab-title">Customer</span></a></li>
+														<li><a href="#pane-collab-c-2" data-toggle="tab"><span class="badge">2</span> <span class="tab-title">Others</span> </a></li>
+													</ul>
+													<ul class="nav nav-tabs pull-right">
+														<li><button class="btn bgnone brnone" type="submit"><i class="fa fa-refresh"></i></button></li>
+													</ul>
+												</div>
+							
+												<div class="tab-content m0 pt10">
+							
+													<div class="tab-pane fade active in" id="pane-collab-c-1">
+
+														<div class="panel panel-clean mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-c-3-2" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">COMMENTS</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-c-3-2">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<div class="collab-item">
+																		<div class="row">
+																			<div class="col-xs-6 collab-item-user">CloudPay Payroll</div>
+																			<div class="col-xs-6 collab-item-timestamp" align="right">2 Aug 2017 &nbsp; 18:29:41 </div>
+																		</div>
+																		<div class="row mt10">
+																			<div class="col-xs-12 collab-item-comment">
+																				<p>Bacon ipsum dolor amet flank landjaeger beef ribs, burgdoggen ham venison shankle tenderloin picanha. Venison swine jowl shankle chuck boudin. </p>
+																				<p>Hamburger doner short loin, turkey salami shankle cupim ham hock spare ribs pastrami burgdoggen biltong tri-tip bacon. Prosciutto pork loin shankle bresaola, beef ribs tri-tip brisket tail capicola andouille boudin burgdoggen turducken picanha. Pig pork kielbasa cupim kevin pancetta tail sausage short ribs jerky ribeye.</p>																				
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-clean mb0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-c-3-3" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">ADD NEW COMMENT</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-c-3-3">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<form>
+																		<div class="form-group mb0">
+																			<!--label for="exampleTextbox">Add new comment</label-->
+																			<textarea class="form-control" id="exampleTextbox" placeholder="Start typing comment..." rows="3"></textarea>
+																			<button class="btn btn-default mt10 mb0" type="submit">Submit</button>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="pane-collab-c-2">
+														<div class="panel mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-c-3-4" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">Others</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-c-3-4">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<table class="table">
+																			<thead>
+																				<tr>
+																					<th>Type</th>
+																					<th>Title</th>
+																					<th>Last Activity</th>
+																					<th>Comments</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>Service Collaboration<br><span class="label label-info">New</span></td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>2</td>
+																				</tr>
+																				<tr>
+																					<td>Service Collaboration<br><span class="label label-info">New</span></td>
+																					<td><a href="#">(#22653) Service for SHX025</a></td>
+																					<td>25 Jul 2017 8:02:03</td>
+																					<td>1</td>
+																				</tr>
+																			</tbody>
+																			<!--tfoot>
+																				<tr>
+																					<td colspan="4">Total: 3 records</td>
+																				</tr>
+																			</tfoot-->
+																		</table>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-c-4">
+											<h3 class="panel-title">
+												Useful links
+											</h3>
+										</div>
+										<div class="panel-collapse collapse" id="example-bpanel-c-4">
+											<div class="panel-body" style="max-height: 200px; overflow: auto;">
+												<div class="row">
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>DOCUMENTS</b><br>
+														<a href="#">Input Documents</a><br>
+														<a href="#">Output Documents</a>
+													</div>
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>REPORTS</b><br>
+														<span class="opa50">SIGN-OFF REPORTS</span><br>
+														<a href="#">Cash Payments</a><br>
+														<a href="#">Cheque Payments</a><br>
+														<a href="#">General Ledger</a><br>
+														<a href="#">Gross to Net</a><br>
+														<a href="#">Payment Data Report</a><br>
+														<span class="opa50">RECONCILIATION REPORTS</span><br>
+														<a href="#">CPF Reconciliation Report</a><br>
+														<a href="#">Employee Payment Type Report</a><br>
+														<a href="#">Gross to Net Difference</a><br>
+														<a href="#">Payment Type Totals Report</a><br>
+														<a href="#">Payroll Exceptions Report</a><br>
+														<a href="#">Payroll Processing Status</a><br>
+														<a href="#">Payroll Totals</a><br>
+														<a href="#">Permanent Pay Elements</a><br>
+														<a href="#">Processed Temporary Payments and Deductions</a><br>
+														<a href="#">Processed Time-Based Payments & Deductio</a>
+													</div>
+
+												</div>
+												
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane fade" id="pane-4">
+
+							<h2>972 <small>Bonus Run</small>
+								<span class="pull-right">
+									<div class="alert alert-warning alert-icon ">
+										<p class="">Data Freeze starts at <b>15 August 2017</b>, 12:00:01 AM.</p>
+									</div>
+									<!--button class="btn btn-icon-left btn-default" type="button" data-toggle="dropdown"><i class="fa fa-lock"></i> Lock Payroll</button-->
+								</span>
+							</h2>
+
+							<div class="multistep-wizard pt10">
+								<div class="multistep multistep-6">
+									<div id="bar" class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+									</div>
+									<ul class="steps">
+										<li class="step active">
+											<span class="step-shape">
+												<span class="step-index">1</span>
+												<span class="step-icon">
+													<i class="fa fa-upload"></i>
+												</span>
+											</span>
+											<span class="step-name">Data In</span>
+											<span class="step-desc">15 Feb 2017</span>
+										</li>
+										<li class="step ">
+											<span class="step-shape">
+												<span class="step-index">2</span>
+												<span class="step-icon">
+													<i class="fa fa-clock-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Freeze</span>
+											<span class="step-desc">Step 2</span>
+										</li>
+										<li class="step ">
+											<span class="step-shape">
+												<span class="step-index">3</span>
+												<span class="step-icon">
+													<i class="fa fa-lock"></i>
+												</span>
+											</span>
+											<span class="step-name">Payroll Locked</span>
+											<span class="step-desc">Step 3</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">4</span>
+												<span class="step-icon">
+													<i class="fa fa-play"></i>
+												</span>
+											</span>
+											<span class="step-name">Data Process</span>
+											<span class="step-desc">Step 4</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+												<span class="step-index">5</span>
+												<span class="step-icon">
+													<i class="fa fa-check"></i>
+												</span>
+											</span>
+											<span class="step-name">Approval</span>
+											<span class="step-desc">Step 5</span>
+										</li>
+										<li class="step">
+											<span class="step-shape">
+											<span class="step-index">6</span>
+												<span class="step-icon">
+													<i class="fa fa-calendar-check-o"></i>
+												</span>
+											</span>
+											<span class="step-name">Close Payroll</span>
+											<span class="step-desc">Step 6</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-lg-7">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-d-1">
+											<h3 class="panel-title">RUN INFO</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-d-1">
+											<div class="panel-body">
+												<div class="row" style="display: inline-block; width: 100%;">
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN ID <a href="#"><i class="fa fa-gear add-margin-l"></i></a></div>
+														<div class="info-value">970 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">RUN TYPE</div>
+														<div class="info-value">Standard Main Run </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PAY DATE </div>
+														<div class="info-value">15 Feb 2017 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">PERIOD NUMBER</div>
+														<div class="info-value">2 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">EMPLOYEES ON RUN</div>
+														<div class="info-value">79 </div>
+													</div>
+													<div class="info-bits col-xs-3">
+														<div class="info-label">STATUS </div>
+														<div class="info-value"><span class="label label-default"><i class="fa fa-unlock"></i> Unlocked</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-secondary">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-d-2">
+											<h3 class="panel-title">
+												PAYROLL PROGRESS
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-d-2">
+											<div class="panel-body">
+												<b>Data upload is restricted during Freeze Data period. </b>
+												<ul class="nav nav-tabs">
+													<li class="active"><a href="#pane-payprogress-d-1" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Input Data</span></a></li>
+													<li><a href="#pane-payprogress-d-2" data-toggle="tab">
+														<span class="badge">4</span> <span class="tab-title">Data on Demand</span></a></li>
+													<li><a href="#pane-payprogress-d-3" data-toggle="tab">
+														<span class="badge">12</span> <span class="tab-title">Preprocessed Data</span></a></li>
+													<lI><a href="#pane-payprogress-d-4" data-toggle="tab">
+														<span class="badge">5</span> <span class="tab-title">Output Data</span></a></li>
+												</ul>
+							
+												<div class="tab-content">
+							
+													<div class="tab-pane fade active in" id="pane-payprogress-d-1">
+														<div class="row">
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-d-2-1">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> MASTER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-d-2-1">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-d-2-2">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT AND DEDUCTION DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-d-2-2">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-d-2-3">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> PAYMENT ELECTIVE DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-d-2-3">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-xs-12 panel panel-default">
+																<div class="panel-heading panel-collapse-indicate-right bgblue" data-toggle="collapse" data-target="#example-bpanel-d-2-4">
+																	<h3 class="panel-title"><!--span class="badge mr5">2</span--> OTHER DATA</h3>
+																</div>
+																<div class="panel-collapse collapse in" id="example-bpanel-d-2-4">
+																	<div class="panel-body upload-frame">
+																		<div class="row upload-icon">
+																			<div class="col-xs-12" align="center">
+																					<i class="fa fa-upload fz40"></i>
+																			</div>
+																		</div>
+																		<div class="row upload-links">
+																			<div class=" col-xs-6">
+																				Drag and drop files here or <a href="#">select file</a>.
+																			</div>
+																			<div class="col-xs-6" align="right">
+																				<a href="#">Link data from Document Manager <i class="fa fa-external-link-square"></i></a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="col-xs-12 col-lg-6">
+																<button class="btn btn-icon-left" type="button" data-toggle="dropdown"><i class="fa fa-pencil"></i> Edit Data In Categories</button>
+															</div>
+
+														</div>
+
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-d-2">
+														<h2>Data on Demand <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-d-3">
+														<h2>Preprocessed Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+													<div class="tab-pane fade" id="pane-payprogress-d-4">
+														<h2>Output Data <small>Input Data</small></h2>
+														<p>Description</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+									
+								<div class="col-xs-12 col-md-12 col-lg-5">
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-d-3">
+											<h3 class="panel-title">
+												COLLABORATION
+											</h3>
+										</div>
+										<div class="panel-collapse collapse in" id="example-bpanel-d-3">
+											<div class="panel-body">
+												
+												<div class="panel panel-clean">
+													<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-d-3-1" style="border-bottom: 1px solid #CCCCCC";>
+														<h3 class="panel-title fgrey3">INFO</h3>
+													</div>
+													<div class="panel-collapse collapse active in" id="example-bpanel-d-3-1">
+														<div class="panel-body pl5 pr5" style="border:0; line-height:1.7;">
+															<div class="row">
+																<div class="col-xs-6">COLLABORATE ID</div>
+																<div class="col-xs-6 txbold"><a href="#">229381</a></div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">STATUS</div>
+																<div class="col-xs-6 txbold">NEW</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">SERVICE TEAM MEMBER</div>
+																<div class="col-xs-6 txbold">-</div>
+															</div>
+															<div class="row">
+																<div class="col-xs-6">COLLABORATORS</div>
+																<div class="col-xs-6 txbold">
+																	<a href="#">James Atkinson</a>
+																	<br>
+																	<a href="#">Bethlehem Ajin</a>
+																	<br>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="tab-group">
+													<ul class="nav nav-tabs">
+														<li class="active"><a href="#pane-collab-d-1" data-toggle="tab"><!--span class="badge">3</span--> <span class="tab-title">Customer</span></a></li>
+														<li><a href="#pane-collab-d-2" data-toggle="tab"><!--span class="badge">11</span--> <span class="tab-title">Others</span> </a></li>
+													</ul>
+													<ul class="nav nav-tabs pull-right">
+														<li><button class="btn bgnone brnone" type="submit"><i class="fa fa-refresh"></i></button></li>
+													</ul>
+												</div>
+							
+												<div class="tab-content m0 pt10">
+							
+													<div class="tab-pane fade active in" id="pane-collab-d-1">
+
+														<div class="panel panel-clean mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-d-3-2" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">COMMENTS</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-d-3-2">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<i>- No comments yet. -</i>
+																</div>
+															</div>
+														</div>
+
+														<div class="panel panel-clean mb0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l " data-toggle="collapse" data-target="#example-bpanel-d-3-3" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">ADD NEW COMMENT</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-d-3-3">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<form>
+																		<div class="form-group mb0">
+																			<!--label for="exampleTextbox">Add new comment</label-->
+																			<textarea class="form-control" id="exampleTextbox" placeholder="Start typing comment..." rows="3"></textarea>
+																			<button class="btn btn-default mt10 mb0" type="submit">Submit</button>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="pane-collab-d-2">
+														<div class="panel mb0 mt0">
+															<div class="panel-heading panel-collapse-indicate-right drop-padding-l bgnone" data-toggle="collapse" data-target="#example-bpanel-d-3-4" style="border-bottom: 1px solid #CCCCCC";>
+																<h3 class="panel-title fgrey3">Others</h3>
+															</div>
+															<div class="panel-collapse collapse active in" id="example-bpanel-d-3-4">
+																<div class="panel-body pl5 pr5" style="border:0;">
+																	<i>- No entries yet. -</i>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div class="panel panel-default">
+										<div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-d-4">
+											<h3 class="panel-title">
+												Useful links
+											</h3>
+										</div>
+										<div class="panel-collapse collapse" id="example-bpanel-d-4">
+											<div class="panel-body" style="max-height: 200px; overflow: auto;">
+												<div class="row">
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>DOCUMENTS</b><br>
+														<a href="#">Input Documents</a><br>
+														<a href="#">Output Documents</a>
+													</div>
+													<div class="col-xs-6" style="line-height: 1.7;">
+														<b>REPORTS</b><br>
+														<span class="opa50">SIGN-OFF REPORTS</span><br>
+														<a href="#">Cash Payments</a><br>
+														<a href="#">Cheque Payments</a><br>
+														<a href="#">General Ledger</a><br>
+														<a href="#">Gross to Net</a><br>
+														<a href="#">Payment Data Report</a><br>
+														<span class="opa50">RECONCILIATION REPORTS</span><br>
+														<a href="#">CPF Reconciliation Report</a><br>
+														<a href="#">Employee Payment Type Report</a><br>
+														<a href="#">Gross to Net Difference</a><br>
+														<a href="#">Payment Type Totals Report</a><br>
+														<a href="#">Payroll Exceptions Report</a><br>
+														<a href="#">Payroll Processing Status</a><br>
+														<a href="#">Payroll Totals</a><br>
+														<a href="#">Permanent Pay Elements</a><br>
+														<a href="#">Processed Temporary Payments and Deductions</a><br>
+														<a href="#">Processed Time-Based Payments & Deductio</a>
+													</div>
+
+												</div>
+												
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<div class="tab-pane fade" id="pane-5">
+
+							<h2>Statutory Filing <!--small>Overview</small--></h2>
+							<div class="panel">
+								<div class="panel-heading panel-collapse-indicate-right drop-padding-l" data-toggle="collapse" data-target="#example-bpanel-e">
+									<h3 class="panel-title fblue">Statutory Filing Overview</h3>
+								</div>
+								<div class="panel-collapse collapse in" id="example-bpanel-e">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-xs-12" style="vertical-align: middle;">
+												<div class="row pt20">
+													<div class="balance-item col-xs-4" align="center">
+														<label>ACTIONS TO DO</label>
+														<span class="balance-number bigger-2 forange">4</span>
+													</div>
+													<div class="balance-item col-xs-4" align="center">
+														<label>ACTIONS COMPLETED</label>
+														<span class="balance-number bigger-2 fgreen">6</span>
+													</div>
+													<div class="balance-item col-xs-4" align="center">
+														<label>OPEN ISSUES</label>
+														<span class="balance-number bigger-2 fskyblue">8</span>
+													</div>
+												</div>
+
+
+
+												
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="row mt10">
+									<div class="col-xs-8">
+										<span class="mr20">TAX YEAR <b class="ml5 fblue">2017</b></span> <span class="mr20">PERIOD <b class="ml5 fblue">ALL</b></span><a class="btn btn-small btn-default" href="#">Change</a>
+									</div>
+									<div class="col-xs-4" align="right">
+										<span class="mr10">STATUS</span> <input id="priority" value="">
+									</div>
+								</div>
+								<div class="mt10">
+									<table id="grid" class="table head-row-flat body-row-flat">
+										<colgroup>
+											<col style="width:75px" />
+											<col style="width:20%" />
+											<col style="width:90px" />
+											<col style="width:60px" />
+											<col style="width:80px" />
+											<col style="width:110px" />
+											<col style="" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>REQUIRED</th>
+												<th>FILING NAME</th>
+												<th>FREQUENCY</th>
+												<th>PERIOD</th>
+												<th>QUANTITY</th>
+												<th>STATUS</th>
+												<th>FILING ACTIVITIES</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch" class="switch-checkbox" id="myswitch" checked><label class="switch-label" for="myswitch"></label></div></td>
+												<td>FPS Submission <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>12</td>
+												<td>3</td>
+												<td>4</td>
+												<td><i class="fa fa-arrow-circle-right fz16 forange"></i> In-Progress</td>
+												<td>
+													<a class="btn btn-small btn-undone btn-icon-left mr5 mb5"><i class="fa fa-edit"></i>Generation</a>
+													<a class="btn btn-small btn-undone btn-icon-left mr5 mb5"><i class="fa fa-download"></i>Submission</a>
+													<a class="btn btn-small btn-undone btn-icon-left mr5 mb5"><i class="fa fa-dollar"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-2" class="switch-checkbox" id="myswitch-2" checked><label class="switch-label" for="myswitch-2"></label></div></td>
+												<td>EPS Submission <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>16</td>
+												<td>5</td>
+												<td>6</td>
+												<td><i class="fa fa-check-circle fz16 fgreen"></i> Completed</td>
+												<td>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Generation</a>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Submission</a>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-3" class="switch-checkbox" id="myswitch-3"><label class="switch-label" for="myswitch-3"></label></div></td>
+												<td>J829SKDU23D <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>22</td>
+												<td>1</td>
+												<td>1</td>
+												<td><i class="fa fa-exclamation-circle fz16 fred"></i> Incomplete</td>
+												<td>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-edit"></i>Generation</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-download"></i>Submission</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-dollar"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-4" class="switch-checkbox" id="myswitch-4" checked><label class="switch-label" for="myswitch-4"></label></div></td>
+												<td>EFG's Filing <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>12</td>
+												<td>1</td>
+												<td>9</td>
+												<td><i class="fa fa-check-circle fz16 fgreen"></i> Completed</td>
+												<td>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Generation</a>
+													<a class="btn btn-small btn-undone btn-icon-left mr5 mb5"><i class="fa fa-download"></i>Submission</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-dollar"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-2" class="switch-checkbox" id="myswitch-2" checked><label class="switch-label" for="myswitch-2"></label></div></td>
+												<td>EPS Submission <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>16</td>
+												<td>5</td>
+												<td>6</td>
+												<td><i class="fa fa-check-circle fz16 fgreen"></i> Completed</td>
+												<td>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Generation</a>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Submission</a>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-3" class="switch-checkbox" id="myswitch-3"><label class="switch-label" for="myswitch-3"></label></div></td>
+												<td>J829SKDU23D <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>22</td>
+												<td>1</td>
+												<td>1</td>
+												<td><i class="fa fa-exclamation-circle fz16 fred"></i> Incomplete</td>
+												<td>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-edit"></i>Generation</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-download"></i>Submission</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-dollar"></i>Payment</a>
+												</td>
+											</tr>
+											<tr>
+												<td><div class="switch"><input type="checkbox" name="switch-4" class="switch-checkbox" id="myswitch-4" checked><label class="switch-label" for="myswitch-4"></label></div></td>
+												<td>EFG's Filing <i class="fa fa-info-circle fz14 fgrey3 ml5"></i></td>
+												<td>12</td>
+												<td>1</td>
+												<td>9</td>
+												<td><i class="fa fa-check-circle fz16 fgreen"></i> Completed</td>
+												<td>
+													<a class="btn btn-small btn-green btn-icon-left mr5 mb5"><i class="fa fa-check"></i>Generation</a>
+													<a class="btn btn-small btn-undone btn-icon-left mr5 mb5"><i class="fa fa-download"></i>Submission</a>
+													<a class="btn btn-small btn-undone disabled btn-icon-left mr5 mb5"><i class="fa fa-dollar"></i>Payment</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+							</div>	
+
+						</div>
+						<div class="tab-pane fade" id="pane-6">
+
+							<h2>Collaborate <!--small>Overview</small--></h2>
+							<table id="grid-2" class="table head-row-flat body-row-flat">
+								<colgroup>
+									<col style="width:60px" />
+									<col style="width:15%" />
+									<col style="width:35%" />
+									<col style="width:130px" />
+									<col style="width:130px" />
+									<col style="width:50px" />
+									<col style="width:50px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>COLLABORATE TYPE</th>
+										<th>COLLABORATE TITLE</th>
+										<th>DATE CREATED</th>
+										<th>LAST ACTIVITY</th>
+										<th>STATUS</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">12346</a></td>
+										<td>Payroll Collaboration</td>
+										<td>WIL004 | 3001540 | 3004011 | 2016-9 | SG | Standard Main Run | Customer</td>
+										<td>31 Oct 2017 5:22:14 AM</td>
+										<td>31 Oct 2017 5:22:31 AM</td>
+										<td><b>NEW</b></td>
+										<td>
+											<a class="btn btn-small" href="">View</a>
+										</td>
+									</tr>
+									<tr>
+										<td><a href="#">12345</a></td>
+										<td>Payroll Collaboration</td>
+										<td>WIL004 | 3001540 | 3004011 | 2016-9 | SG | Standard Main Run | Customer</td>
+										<td>30 Oct 2017 3:48:27 AM</td>
+										<td>30 Oct 2017 3:48:29 AM</td>
+										<td><b>NEW</b></td>
+										<td>
+											<a class="btn btn-small" href="">View</a>
+										</td>
+									</tr>
+									<tr>
+										<td><a href="#">12344</a></td>
+										<td>Payroll Collaboration</td>
+										<td>WIL004 | 3001540 | 3004011 | 2016-9 | SG | Standard Main Run | Customer</td>
+										<td>29 Oct 2017 1:21:52 AM</td>
+										<td>29 Oct 2017 4:10:32 AM</td>
+										<td><b>NEW</b></td>
+										<td>
+											<a class="btn btn-small" href="">View</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+            </div>
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+<script>
+	$(document).ready(function() {
+		// define the data used for the list
+		var data = [
+			{ text: "ALL",      value: "",                  iconClass: "" },
+			{ text: "Completed",    value: "status_completed",    iconClass: "fa-check-circle color-success" },
+			{ text: "In-progress",    value: "status_inp-rogress",    iconClass: "fa-arrow-circle-right color-warning" },
+			{ text: "Incomplete",    value: "status_incompleted",    iconClass: "fa-exclamation-circle color-danger" }
+		];
+		// create DropDownList from input HTML element
+		$("#priority").kendoDropDownList({
+			dataSource      : data,
+			dataTextField   : "text",
+			dataValueField  : "value",
+			valueTemplate   : kendo.template($("#priority-options-template").html()),
+			template        : kendo.template($("#priority-options-template").html())
+		});
+		var color = $("#priority").data("kendoDropDownList");
+	});
+</script>
+<script id="priority-options-template" type="text/x-kendo-template">
+	# if (data.iconClass) { #
+		<i class="fa #: data.iconClass # add-margin-r icon-larger"></i> #: data.text #
+	# } else { #
+		#: data.text #
+	# } #
+</script>
+<script>
+	$(document).ready(function() {
+		$("#grid").kendoGrid({
+			//height: 360,
+			scrollable: false,
+			sortable: true
+		});
+	});
+</script>
+
+</body>
+</html>`

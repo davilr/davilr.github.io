@@ -1,0 +1,370 @@
+/*=============================================
+ * Multistep
+ *============================================*/
+.multistep .steps:before, .multistep .step:before, .multistep .steps:after, .multistep .step:after {
+  content: "";
+  display: table; }
+
+.multistep .steps:after, .multistep .step:after {
+  clear: both; }
+
+.multistep .step-shape .step-icon, .multistep .passed .step-shape,
+.multistep .active .step-shape, .multistep .active .step-shape .step-icon, .multistep .active .step-name,
+.multistep .active .step-desc {
+  transition: all 0.15s ease-in 0.25s; }
+
+.multistep .step-shape, .multistep .step-name,
+.multistep .step-desc {
+  transition: all 0.15s ease-in; }
+
+.multistep .step-shape .step-icon, .multistep .step-name,
+.multistep .step-desc, .multistep-wizard .multistep .step-shape .step-index {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/**************************************************
+Multistep
+
+_Multipstep_ is used to represent the present step in a series of steps.
+
+It uses `.multistep` in combination with a mandatory companion selector, 
+`.multistep-n` (where n is a number 2 through 10, representing number of total steps).
+The `.multistep-n` selector is used to adjust the display of the _multistep_ component 
+and must correspond to the actual number of steps.
+
+Dependencies:
+- scss:base:tabs
+- scss:base:progress
+
+markup:
+<div class="multistep multistep-3">
+    <!-- progress bar -->
+    <div id="bar" class="progress">
+        <!-- the current progress is controlled via inline style as with Bootstrap -->
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+    </div>
+    <!-- steps -->
+    <ul class="steps">
+        <li class="passed">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-upload"></i>
+                    </span>
+                </span>
+                <span class="step-name">Data In</span>
+                <span class="step-desc">15 Feb 2017</span>
+            </span>
+        </li>
+        <li class="passed">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-clock-o"></i>
+                    </span>
+                </span>
+                <span class="step-name">Freeze</span>
+                <span class="step-desc">Step 2</span>
+            </span>
+        </li>
+        <li class="active">
+            <span class="step">
+                <span class="step-shape">
+                    <span class="step-icon">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </span>
+                <span class="step-name">Payroll Locked</span>
+                <span class="step-desc">Step 3</span>
+            </span>
+        </li>
+    </ul>
+</div>        
+
+**************************************************/
+.multistep-2 .steps > li {
+  width: 50%; }
+
+.multistep-2 > .progress {
+  left: 25%;
+  width: 50%; }
+
+.multistep-3 .steps > li {
+  width: 33%; }
+
+.multistep-3 > .progress {
+  left: 16%;
+  width: 66%; }
+
+.multistep-4 .steps > li {
+  width: 25%; }
+
+.multistep-4 > .progress {
+  left: 12%;
+  width: 75%; }
+
+.multistep-5 .steps > li {
+  width: 20%; }
+
+.multistep-5 > .progress {
+  left: 10%;
+  width: 80%; }
+
+.multistep-6 .steps > li {
+  width: 16%; }
+
+.multistep-6 > .progress {
+  left: 8%;
+  width: 80%; }
+
+.multistep-7 .steps > li {
+  width: 14%; }
+
+.multistep-7 > .progress {
+  left: 7%;
+  width: 84%; }
+
+.multistep-8 .steps > li {
+  width: 12%; }
+
+.multistep-8 > .progress {
+  left: 6%;
+  width: 84%; }
+
+.multistep-9 .steps > li {
+  width: 11%; }
+
+.multistep-9 > .progress {
+  left: 5%;
+  width: 88%; }
+
+.multistep-10 .steps > li {
+  width: 10%; }
+
+.multistep-10 > .progress {
+  left: 5%;
+  width: 90%; }
+
+.multistep {
+  position: relative;
+  font-size: 13px;
+  background-color: #fff;
+  margin-bottom: 20px; }
+  .multistep > .progress {
+    position: absolute;
+    top: 28.5px;
+    height: 3px;
+    background-color: #cccccc;
+    box-shadow: none; }
+    .multistep > .progress .progress-bar {
+      background-color: #f59a3f;
+      box-shadow: none; }
+  .multistep .steps {
+    position: relative;
+    padding: 0;
+    margin: 0 0 20px; }
+    .multistep .steps > li {
+      text-align: center;
+      display: inline-block;
+      float: left;
+      background-color: transparent; }
+    .multistep .steps a:hover, .multistep .steps a:focus, .multistep .steps a:active {
+      text-decoration: none; }
+  .multistep .step {
+    display: inline-block;
+    max-width: 100%; }
+  .multistep .step a {
+    cursor: not-allowed; }
+  .multistep .step-shape {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: #cccccc;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 50%;
+    color: #fff;
+    transform: scale(0.25, 0.25); }
+    .multistep .step-shape .step-icon {
+      font-size: 24px;
+      line-height: 58px;
+      opacity: 0; }
+      .multistep .step-shape .step-icon .fa {
+        line-height: inherit; }
+    .multistep .step-shape .step-index ~ .step-icon {
+      line-height: 1; }
+  .multistep .step-name,
+  .multistep .step-desc {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0.5em; }
+  .multistep .step-name {
+    font-size: 0.9em;
+    color: #cccccc;
+    margin-top: -9px; }
+  .multistep .step-desc {
+    font-size: 0.85em;
+    color: #cccccc; }
+
+.multistep .passed.step a,
+.multistep .active.step a {
+  cursor: pointer; }
+
+.multistep .passed .step-shape {
+  background-color: #f59a3f;
+  border-color: #f59a3f; }
+
+.multistep .active .step-shape {
+  background-color: #f59a3f;
+  border-color: #f59a3f;
+  box-shadow: 0 0 3px rgba(245, 154, 63, 0.5);
+  transform: scale(0.5, 0.5); }
+  .multistep .active .step-shape .step-icon {
+    opacity: 1; }
+
+.multistep .active .step-name {
+  color: #f59a3f; }
+
+.multistep .active .step-desc {
+  color: #67686b; }
+
+/**************************************************
+Multistep Wizard
+
+_Multipstep Wizard_ is to guide users through a series of steps (of operations).
+
+It uses `.multistep-wizard` for housing a _multistep_ and _tab panes_ to render a 
+step-by-step dynamic wizard.
+
+Dependencies:
+- scss:base:multistep
+- scss:base:tabs
+- scss:base:progress
+- js:feature:cp-wizard
+
+markup:
+<div id="my-timeline-wizard" class="multistep-wizard">
+    <!-- multistep -->
+    <div class="multistep multistep-3">
+        <!-- progress bar -->
+        <div id="bar" class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+        </div>
+        <!-- steps -->
+        <ul class="steps">
+            <li>
+                <a href="#cp-t-tab1" data-toggle="tab" class="step">
+                    <span class="step-shape">
+                        <span class="step-icon">
+                            <i class="fa fa-upload"></i>
+                        </span>
+                    </span>
+                    <span class="step-name">Data In</span>
+                    <span class="step-desc">15 Feb 2017</span>
+                </a>
+            </li>
+            <li>
+                <a href="#cp-t-tab2" data-toggle="tab" class="step">
+                    <span class="step-shape">
+                    <span class="step-icon">
+                            <i class="fa fa-clock-o"></i>
+                        </span>
+                    </span>
+                    <span class="step-name">Freeze</span>
+                    <span class="step-desc">Step 2</span>
+                </a>
+            </li>
+            <li>
+                <a href="#cp-t-tab3" data-toggle="tab" class="step">
+                    <span class="step-shape">
+                    <span class="step-icon">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </span>
+                    <span class="step-name">Payroll Locked</span>
+                    <span class="step-desc">Step 3</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane" id="cp-t-tab1">
+            <p><b>Step 1</b> - Data comes in...</p>
+        </div>
+        <div class="tab-pane" id="cp-t-tab2">
+            <p><b>Step 2</b> - Display data snapshot. No more changes.</p>
+        </div>
+        <div class="tab-pane" id="cp-t-tab3">
+            <p><b>Step 3</b> - Show the state of payroll.</p>
+        </div>
+    </div>
+    <ul class="pager wizard">
+        <li class="previous first" style="display:none;">
+            <a href="javascript:void(0);">First</a>
+        </li>
+        <li class="previous">
+            <a href="javascript:void(0);">Previous</a>
+        </li>
+        <li class="next last" style="display:none;">
+            <a href="javascript:void(0);">Last</a>
+        </li>
+        <li class="next">
+            <a href="javascript:void(0);">Next</a>
+        </li>
+        <li class="finish">
+            <a href="javascript:void(0);">Finish</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="my-button">I'm here for show</a>
+        </li>
+    </ul>
+</div>
+<script>                    
+    (function($) {
+        // invoke when ready
+        $(function() {
+            var wiz = $("#my-timeline-wizard").cpWizard();
+        });
+    })(jQuery);
+</script>
+
+**************************************************/
+.multistep-wizard .multistep .step-shape {
+  transform: scale(0.8, 0.8); }
+  .multistep-wizard .multistep .step-shape .step-index {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 6px 0; }
+  .multistep-wizard .multistep .step-shape .step-icon {
+    opacity: 1; }
+
+.multistep-wizard .multistep .active .step-shape {
+  transform: scale(1, 1); }
+
+.multistep-wizard .multistep .step-name {
+  margin-top: 5px; }
+
+.multistep-wizard .tab-content {
+  padding: 15px; }
+
+.multistep-wizard .pager {
+  margin-bottom: 0; }
+  .multistep-wizard .pager > li > a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    border-radius: 0; }
+    .multistep-wizard .pager > li > a, .multistep-wizard .pager > li > a:active {
+      color: #fff;
+      background-color: #f59a3f;
+      border-color: #f59a3f; }
+    .multistep-wizard .pager > li > a:hover, .multistep-wizard .pager > li > a:focus {
+      color: #ebebeb;
+      background-color: #f38618;
+      border-color: #f38618; }

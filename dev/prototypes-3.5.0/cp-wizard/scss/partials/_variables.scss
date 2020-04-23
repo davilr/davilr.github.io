@@ -1,0 +1,37 @@
+$cp-brand-primary   : #1c75bc !default;
+$cp-brand-info      : #481368 !default;
+$cp-brand-warning   : #f59a3f !default;
+
+$cp-black           : #3f4043 !default;
+$cp-dark-grey       : #67686b !default; // default text colour & table borders
+$cp-medium-grey     : #8a8c8e !default;
+$cp-light-grey      : #cccccc !default;
+$cp-lighter-grey    : #f2f2f2 !default; // header, left nav & alternate row bg
+$cp-white           : #fff    !default;
+
+
+/*=============================================
+ * Multistep
+ *============================================*/
+
+$cp-multistep-tab-height            : 60px !default;
+$cp-multistep-tab-width             : $cp-multistep-tab-height !default;
+$cp-multistep-progress-height       : $cp-multistep-tab-height * 0.05 !default;
+$cp-multistep-shape-border-width    : 1px !default;
+
+$cp-multistep-font-size             : 13px !default;
+$cp-multistep-name-font-size        : 0.9em !default; // ~12px
+$cp-multistep-desc-font-size        : 0.85em !default; // ~11px
+
+$cp-multistep-color                 : $cp-white !default;
+$cp-multistep-progress-color        : $cp-brand-warning !default;
+$cp-multistep-bg-color-default      : $cp-light-grey !default;
+$cp-multistep-bg-color-active       : $cp-brand-warning !default;
+$cp-multistep-bg-color-passed       : $cp-multistep-bg-color-active !default;
+$cp-multistep-border-color-default  : $cp-multistep-bg-color-default !default;
+$cp-multistep-border-color-active   : $cp-multistep-bg-color-active !default;
+$cp-multistep-border-color-passed   : $cp-multistep-bg-color-passed !default;
+$cp-multistep-name-color-default    : $cp-multistep-bg-color-default !default;
+$cp-multistep-name-color-active     : $cp-multistep-bg-color-active !default;
+$cp-multistep-desc-color-default    : $cp-multistep-bg-color-default !default;
+$cp-multistep-desc-color-active     : $cp-dark-grey !default;
