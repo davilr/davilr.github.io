@@ -109,12 +109,13 @@ $(window).on('mousemove click', function(e) {
   lFollowY3 = (30 * lMouseY) / 100;
   lFollowX4 = (70 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
   lFollowY4 = (35 * lMouseY) / 100;
-  lFollowX5 = (65 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-  lFollowY5 = (32 * lMouseY) / 100;
-  lFollowX6 = (75 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-  lFollowY6 = (38 * lMouseY) / 100;
-  lFollowX7 = (70 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-  lFollowY7 = (35 * lMouseY) / 100;
+	
+  lFollowX5 = (60 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY5 = (30 * lMouseY) / 100;
+  lFollowX6 = (80 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY6 = (30 * lMouseY) / 100;
+  lFollowX7 = (100 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY7 = (50 * lMouseY) / 100;
 
 });
 
