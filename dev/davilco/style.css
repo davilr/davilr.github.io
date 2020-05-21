@@ -20,11 +20,12 @@ h1 {
   top: 50%;
   left: 50%;
   color: white;
-  font-size: 5vmin;
+  font-size: 4vmin;
   text-align: center;
   text-transform: uppercase;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+  text-shadow: 2px 5px 16px rgba(22,22,22,.5), 3px 4px 5px rgba(200,200,200,.8);
 }
 
 .wrap {
