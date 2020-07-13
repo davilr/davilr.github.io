@@ -56,6 +56,21 @@ body {
 	height: 100%;
 }
 
+#logo-wd svg {
+  width: 60px;
+  height: 60px;
+	fill: rgba(0,0,0,.8);
+	-moz-backdrop-filter: saturate(100%) blur(3px);
+	-webkit-backdrop-filter: saturate(100%) blur(3px);
+	backdrop-filter: saturate(100%) blur(3px);
+	transition: 1s all; 
+}
+
+#logo-wd svg:hover {
+  fill: red;
+}
+
+
 .bodybg1 {
 		background: url(../images/web-dtp/bg1.png) top center repeat-x #d2d2d2!important;
 }
@@ -258,12 +273,15 @@ a.buttontasky:hover, a.buttontasky:focus {
 #mainnavi  {
 	margin: 0 0 0 0;
 	padding: 0;
-	background: url(../images/web-dtp/mainnavi-bg.png) top repeat;
+	-moz-backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	background-color: rgba(10,10,15,.44);
 	width: 120px;
 	max-width: 120px;
-	box-shadow: 0px 2px 2px #1a1a1a;
-	-moz-box-shadow: 0px 2px 2px #1a1a1a;
-	-webkit-box-shadow: 0px 2px 2px #1a1a1a;
+	box-shadow: 0px 2px 12px rgba(0,0,0,.2);
+	-moz-box-shadow: 0px 2px 12px rgba(0,0,0,.2);
+	-webkit-box-shadow: 0px 2px 12px rgba(0,0,0,.2);
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -274,11 +292,12 @@ a.buttontasky:hover, a.buttontasky:focus {
 	right: 10px; 
 }
 #mainnavi .label {
-	padding: 2px 5px 1px;
-	color: #bababa;
-	font-size: 13px;
+	padding: 3px 8px 3px;
+	color: rgba(255,255,255,.6);
+	font-size: 11px;
 	letter-spacing: 2px;
-	background: url(../images/web-dtp/shadow-r.png) bottom repeat-x;
+	text-align: left;
+	/*background: url(../images/web-dtp/shadow-r.png) bottom repeat-x;*/
 }
 #mainnavi ul {
 	margin: 0 0 0 0;
@@ -295,26 +314,26 @@ a.buttontasky:hover, a.buttontasky:focus {
 }
 #mainnavi ul > li > a {
 	display: block;
-	color:#FFFFFF;
+	color: rgba(255,255,255,.6);
 	padding: 17px 0 15px;
 	
 }
 #mainnavi ul > li > a:hover, #mainnavi ul > li > a:focus{
-	color:#FFFFFF;
-	background: #0f76cb;
+	color: rgba(255,255,255,1);
+	background: rgba(15, 118, 203, .8);
 	box-shadow: 1px 1px 2px #FFFFFF;
 	-moz-box-shadow: 1px 1px 2px #FFFFFF;
 	-webkit-box-shadow: 1px 1px 2px #FFFFFF;
 }
-a.link-active {
-	color:#FFFFFF;
+#mainnavi ul > li > a.link-active {
+	color: rgba(255,255,255,1);
 	background: #0f76cb;
 	box-shadow: 1px 1px 2px #FFFFFF;
 	-moz-box-shadow: 1px 1px 2px #FFFFFF;
 	-webkit-box-shadow: 1px 1px 2px #FFFFFF;
 }
 
-#mainnavi ul > li ul{
+#mainnavi ul > li ul {
 	background:url(../images/web-dtp/shadow.png) top center repeat-x !important;
 }
 #mainnavi ul > li ul > li{
@@ -328,7 +347,7 @@ a.link-active {
 }
 #mainnavi ul > li ul > li > a, #mainnavi ul > li ul > li > a:visited {
 	display: block;
-	color:#bababa;
+	color: rgba(255,255,255,1);
 	padding: 15px 3px 14px;
 	background: url(../images/web-dtp/mainnavi-bg.png) center repeat !important;
 }
