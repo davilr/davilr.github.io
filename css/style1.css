@@ -56,6 +56,10 @@ body {
 	height: 100%;
 }
 
+#logo-wd {
+  width: 60px;
+  height: 60px;
+}
 #logo-wd svg {
   width: 60px;
   height: 60px;
