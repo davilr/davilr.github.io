@@ -55,7 +55,9 @@ body {
 	padding: 0;
 	height: 100%;
 }
-
+.opa-50 {
+	opacity: .5;
+}
 #logo-wd {
   width: 60px;
   height: 60px;
@@ -64,14 +66,30 @@ body {
   width: 60px;
   height: 60px;
 	fill: rgba(0,0,0,.8);
-	-moz-backdrop-filter: saturate(200%) blur(3px);
+	/*-moz-backdrop-filter: saturate(200%) blur(3px);
 	-webkit-backdrop-filter: saturate(200%) blur(3px);
-	backdrop-filter: saturate(200%) blur(3px);
+	backdrop-filter: saturate(200%) blur(3px);*/
 	transition: 1s all; 
 }
 
 #logo-wd svg:hover {
   fill: red;
+}
+
+.fill-red {
+  fill: red !important;
+}
+.fill-blue {
+  fill: blue !important;
+}
+.fill-green {
+  fill: green !important;
+}
+.fill-yellow {
+  fill: yellow !important;
+}
+.fill-orange {
+  fill: orange !important;
 }
 
 
@@ -364,12 +382,12 @@ a.buttontasky:hover, a.buttontasky:focus {
 }
 #mainnavi ul > li ul > li > a, #mainnavi ul > li ul > li > a:visited {
 	display: block;
-	color: rgba(255,255,255,.6);
+	color: rgba(255,255,255,.8);
 	padding: 15px 3px 14px;
-	background: url(../images/web-dtp/mainnavi-bg.png) center repeat !important;
+	background: rgba(0, 0, 0, .7) !important;
 }
 #mainnavi ul > li ul > li > a:hover, #mainnavi ul > li ul > li > a:focus {
-	color: #000;
+	color: #FFF;
 	background: rgba(249, 206, 16, .7) !important;
 	box-shadow: 1px 1px 2px #000000;
 	-moz-box-shadow: 1px 1px 2px #000000;
