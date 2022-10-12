@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Blanc Noir II</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div id="container" class="bg container">
+		<canvas id="lamp-anim" class="lamp-anim"></canvas>
+	</div>
+  <script src="./modernizr-custom.js"></script>
+<script src="./jquery-2.2.2.min.js"></script>
+<script src="./lamp.animation.js"></script>
+<script src="./main.js"></script>
+<script src="./jquery.min.js"></script><script  src="./script.js"></script>
+	<script>
+	
+	
+	//window.setInterval(function() {
+		//		ranDOM();
+	//}, 10000);
+	
+	
+	var myThemeDom;
+
+	function startRandom() {
+				myThemeDom = setTimeout(function(){ ranDOM(); }, 5000);
+	}
+
+	function stopRandom() {
+				clearTimeout(myThemeDom);
+	}
+	
+	
+	$(document).ready(function() {
+				//$(" body ").css("min-width", $(".container").width()+60);
+				//$(" body ").css("height", $(".container").height()+100);
+				ranDOM();
+	});
+	
+	
+	function ranDOM(){
+            var lists = [
+                'myTheme1()',
+                'myTheme2()',
+                'myTheme3()',
+                'myTheme4()'
+            ];
+            eval(lists[Math.round(Math.random() * (lists.length - 1))]);
+	}
+	
+	
+	$( ".colorboard.one" ).click(function() {
+				myTheme1();
+				//alert( "one" );
+	});
+	$( ".colorboard.two" ).click(function() {
+				myTheme2();
+				//alert( "two" );
+	});
+	$( ".colorboard.three" ).click(function() {
+				myTheme3();
+				//alert( "three" );
+	});
+	$( ".colorboard.four" ).click(function() {
+				myTheme4();
+				//alert( "three" );
+	});
+	
+	function myTheme1() {
+				$( " #container, body " ).removeClass();
+				$( " body " ).addClass("theme1");
+				$( " #container " ).addClass("bg");
+				$( " .colorboard " ).removeClass("color-active");
+				$( " .colorboard.one " ).addClass("color-active");
+				stopRandom();
+				startRandom();
+	}
+	function myTheme2() {
+				$( " #container, body " ).removeClass();
+				$( " body " ).addClass("theme2");
+				$( " #container " ).addClass("bg-2");
+				$( " .colorboard " ).removeClass("color-active");
+				$( " .colorboard.two " ).addClass("color-active");
+				stopRandom();
+				startRandom();
+	}
+	function myTheme3() {
+				$( " #container, body " ).removeClass();
+				$( " body " ).addClass("theme3");
+				$( " #container " ).addClass("bg-3");
+				$( " .colorboard " ).removeClass("color-active");
+				$( " .colorboard.three " ).addClass("color-active");
+				stopRandom();
+				startRandom();
+	}
+	function myTheme4() {
+				$( " #container, body " ).removeClass();
+				$( " body " ).addClass("theme4");
+				$( " #container " ).addClass("bg-4");
+				$( " .colorboard " ).removeClass("color-active");
+				$( " .colorboard.four " ).addClass("color-active");
+				stopRandom();
+				startRandom();
+	}
+	
+
+	
+</script>
+	
+</body>
+</html>

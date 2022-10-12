@@ -1,0 +1,778 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DAVIL NFT</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200;400;700&display=swap');
+	
+	html, body { margin 0; }
+	body { margin: 0; display: block; }
+	body {
+		font-family: 'Lato', sans-serif;
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		transition: 1s all;
+	}
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: 100%;  
+		opacity: 0; 
+		z-index: -1;
+		transition: 1s all;
+	}
+	.bg-trans::before {
+		background: rgba(255,255,255,0); 
+		opacity: 0; 
+	}
+	.bg-white::before {
+		background: #FFFFFF; 
+		opacity: 1; 
+	}
+	.bg-black::before {
+		background: #000000; 
+		opacity: 1; 
+	}
+	h1, h2 { 
+		font-family: "Oswald", Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+		color: rgba(22,22,22,.8);
+	}
+	p > a { 
+		font-family: 'Lato', sans-serif;
+		color: rgba(0,100,200,.8);
+	}
+	p > a:hover { 
+		text-decoration: none;
+	}
+	h2 { 
+		font-size: 3em;
+		font-weight:  400;
+		color: rgba(0,100,200,.8);
+		margin-top: 16px;
+		margin-bottom: 2px;
+	}
+	p { 
+		margin-top: 2px;
+		font-family: 'Lato', sans-serif;
+	}
+	nav.bg-trans::before {
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		opacity: .67; 
+	}
+	nav.bg-white::before {
+		background: #FFFFFF; 
+		opacity: .5; 
+	}
+	nav.bg-black::before {
+		background: #000000; 
+		opacity: .5; 
+	}
+	.d-none { display: none; }
+	.d-block { display: block; }
+	.d-opa-0 { opacity: 0; }
+	.d-opa-100 { opacity: 1; }
+	nav {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,0,0,.0); 
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
+		padding: 10px 15px;
+		border-bottom: 1px solid rgba(0,0,0,.05);
+		box-sizing:  content-box;
+		z-index: 1000;
+		transition: 1s all;
+	}
+	nav::before {
+		content: "";
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: 100%;  
+		opacity: .67; 
+		z-index: -1;
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		transition: 1s all;
+	}
+	nav logo { 
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		margin: 12px 17px;
+		vertical-align: middle;
+		border-radius: 10px;
+		transition: 1s all;
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #29ABE2, #1C75BC, #1B449C); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #29ABE2, #1C75BC, #1B449C); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #29ABE2, #1C75BC, #1B449C); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #29ABE2, #1C75BC, #1B449C); /* Standard syntax */
+	}
+	.bg-white nav logo { 
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #29ABE2, #1C75BC); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #29ABE2, #1C75BC); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #29ABE2, #1C75BC); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #29ABE2, #1C75BC); /* Standard syntax */
+	}
+	.bg-black nav logo { 
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #FFDF72, #F59A3F); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #FFDF72, #F59A3F); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #FFDF72, #F59A3F); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #FFDF72, #F59A3F); /* Standard syntax */
+	}
+	
+	nav logo img { 
+		height: 100%; 
+	}
+	nav li {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		box-sizing:  content-box;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+		font-size: 13px;
+	}
+	nav li a, nav li .sub-title {
+		display: block;
+		box-sizing:  content-box;
+		text-decoration: none;
+		color: rgba(28, 117, 188,1);
+		border-radius: 3px;
+		padding: 5px 5px;
+	}
+	nav li a span {
+		display: inline-block;
+		font-weight: 400;
+		font-size: .85em;
+		vertical-align: bottom;
+		transform: translateY(-1px)
+	}
+	nav li .sub-title {
+		display: inline-block;
+		font-size: .85em;
+		vertical-align: middle;
+		transform: translateY(-1px)
+	}
+	nav li a span, nav li .sub-title, nav li .sub-title span {
+		color: rgba(120, 121, 125,1);
+	}
+	nav li:hover {
+		color: rgba(8, 97, 168,1);
+		background: rgba(0,0,3,.05);
+	}
+	nav li.active {
+		border-right: 0;
+	}
+	nav li.active a {
+		background: rgba(28, 117, 188,1);
+		color: rgba(255, 255, 255,1);
+	}
+	nav li.active span {
+		color: rgba(0,0,5,1);
+	}
+	
+	.bg-white nav li a, .bg-black  nav li .sub-title {
+		color: rgba(1,51,66,.5);
+	}
+	.bg-white nav li a span, .bg-white nav li .sub-title, .bg-white nav li .sub-title span {
+		color: rgba(120, 121, 125,.5);
+	}
+	.bg-white nav li.active a {
+		background: #29ABE2;
+		color: white;
+	}
+	.bg-white nav li.active span {
+		color: rgba(0,0,5,.5);
+	}
+	.bg-black nav li a, .bg-black  nav li .sub-title {
+		color: rgba(255,223,114,.8);
+	}
+	.bg-black nav li a span, .bg-black nav li .sub-title, .bg-black nav li .sub-title span {
+		color: rgba(120, 121, 125,1);
+	}
+	.bg-black nav li:hover {
+		background: rgba(255,255,255,.1);
+	}
+	.bg-black nav li a:hover  {
+		color: rgba(255,223,114,.9);
+	}
+	.bg-black nav li.active a {
+		background: rgba(255,223,114,1);
+		color: black;
+	}
+	.bg-black nav li.active span {
+		color: rgba(0,0,5,.6);
+	}
+	
+	
+	section#content {
+		padding: 160px 0 50px;
+		box-sizing: border-box;
+	}
+	section#content > div {
+		border-top: 1px solid rgba(70, 71, 75,.5);
+		min-height: 100px;
+		box-sizing: border-box;
+		width: 100vw;
+		overflow-x: auto;
+		transition: .3s all;
+		position: relative;
+		padding: 0 16px;
+	}
+	#content > div > .label {
+		display: block;
+		position: absolute;
+		background: rgba(70, 71, 75,.5);
+		color: rgba(255,255,255,1);
+		margin-left: 0;
+		transition: .3s all;
+	}
+	#content > div > .label h6 {
+		display: inline-block;
+		position: relative;
+		font-family: 'Oswald', sans-serif;
+		font-size: .6rem;
+		letter-spacing: .2em;
+		margin: 0;
+		padding: 2px 10px;
+		color: rgba(255,255,255,.8);
+		transition: .3s all;
+	}
+	
+	.bg-white section#content > div {
+		border-top: 1px solid #29ABE2;
+	}
+	.bg-white section#content > div > .label {
+		background: #29ABE2;
+	}
+	.bg-white #content > div > .label h6 {
+		color: white;
+	}
+	.bg-black section#content > div {
+		border-top: 1px solid #FFDF72;
+	}
+	.bg-black section#content > div > .label {
+		background: #FFDF72;
+	}
+	.bg-black #content > div > .label h6 {
+		color: black;
+	}
+	.bg-black p {
+		color: rgba(170, 171, 175,1) !important;
+	}
+	.bg-black p > a {
+	color: rgba(255,223,114,1) !important;
+	}
+	
+	
+	.colorboard-wrapper {
+		display: block;
+		margin: 5px 10px;
+	}
+	.colorboard-wrapper:hover {
+		background: none !important;
+	}
+	.colorboard {
+		display: inline-block;
+		text-align: center;
+		padding: 4px;
+		cursor: hand;
+		cursor: pointer;
+		border-radius: 100px;
+		transition: .3s all;
+	}
+	.colorboard:hover {
+		background: rgba(120,121,125,.1);
+	}
+	.colorboard .thumb {
+		position: relative;
+		display: block;
+		margin: 0 auto 0;
+		width: 16px;
+		height: 16px;
+		border: 2px solid rgba(110,110,115,.5);
+		border-radius: 100px;
+	}
+	.colorboard.cloudy .thumb {
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed;
+	}
+	.colorboard.white .thumb {
+		background: white;
+	}
+	.colorboard.black .thumb {
+		background: black;
+	}
+	.colorboard.color-active {
+		background: rgba(120,121,125,.3);
+	}
+	.colorboard.color-active {
+		background: rgba(120,121,125,.3);
+	}
+	.colorboard.color-active .thumb {
+		border: 2px solid #1C75BC;
+	}
+	
+	.floater {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.thecolours {
+		position: absolute;
+		font-family: "Noto-Sans", Arial, san-serif;
+		font-size: 11px;
+		
+	}
+	.txt-grey {
+		color: rgba(138,140,142,.6);
+	}
+	.image-container {
+		display: inline-block;
+		vertical-align: middle;
+		transition: 0.3s all;
+	}
+	.image-container.biggie > img {
+		display: inline-block;
+		max-width: calc(100vw - 80px);
+		max-height: calc(100vw - 80px);
+	}
+	.image-container > img {
+		display: inline-block;
+		max-width: calc(30vw - 80px);
+		max-height: calc(30vw - 80px);
+		margin: 12px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		transition: 0.3s all;
+	}
+	.image-container > img:hover {
+		display: inline-block;
+		box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px, rgba(0, 0, 0, 0.5) 0px 8px 16px -8px;
+	}
+	.section { padding-bottom: 40px; }
+	
+	@media (min-width: 1281px) {
+		
+		#content > div > .label {
+			position: absolute;
+			display: inline-block;
+			left: 12vw;
+			margin-left: 8px;
+			overflow-x: auto;
+		}
+		#content > div > .label {
+			position: absolute;
+			display: inline-block;
+			margin-left: 8px;
+			overflow-x: auto;
+		}
+		#content > div > .label h6 {
+		}
+		nav {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: rgba(255,255,255,0); 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px);
+			padding: 0;
+			border-bottom: none;
+			width: 12vw;
+			padding-bottom: 10px;
+		}
+		nav::before {
+			content: "";
+			position: absolute;
+			top: 0; 
+			left: 0;
+			width: 100%; 
+			height: 100%;  
+			opacity: .67; 
+			z-index: -1;
+			background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			transition: 1s all;
+		}
+		nav logo { 
+			display: block;
+			height: 50px; 
+			margin: 12px 17px;
+		}
+		nav li {
+			display: block;
+			border-radius: 0;
+		}
+		nav li a {
+			padding: 4px 12px;
+			font-size: 12px;
+		}
+		nav li .sub-title {
+			padding: 6px 12px 0;
+		}
+		nav li.active {
+			border-right: 4px solid rgba(8, 97, 168,1);
+		}
+		nav li.active a {
+			color: rgba(28, 117, 188,1);
+			background: none;
+		}
+		nav li.active span {
+			color: rgba(70, 71, 75,1);
+		}
+		.bg-white nav li.active {
+			border-right: 4px solid #29ABE2;
+		}
+		.bg-white nav li.active a {
+			color: rgba(41,171,226,1);
+			background: none;
+		}
+		.bg-white p {
+			color: rgba(22,22,22,.8);
+		}
+		.bg-black nav li a {
+			color: rgba(255,223,114,.5);
+		}
+		.bg-black nav li.active {
+			border-right: 4px solid #FFDF72;
+		}
+		.bg-black nav li.active a {
+			color: #FFDF72;
+			background: none;
+		}
+		.bg-black nav li.active span {
+			color: rgba(170, 171, 175,1);
+		}
+
+		section#content {
+			padding: 0 0 50px 0;
+			width: auto;
+		}
+		section#content > div {
+			width: auto;
+		}
+		section#content > div:first-child {
+			border-top: 1px solid rgba(0,0,0,0);
+		}
+		section#content > div > img, section#content > div > .floater, section#content > div > div.section-content {
+			margin-left: 12vw;
+		}
+		
+		section#content > div > div.section-content {
+			margin-left: calc(12vw + 8px);
+		}
+		
+	}
+	
+	.logo-container { height: 66px;}	
+	#logo-wd {
+	  width: 60px;
+	  height: 60px;
+	  margin-left: 8px;
+	}
+	.bg-black #logo-wd svg {
+		fill: rgba(200,200,220,.8);
+		/*-moz-backdrop-filter: saturate(200%) blur(3px);
+		-webkit-backdrop-filter: saturate(200%) blur(3px);
+		backdrop-filter: saturate(200%) blur(3px);*/
+		transition: 1s all; 
+	}
+	#logo-wd svg {
+	  width: 60px;
+	  height: 60px;
+		fill: rgba(0,0,0,.8);
+		/*-moz-backdrop-filter: saturate(200%) blur(3px);
+		-webkit-backdrop-filter: saturate(200%) blur(3px);
+		backdrop-filter: saturate(200%) blur(3px);*/
+		transition: 1s all; 
+	}
+
+	#logo-wd svg:hover {
+	  fill: red;
+	}
+
+	.fill-red {
+	  fill: red !important;
+	}
+	.fill-blue {
+	  fill: blue !important;
+	}
+	.fill-green {
+	  fill: green !important;
+	}
+	.fill-yellow {
+	  fill: yellow !important;
+	}
+	.fill-orange {
+	  fill: orange !important;
+	}
+	
+	
+</style>
+
+</head>
+
+<body>
+
+<nav>
+	<!--a href="#c1"><logo><img src="logo-CP-sq-wd-trans.svg"></logo></a-->
+	<div class="logo-container"></div>
+	<div id="logo-wd" style=" z-index: 10000; position:fixed; top: 0; left: 1%;">
+		<a href="#sec-home" class="none">
+			<svg version="1.1" id="logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
+		 viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
+			<g>
+				<polygon points="249.2,131.6 222.4,131.6 249.2,158.4 	"/>
+				<path d="M0,0v310h310V0H0z M135.9,206.8h-20l0,0l-83.5-83.5v-20h20l83.5,83.5h0V206.8z M206.8,186.7v20h-20v0l0,0l-83.5-83.5l0,0h0
+					v-20h20v0l0,0L206.8,186.7L206.8,186.7L206.8,186.7z M277.6,206.8h-20v0l0,0l-83.5-83.5l0,0v-20h103.5V206.8z"/>
+			</g>
+			</svg>
+		</a>
+	</div>  
+	
+	<li class="active"><a href="#nft-micmac"><span>001</span> MICMAC</a></li>
+	<li><a href="#nft-zwen"><span>002</span> ZWEN</a></li>
+	<li><a href="#nft-ibrrt"><span>003</span> IBRRT</a></li>
+	<li><a href="#c004"><span>004</span> COMING SOON</a></li>
+	<li><a href="#c005"><span>005</span> COMING SOON</a></li>
+	<li class="colorboard-wrapper">
+		<div class="colorboard cloudy color-active" title="NFT DAVILR"><div class="thumb"></div></div>
+		<div class="colorboard white" title="WHITE"><div class="thumb"></div></div>
+		<div class="colorboard black" title="BLACK"><div class="thumb"></div></div>
+	</li>
+</nav>
+
+<section id="content">
+	<div id="nft-micmac" class="section">
+		<div class="label"><h6><small>001.</small> MICMAC</h6></div>
+		<div class="section-content">
+			<h2>MICMAC</h2>
+			<p>The macnificent MicMac, if you can see him behind trolling this zigzag curtain.</p>
+			<p><a target="blank" href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/77431120155397806688591347653607702739117311225068532281961760486626819047425/"><strong>Visit MICMAC@OpenSea</strong></a></p>
+			<div class="image-container"><img src="NFT-MAC-1.svg" width="250" height="250"></div>
+			<div class="image-container biggie"><img src="NFT-MAC-1.svg" width="1000" height="1000"></div>
+		</div>
+	</div>
+	
+	<div id="nft-zwen" class="section">
+		<div class="label"><h6><small>002.</small>ZWEN</h6></div>
+		<div class="section-content">
+			<h2>ZWEN</h2>
+			<p>The circles represents the cycles. Unlimited cycles - you can see them but you cannot count them. ZWENGGGGG...</p>
+			<p><a target="blank" href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/77431120155397806688591347653607702739117311225068532281961760487726330675201/"><strong>Visit ZWEN@OpenSea</strong></a></p>
+			<div class="image-container"><img src="NFT-ZWEN.svg" width="250" height="250"></div>
+			<div class="image-container biggie"><img src="NFT-ZWEN.svg" width="1000" height="1000"></div>
+		</div>
+	</div>
+	
+	<div id="nft-ibrrt" class="section">
+		<div class="label"><h6><small>003.</small>IBRRT</h6></div>
+		<div class="section-content">
+			<h2>IBRRT</h2>
+			<p>Care to spoon? Banananananananananana.... Brrtmannn!</p>
+			<p><a target="blank" href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/77431120155397806688591347653607702739117311225068532281961760488825842302977/"><strong>Visit IBRRT@OpenSea</strong></a></p>
+			<div class="image-container"><img src="NFT-IBRRT.svg" width="250" height="250"></div>
+			<div class="image-container biggie"><img src="NFT-IBRRT.svg" width="1000" height="1000"></div>
+		</div>
+	</div>
+
+	<div id="c004" class="section">
+		<div class="label"><h6><small>004.</small>COMING SOON</h6></div>
+		<div class="section-content">
+			<h2>COMING SOON</h2>
+			<p>Ready or not, something is coming.</p>
+			<div class="image-container"><img src="NFT-UNK-TEAL.svg" width="250" height="250"></div>
+			<div class="image-container biggie"><img src="NFT-UNK-TEAL.svg" width="1000" height="1000"></div>
+		</div>
+	</div>
+
+	<div id="c005" class="section">
+		<div class="label"><h6><small>005.</small>COMING SOON</h6></div>
+		<div class="section-content">
+			<h2>COMING SOON</h2>
+			<p>Ready or not, something is coming.</p>
+			<div class="image-container"><img src="NFT-UNK-MAGE.svg" width="250" height="250"></div>
+			<div class="image-container biggie"><img src="NFT-UNK-MAGE.svg" width="1000" height="1000"></div>
+		</div>
+	</div>
+
+
+</section>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+	
+	
+	
+	/*
+	$('a[href*="#"]:not([href="#"])').click(function() {
+	  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		if (target.length) {
+		  $('html, body').animate({
+			scrollTop: target.offset().top
+		  }, 333);
+		  return false;
+		}
+	  }
+	});	
+	
+	$('nav a').click(function(e) {
+        e.preventDefault();
+        $('a').removeClass('active');
+        $(this).addClass('active');
+    });
+	*/
+	
+	// Cache selectors
+	var lastId,
+		topMenu = $("nav"),
+		topMenuHeight = topMenu.outerHeight()+15,
+		// All list items
+		menuItems = topMenu.find("a"),
+		// Anchors corresponding to menu items
+		scrollItems = menuItems.map(function(){
+		  var item = $($(this).attr("href"));
+		  if (item.length) { return item; }
+		});
+
+	// Bind click handler to menu items
+	// so we can get a fancy scroll animation
+	/*
+	menuItems.click(function(e){
+	  var href = $(this).attr("href"),
+		  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	  $('html, body').stop().animate({ 
+		  scrollTop: offsetTop
+	  }, 300);
+	  e.preventDefault();
+	});
+	*/
+	
+	// media query event handler  ---- inserted
+	if (matchMedia) {
+	  var mq = window.matchMedia("(min-width: 1281px)");
+	  mq.addListener(WidthChange);
+	  WidthChange(mq);
+	}
+
+	// media query change
+	function WidthChange(mq) {
+	  if (mq.matches) {
+		// window width is at least 1281px
+		menuItems.click(function(e){
+		  var href = $(this).attr("href"),
+			  offsetTop = href === "#" ? 0 : $(href).offset().top;
+		  $('html, body').stop().animate({ 
+			  scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+	  } else {
+		// window width is less than 1281px
+		menuItems.click(function(e){
+		  var topMenuHeight = topMenu.outerHeight()+15;
+		  var href = $(this).attr("href"),
+			  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+15;
+		  $('html, body').stop().animate({ 
+			  scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+	  }
+
+	}
+	
+
+	// Bind to scroll
+	$(window).scroll(function(){
+	   // Get container scroll position
+	   var fromTop = $(this).scrollTop()+topMenuHeight;
+
+	   // Get id of current scroll item
+	   var cur = scrollItems.map(function(){
+		 if ($(this).offset().top < fromTop)
+		   return this;
+	   });
+	   // Get the id of the current element
+	   cur = cur[cur.length-1];
+	   var id = cur && cur.length ? cur[0].id : "";
+
+	   if (lastId !== id) {
+		   lastId = id;
+		   // Set/remove active class
+		   menuItems
+			 .parent().removeClass("active")
+			 .end().filter("[href='#"+id+"']").parent().addClass("active");
+	   }                   
+	});
+	
+	
+	
+	 $(function() {
+		 $( ".colorboard.cloudy" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-trans");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.cloudy " ).addClass("color-active");
+		 });
+		 $( ".colorboard.white" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-white");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.white " ).addClass("color-active");
+		 });  
+		 $( ".colorboard.black" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-black");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.black " ).addClass("color-active");
+		 });  
+	 });  
+	
+	/*
+	 $(function() {  
+		 $( ".add-bg-1" ).click(function() {
+			 if ($( body ).hasClass("bg1") {
+				   $( " body " ).removeClass("bg-1");
+				   $( " body " ).addClass("bg-white");
+				}
+				else {
+				 }    
+			});   
+	 });  
+	*/
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "This retro CGI is a relaxing pixel art of Dolphins jumping and swimming in a see of black and white. Moving the mouse over the waters will cause waves. \nChange the colors of water and Sky using Wallpaper Engine controls (see screenshots).\nIn the original version clicking switches between white and black, and it can be found at [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1866412477]Blanc Noir[/url]\nEnjoy!",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"background_color" : 
+			{
+				"order" : 106,
+				"text" : "Sky Color",
+				"type" : "color",
+				"value" : "255 255 255"
+			},
+			"schemecolor" : 
+			{
+				"order" : 108,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"water_color" : 
+			{
+				"order" : 107,
+				"text" : "Water Color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Nature" ],
+	"title" : "Blanc Noir II",
+	"type" : "Web",
+	"version" : 3,
+	"visibility" : "public",
+	"workshopid" : "2076082177"
+}

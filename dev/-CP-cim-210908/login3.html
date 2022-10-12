@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login to CloudPay</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body class="postlogin" style="background: #67686B">
+
+	
+
+<header class="layout-header" style="display: none;">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-center" id="main-menu">
+                <ul class="nav navbar-nav navbar-right navbar-nav-user">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-capitalize">
+                            John Cloud <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+							<li><a href="401.html">My Profile</a></li>
+							<li><a href="404.html">My Favourites</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#">More Options</a>
+                                <ul class="dropdown-menu">
+									<li><a href="500.html">Submit a Request</a></li>
+									<li><a href="500.html">Read Documentation</a></li>
+                                </ul>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login3.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>	
+<div class="layout-body">
+    <div class="container-fluid">
+
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                    <div id="bodycontent">
+                        <!--video poster="assets/vid/network.mp4" id="bgvid" playsinline autoplay muted loop-->
+                            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                            <!--source src="assets/vid/network.mp4" type="video/mp4">
+                        </video-->
+						<canvas id="lamp-anim" class="lamp-anim blurrr"></canvas>
+                        
+                        <div class="row content">
+                            <div class="col-xs-12 login-logo-container">
+                                <div class="app-icon"><img src="assets/img/cloudpay/logos/cloudpay-white.svg" height="60" ></div>
+                            </div>
+                            <div class="col-xs-12 postlogin-wrapper">
+                                <h1>WELCOME TO CLOUDPAY</h1>
+                                <p class="subh">Login to your Account</p>
+                                <div class="postlogin-container">
+                                    <div class="form-group">
+                                        <h2>SIGN IN TO CLOUDPAY</h2>
+                                        <div class="m10"><input type="text" class="form-control form-control-large" id="exampleInput" placeholder="ID"></div>
+                                        <div class="m10"><input type="password" class="form-control form-control-large" id="exampleInput" placeholder="Password"></div>
+                                        <div class="m10 mt20">
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <div class="checkbox pl5"><label><input type="checkbox"> Remember me</label></div>
+                                                    <div class="pl5"><a href="javascript:void();">Trouble logging in</a></div>
+                                                </div>
+                                                <div class="col-xs-5" align="right"><button class="btn-login btn btn-tertiary btn-large pl30 pr30" type="submit">Login <i class="fa fa-chevron-right add-margin-l"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="ml10 mr10"><hr></div>
+                                        <div class="m10">
+                                            <div id="customBtn" class="customGPlusSignIn">
+                                                <span class="icon"></span>
+                                                <span class="buttonText">Sign in with Google</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row content-2" style="display: none;">
+                            <div class="col-xs-12 postlogin-info">
+                                Welcome <strong>John</strong>, <br/>your last login was 1 January 2017, 13:49:02.
+                            </div>
+                            <div class="col-xs-12 switchboardH postlogin-wrapper">
+                                <h1>WELCOME TO CLOUDPAY</h1>
+                                <p class="subh">Please select an application</p>
+                                <ul id="menu" class="applist">
+                                    <li><a href="index.html"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg" ></div><span>PAYROLL</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg" ></div><span>ANALYTICS</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg" ></div><span>CALENDAR</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg" ></div><span>COLLABORATE</span></a></li>
+                                    <li><a href="ss-home.html"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg" ></div><span>SELF SERVICE</span></a></li>
+                                    <li><a href="ts-list.html"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg" ></div><span>TEST SITES</span></a></li>
+                                    <!--li class="">
+                                        <a href="javascript:void(0);" data-toggle="dropdown"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg" ></div><span>TEST SITES <i class="fa fa-caret-down"></i></span></a>
+                                        <ul class="sb-dropdown hidden">
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test01 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test02 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test03 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test01 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test02 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test03 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test01 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test02 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test03 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test04 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test05 Payroll</a></li>
+                                        </ul-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+																	
+						
+                </div>
+            </div>
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<div class="row switchboardH-bot" style="display: none;">
+    <div class="col-xs-12 col-lg-6 col-xl-6">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-transparent">
+                    <div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-a-1">
+                        <h3 class="panel-title">Your Payroll Runs Overview</h3>
+                    </div>
+                    <div class="panel-collapse collapse in" id="example-bpanel-a-1" style="width: 100%;">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-5" style="height:150px">
+                                    <div id="chart"></div>
+                                </div>
+                                <div class="col-xs-5 col-md-6" style="vertical-align: middle;">
+                                    <div class="row pt20">
+                                        <div class="balance-item col-xs-3">
+                                            <label>CRITICAL</label>
+                                            <span class="balance-number bigger fred">1</span>
+                                        </div>
+                                        <div class="balance-item col-xs-3">
+                                            <label>HIGH</label>
+                                            <span class="balance-number bigger forange">2</span>
+                                        </div>
+                                        <div class="balance-item col-xs-3">
+                                            <label>NORMAL</label>
+                                            <span class="balance-number bigger fskyblue">1</span>
+                                        </div>
+                                        <div class="balance-item col-xs-3">
+                                            <label>LOW</label>
+                                            <span class="balance-number bigger fgrey3">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="row pt20">
+                                        <div class="balance-item col-xs-12">
+                                            CURRENT: <b>4 RUNS</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  UPCOMING: <b>2 RUNS</b>
+                                        </div>
+                                        <!--div class="balance-item col-xs-12 pt10">
+                                            UPCOMING: <b>12 RUNS</b>
+                                        </div-->
+                                    </div>
+                                    <!--br><br>
+                                    <button class="btn btn-icon-left btn-default mb10" type="button" onclick="location.href='index.html';">Go to Payroll <i class="fa fa-chevron-right"></i></button>
+                                    <br>
+                                    <a class="p5" href="ss-vacation_details.html">Vacation Details</a-->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="panel-footer">
+                            <a href="index.html">Go to Payroll Dashboard <i class="fa fa-chevron-right add-margin-l"></i></a>
+                        </div>
+                    </div>
+                </div>	
+            </div>	
+        </div>	
+
+    </div>
+            
+    <div class="col-xs-12 col-lg-3 col-xl-2">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-transparent">
+                    <div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-a-2">
+                        <h3 class="panel-title">Latest Uploaded Documents </h3>
+                    </div>
+                    <div class="panel-collapse collapse in" id="example-bpanel-a-2" style="width: 100%;">
+                            <div class="panel-body" style="max-height: 170px; overflow-y: scroll; width: 100%;">
+                                <ol class="list-group">
+                                        <li class="list-item">
+                                            <div class="row">
+                                                <div class="col-xs-12 list-item-c "><i class="fa fa-file-o add-margin-r fblue fz16"></i> payroll_masterdata-20170801-2017-06-3009278.xls</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 directory fz11 pb5"><i class="fa fa-folder-open mr10"></i><div class="directory-url"><span><a href="#">Davil Devil SG / 3001540-Bo Huat / 2016 / 2016-04 / Output / Statutory Documents /</a></span></div></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-lg-4 col-xl-4 fz11 pl35"><b>GSJ2838YU</b></div>
+                                                <div class="col-xs-8 col-lg-8 fz11" align="right">by <em><b>Lily James</b></em> <span class="pl5">12 Jan 2017</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="row">
+                                                <div class="col-xs-12 list-item-c "><i class="fa fa-file-o add-margin-r fblue fz16"></i> payroll_masterdata-20170801-2017-06-3009278.xls</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 directory fz11 pb5"><i class="fa fa-folder-open mr10"></i><div class="directory-url"><span><a href="#">Davil Devil SG / 3001540-Bo Huat / 2016 / 2016-04 / Output / Statutory Documents /</a></span></div></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-lg-4 col-xl-4 fz11 pl35"><b>GSJ2810AZ</b></div>
+                                                <div class="col-xs-8 col-lg-8 fz11" align="right">by <em><b>Jamiraquai Henson</b></em> <span class="pl5">11 Jan 2017</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="row">
+                                                <div class="col-xs-12 list-item-c "><i class="fa fa-file-o add-margin-r fblue fz16"></i> payroll_masterdata-20170801-2017-06-3009278.xls</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 directory fz11 pb5"><i class="fa fa-folder-open mr10"></i><div class="directory-url"><span><a href="#">Davil Devil SG / 3001540-Bo Huat / 2016 / 2016-04 / Output / Statutory Documents /</a></span></div></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-lg-4 fz11 pl35"><b>GSJ21128OW</b></div>
+                                                <div class="col-xs-8 col-lg-8 fz11" align="right">by <em><b>Clay Jansen</b></em> <span class="pl5">11 Jan 2017</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="row">
+                                                <div class="col-xs-12 list-item-c "><i class="fa fa-file-o add-margin-r fblue fz16"></i> payroll_masterdata-20170801-2017-06-3009278.xls</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 directory fz11 pb5"><i class="fa fa-folder-open mr10"></i><div class="directory-url"><span><a href="#">Davil Devil SG / 3001540-Bo Huat / 2016 / 2016-04 / Output / Statutory Documents /</a></span></div></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-lg-4 fz11 pl35"><b>GSJ2838YU</b></div>
+                                                <div class="col-xs-8 col-lg-8 fz11" align="right">by <em><b>Lily James</b></em> <span class="pl10">11 Jan 2017</span></div>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="row">
+                                                <div class="col-xs-12 list-item-c "><i class="fa fa-file-o add-margin-r fblue fz16"></i> payroll_masterdata-20170801-2017-06-3009278.xls</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 directory fz11 pb5"><i class="fa fa-folder-open mr10"></i><div class="directory-url"><span><a href="#">Davil Devil SG / 3001540-Bo Huat / 2016 / 2016-04 / Output / Statutory Documents /</a></span></div></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-4 col-lg-4 fz11 pl35"><b>GSJ8872</b></div>
+                                                <div class="col-xs-8 col-lg-8 fz11" align="right">by <em><b>John Jefferson</b></em> <span class="pl5">10 Jan 2017</span></div>
+                                            </div>
+                                        </li>
+                                </ol>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="#">Go to Document Manager <i class="fa fa-chevron-right add-margin-l"></i></a>
+                        </div>
+                    </div>
+                </div>	
+            </div>	
+        </div>
+    </div>	
+
+    <div class="col-xs-12 col-lg-3 col-xl-2">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-transparent">
+                    <div class="panel-heading panel-collapse-indicate-right" data-toggle="collapse" data-target="#example-bpanel-a-3">
+                        <h3 class="panel-title">Latest Viewed Employees </h3>
+                    </div>
+                    <div class="panel-collapse collapse in" id="example-bpanel-a-3" style="width: 100%;">
+                            <div class="panel-body" style="max-height: 170px; overflow-y: scroll; width: 100%;">
+                                <ol class="list-group">
+                                    <li class="list-item">
+                                        <div class="row">
+                                            <div class="col-xs-7 "><i class="fa fa-user add-margin-r fblue fz16"></i> <span><a href="#">Christopher Dolan</a></span></div>
+                                            <div class="col-xs-5 " align="right"><b>CP3829CD</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 directory fz11 pb5"><span class="flag gb"></span><span class="pl5">CloudPay, Inc.</span></div>
+                                            <div class="col-xs-5 fz11" align="right"><b>CP0001</b></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="row">
+                                            <div class="col-xs-7 "><i class="fa fa-user add-margin-r fblue fz16"></i> <span><a href="#">Lily Adams</a></span></div>
+                                            <div class="col-xs-5 " align="right"><b>WE1019LA</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 directory fz11 pb5"><span class="flag sg"></span><span class="pl5">Walaoeh SG</span></div>
+                                            <div class="col-xs-5 fz11" align="right"><b>WE0029</b></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="row">
+                                            <div class="col-xs-7 "><i class="fa fa-user add-margin-r fblue fz16"></i> <span><a href="#">Clark Kentut</a></span></div>
+                                            <div class="col-xs-5 " align="right"><b>MA3338CK</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 directory fz11 pb5"><span class="flag gb"></span><span class="pl5">Macrosoft</span></div>
+                                            <div class="col-xs-5 fz11" align="right"><b>MA8392</b></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="row">
+                                            <div class="col-xs-7 "><i class="fa fa-user add-margin-r fblue fz16"></i> <span><a href="#">Michelle Jordan</a></span></div>
+                                            <div class="col-xs-5 " align="right"><b>TR3229</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 directory fz11 pb5"><span class="flag us"></span><span class="pl5">Thomplinson Routers</span></div>
+                                            <div class="col-xs-5 fz11" align="right"><b>TP2091</b></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="row">
+                                            <div class="col-xs-7 "><i class="fa fa-user add-margin-r fblue fz16"></i> <span><a href="#">Tiger Wong</a></span></div>
+                                            <div class="col-xs-5 " align="right"><b>HD3829TW</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-7 directory fz11 pb5"><span class="flag ch"></span><span class="pl5">Herbs of Diamond, Inc.</span></div>
+                                            <div class="col-xs-5 fz11" align="right"><b>HD0024</b></div>
+                                        </div>
+                                    </li>
+                                </ol>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="#">Go to Employee Search <i class="fa fa-chevron-right add-margin-l"></i></a>
+                        </div>
+                    </div>
+                </div>	
+            </div>	
+        </div>
+    </div>	
+    
+</div>
+
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2021</div>
+    </div>
+</footer>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+<script>
+        $(window).mousedown(foodown);
+
+        function foodown(){
+        $(window).mousemove(foomove).mouseup(fooup);
+        //stuff
+        refr();
+        }
+
+        function foomove(){
+        //stuff
+        refr();
+        }
+
+        function fooup(){
+        //$(someElement).trigger('yourcustomevent');
+        //$(window).unbind('mousemove', foomove).unbind('mouseup', fooup);
+        }
+
+
+        //$(document).ready(refr);
+    
+        $(window).resize(refr);
+    
+        function refr(){
+            var refresh = $(".switchboardH-bot").height();
+            $(".layout-body").css('padding-bottom', refresh);
+
+        }
+
+    $(document).ready(function() {
+            $("#menu").kendoMenu();
+            $(".sb-dropdown").removeClass("hidden");
+        });
+        
+	function createChart() {
+		$("#chart").kendoChart({
+            chartArea: {background:"transparent", height:150},
+			title: {
+				position: "bottom",
+				text: "Payroll Runs Deadlines",
+				visible: false
+			},
+			legend: {
+				position: "left",
+				visible: true
+			},
+			seriesDefaults: {
+				labels: {
+					visible: false,
+					background: "transparent",
+					template: "#= category # \n #= value# RUNS"
+				}
+			},
+			tooltip: {
+				visible: true,
+				format: "{0} RUNS"
+			},
+			series: [{
+				type: "pie",
+				startAngle: 0,
+				padding: 10,
+				data: [{
+					category: "Critical",
+					value: 4,
+					color: "#EF4136"
+				},{
+					category: "High",
+					value: 6,
+					color: "#FBB03B"
+				},{
+					category: "Normal",
+					value: 8,
+					color: "#29ABE2"
+				},{
+					category: "Low",
+					value: 12,
+					color: "#8A8C8E"
+				}],
+				overlay: {
+					gradient: "none"
+				}
+			}]
+		});
+	}
+
+	$(document).ready(createChart);
+	$(document).bind("kendo:skinChange", createChart);
+
+        $( ".btn-login, .customGPlusSignIn" ).click(function() {
+            $(".content ").animate({opacity:0}, {duration: 555})
+                .queue(function() {
+                $( this ).css({display: 'none'}).dequeue();
+                });
+            $(".content-2 ").css({opacity: 0,display: 'block'}).stop().delay(555).animate({opacity: 1}, {duration: 555});
+            $(".switchboardH-bot ").css({opacity: 0,display: 'block',bottom: "-=30"}).stop().delay(555).animate({opacity: 1, bottom: "0"}, {duration: 555});
+            $("header ").css({opacity: 0,display: 'block',top: "-=30"}).stop().delay(555).animate({opacity: 1,top: "0"}, {duration: 555});
+            //$(".vt-2-l.l5 ").delay(1100).animate({opacity:1,height:"197px",top:"-=197px"},400);
+
+            $(document).ready(createChart);
+        });
+
+</script>
+	
+<script src="Home_files/modernizr-custom.js"></script>
+<script src="Home_files/lamp.animation.js"></script>
+<script src="Home_files/main.js"></script>	
+
+</body>
+</html>`

@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CPF</title>
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Oswald|Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<script src="https://use.fontawesome.com/aae6cea847.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
+<style>
+	html, body { margin 0; }
+	body { margin: 0; display: block; }
+	body {
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		transition: 1s all;
+	}
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: 100%;  
+		opacity: 0; 
+		z-index: -1;
+		transition: 1s all;
+	}
+	.bg-trans::before {
+		background: rgba(255,255,255,0); 
+		opacity: 0; 
+	}
+	.bg-white::before {
+		background: #FFFFFF; 
+		opacity: 1; 
+	}
+	.bg-black::before {
+		background: #000000; 
+		opacity: 1; 
+	}
+	nav.bg-trans::before {
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		opacity: .67; 
+	}
+	nav.bg-white::before {
+		background: #FFFFFF; 
+		opacity: .5; 
+	}
+	nav.bg-black::before {
+		background: #000000; 
+		opacity: .5; 
+	}
+	.d-none { display: none; }
+	.d-block { display: block; }
+	.d-opa-0 { opacity: 0; }
+	.d-opa-100 { opacity: 1; }
+	nav {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255,255,255,.67); 
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
+		padding: 10px 15px;
+		border-bottom: 1px solid rgba(0,0,0,.05);
+		box-sizing:  content-box;
+		z-index: 1000;
+		transition: 1s all;
+	}
+	nav::before {
+		content: "";
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: 100%;  
+		opacity: .67; 
+		z-index: -1;
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		transition: 1s all;
+	}
+	nav logo { 
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		margin: 12px 17px;
+		vertical-align: middle;
+		border-radius: 10px;
+		transition: 1s all;
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #29ABE2, #1C75BC, #1B449C); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #29ABE2, #1C75BC, #1B449C); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #29ABE2, #1C75BC, #1B449C); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #29ABE2, #1C75BC, #1B449C); /* Standard syntax */
+	}
+	.bg-white nav logo { 
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #29ABE2, #1C75BC); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #29ABE2, #1C75BC); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #29ABE2, #1C75BC); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #29ABE2, #1C75BC); /* Standard syntax */
+	}
+	.bg-black nav logo { 
+		background: #1C75BC; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, #FFDF72, #F59A3F); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, #FFDF72, #F59A3F); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, #FFDF72, #F59A3F); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, #FFDF72, #F59A3F); /* Standard syntax */
+	}
+	
+	nav logo img { 
+		height: 100%; 
+	}
+	nav li {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		box-sizing:  content-box;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+		font-size: 13px;
+	}
+	nav li a, nav li .sub-title {
+		display: block;
+		box-sizing:  content-box;
+		text-decoration: none;
+		color: rgba(8, 97, 168,1);
+		border-radius: 3px;
+		padding: 5px 5px;
+	}
+	nav li a span {
+		display: inline-block;
+		font-weight: 400;
+		font-size: .85em;
+		vertical-align: bottom;
+		transform: translateY(-1px)
+	}
+	nav li .sub-title {
+		display: inline-block;
+		font-size: .85em;
+		vertical-align: middle;
+		transform: translateY(-1px)
+	}
+	nav li a span, nav li .sub-title, nav li .sub-title span {
+		color: rgba(100, 101, 105,1);
+	}
+	nav li:hover {
+		color: rgba(8, 97, 168,1);
+		background: rgba(0,0,3,.05);
+	}
+	nav li.active {
+		border-right: 0;
+	}
+	nav li.active a {
+		background: rgba(28, 117, 188,1);
+		color: rgba(255, 255, 255,1);
+	}
+	nav li.active span {
+		color: rgba(0,0,5,1);
+	}
+	
+	.bg-white nav li a, .bg-black  nav li .sub-title {
+		color: rgba(0, 17, 22, 0.815);
+	}
+	.bg-white nav li a span, .bg-white nav li .sub-title, .bg-white nav li .sub-title span {
+		color: rgba(120, 121, 125,.5);
+	}
+	.bg-white nav li.active a {
+		background: #29ABE2;
+		color: white;
+	}
+	.bg-white nav li.active span {
+		color: rgba(0,0,5,.5);
+	}
+	.bg-black nav li a, .bg-black  nav li .sub-title {
+		color: rgba(255,223,114,.8);
+	}
+	.bg-black nav li a span, .bg-black nav li .sub-title, .bg-black nav li .sub-title span {
+		color: rgba(120, 121, 125,1);
+	}
+	.bg-black nav li:hover {
+		background: rgba(255,255,255,.1);
+	}
+	.bg-black nav li a:hover  {
+		color: rgba(255,223,114,.9);
+	}
+	.bg-black nav li.active a {
+		background: rgba(255,223,114,1);
+		color: black;
+	}
+	.bg-black nav li.active span {
+		color: rgba(0,0,5,.6);
+	}
+	
+	
+	section#content {
+		padding: 200px 0 50px;
+		box-sizing: border-box;
+	}
+	section#content > div {
+		border-top: 1px solid rgba(70, 71, 75,.5);
+		min-height: 100px;
+		box-sizing: border-box;
+		width: 100%;
+		overflow-x: auto;
+		transition: .3s all;
+		position: relative;
+	}
+	#content > div > .label {
+		display: block;
+		position: absolute;
+		background: rgba(70, 71, 75,.5);
+		color: rgba(255,255,255,1);
+		margin-left: 0;
+		transition: .3s all;
+	}
+	#content > div > .label h6 {
+		display: inline-block;
+		position: relative;
+		font-family: 'Oswald', sans-serif;
+		font-size: .6rem;
+		letter-spacing: .2em;
+		margin: 0;
+		padding: 2px 10px;
+		color: rgba(255,255,255,.8);
+		transition: .3s all;
+	}
+	
+	.bg-white section#content > div {
+		border-top: 1px solid #29ABE2;
+	}
+	.bg-white section#content > div > .label {
+		background: #29ABE2;
+	}
+	.bg-white #content > div > .label h6 {
+		color: white;
+	}
+	.bg-black section#content > div {
+		border-top: 1px solid #FFDF72;
+	}
+	.bg-black section#content > div > .label {
+		background: #FFDF72;
+	}
+	.bg-black #content > div > .label h6 {
+		color: black;
+	}
+	
+	
+	.colorboard-wrapper {
+		display: block;
+		margin: 5px 10px;
+	}
+	.colorboard-wrapper:hover {
+		background: none !important;
+	}
+	.colorboard {
+		display: inline-block;
+		text-align: center;
+		padding: 4px;
+		cursor: hand;
+		cursor: pointer;
+		border-radius: 100px;
+		transition: .3s all;
+	}
+	.colorboard:hover {
+		background: rgba(120,121,125,.1);
+	}
+	.colorboard .thumb {
+		position: relative;
+		display: block;
+		margin: 0 auto 0;
+		width: 16px;
+		height: 16px;
+		border: 2px solid rgba(110,110,115,.5);
+		border-radius: 100px;
+	}
+	.colorboard.cloudy .thumb {
+		background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed;
+	}
+	.colorboard.white .thumb {
+		background: white;
+	}
+	.colorboard.black .thumb {
+		background: black;
+	}
+	.colorboard.color-active {
+		background: rgba(120,121,125,.3);
+	}
+	.colorboard.color-active {
+		background: rgba(120,121,125,.3);
+	}
+	.colorboard.color-active .thumb {
+		border: 2px solid #1C75BC;
+	}
+	
+	.floater {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.thecolours {
+		position: absolute;
+		font-family: "Noto-Sans", Arial, san-serif;
+		font-size: 11px;
+		
+	}
+	.txt-grey {
+		color: rgba(138,140,142,.6);
+	}
+
+	
+	@media (min-width: 1281px) {
+		
+		#content > div > .label {
+			position: absolute;
+			display: inline-block;
+			left: 12vw;
+			margin-left: 8px;
+			overflow-x: auto;
+		}
+		#content > div > .label {
+			position: absolute;
+			display: inline-block;
+			margin-left: 8px;
+			overflow-x: auto;
+		}
+		#content > div > .label h6 {
+		}
+		nav {
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: rgba(255,255,255,0); 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px);
+			padding: 0;
+			border-bottom: none;
+			width: 12vw;
+			padding-bottom: 10px;
+		}
+		nav::before {
+			content: "";
+			position: absolute;
+			top: 0; 
+			left: 0;
+			width: 100%; 
+			height: 100%;  
+			opacity: .67; 
+			z-index: -1;
+			background: url(bg.jpg) no-repeat rgba(255,255,255,0) center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			transition: 1s all;
+		}
+		nav logo { 
+			display: block;
+			height: 50px; 
+			margin: 12px 17px;
+		}
+		nav li {
+			display: block;
+			border-radius: 0;
+		}
+		nav li a {
+			padding: 4px 12px;
+			font-size: 12px;
+		}
+		nav li .sub-title {
+			padding: 6px 12px 0;
+		}
+		nav li.active {
+			border-right: 4px solid rgba(8, 97, 168,1);
+		}
+		nav li.active a {
+			color: rgba(28, 117, 188,1);
+			background: none;
+		}
+		nav li.active span {
+			color: rgba(70, 71, 75,1);
+		}
+		.bg-white nav li.active {
+			border-right: 4px solid #29ABE2;
+		}
+		.bg-white nav li.active a {
+			color: rgba(41,171,226,1);
+			background: none;
+		}
+		.bg-black nav li a {
+			color: rgba(255,223,114,.5);
+		}
+		.bg-black nav li.active {
+			border-right: 4px solid #FFDF72;
+		}
+		.bg-black nav li.active a {
+			color: #FFDF72;
+			background: none;
+		}
+		.bg-black nav li.active span {
+			color: rgba(170, 171, 175,1);
+		}
+		
+		section#content {
+			padding: 0 0 50px 0;
+			width: auto;
+		}
+		section#content > div {
+			width: auto;
+		}
+		section#content > div:first-child {
+			border-top: 1px solid rgba(0,0,0,0);
+		}
+		section#content > div > img, section#content > div > .floater, section#content > div > .section {
+			margin-left: 12vw;
+            margin-bottom: 2vh;
+		}
+		
+	}
+
+	h1 {    
+		padding-left: 20px;
+    	margin: -10px 0 10px 0;
+	}
+
+
+
+	body {
+	color: #3F4043;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif!important;
+}
+h2 { font-size: 1.2em;}
+h3 { font-size: .9em; margin: 0 0 12px 0;}
+h5 { font-size: 1.2em; margin: 0 0 4px 0;}
+
+.m4 { margin: 4px !important; }
+.mt4 { margin-top: 4px !important; }
+.mr4 { margin-right: 4px !important; }
+.mb4 { margin-bottom: 4px !important; }
+.ml4 { margin-left: 4px !important; }
+.m8 { margin: 8px !important; }
+.mt8 { margin-top: 8px !important; }
+.mr8 { margin-right: 8px !important; }
+.mb8 { margin-bottom: 8px !important; }
+.ml8 { margin-left: 8px !important; }
+
+
+.fa-left { margin-right: 4px }
+.fa-right { margin-left: 4px }
+.btn { 
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6.5px 16px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  margin: 2px 8px 2px 0
+}
+.btn-s { 
+  font-size: 11px;
+  padding: 3.5px 10px;
+}
+
+.btn-l { 
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.btn-1 {
+  background: RGBA(254,154,63,1);
+  border: 1px solid RGBA(254,154,63,1);
+  color: #000000;
+}
+.btn-1:hover, .btn-1.fhover {
+  background: RGBA(234,134,33,1);
+  border: 1px solid RGBA(234,134,33,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-1:active, .btn-1.factive {
+  background: RGBA(214,114,13,1);
+  border: 1px solid RGBA(254,154,63,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-1:disabled, btn-1[disabled], .btn-1.fdisabled {
+  background: RGBA(128,68,8,1);
+  border: 1px solid RGBA(128,68,8,1);
+  color: rgba(255,255,255,.75);
+  text-decoration: line-through;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.btn-2 {
+  background: RGBA(242,242,242,1);
+  border: 1px solid RGBA(138,140,142,1);
+  color: RGBA(63,64,67,1);
+}
+.btn-2:hover, .btn-2.fhover {
+  background: RGBA(222,222,222,1);
+  border: 1px solid RGBA(138,140,142,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-2:active, .btn-2.factive {
+  background: RGBA(202,202,202,1);
+  border: 1px solid RGBA(138,140,142,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-2:disabled, btn-2[disabled], .btn-2.fdisabled {
+  background: RGBA(121,121,121,1);
+  border: 1px solid RGBA(121,121,121,1);
+  color: rgba(255,255,255,.75);
+  text-decoration: line-through;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.btn-3 {
+  background: RGBA(28,117,188,1);
+  border: 1px solid RGBA(28,117,188,1);
+  color: #FFFFFF;
+}
+.btn-3:hover, .btn-3.fhover {
+  background: RGBA(8,97,168,1);
+  border: 1px solid RGBA(8,97,168,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-3:active, .btn-3.factive {
+  background: RGBA(0,77,148,1);
+  border: 1px solid RGBA(0,77,148,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-3:disabled, btn-3[disabled], .btn-3.fdisabled {
+  background: RGBA(0,46,89,1);
+  border: 1px solid RGBA(0,46,89,1);
+  color: rgba(255,255,255,.75);
+  text-decoration: line-through;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.btn-4 {
+  background: RGBA(255,255,255,1);
+  border: 1px solid RGBA(254,154,63,1);
+  color: #7D450C;
+}
+.btn-4:hover, .btn-4.fhover {
+  background: RGBA(235,235,235,1);
+  border: 1px solid RGBA(234,134,43,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-4:active, .btn-4.factive {
+  background: RGBA(215,215,215,1);
+  border: 1px solid RGBA(214,114,23,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-4:disabled, btn-4[disabled], .btn-4.fdisabled {
+  background: RGBA(129,129,129,1);
+  border: 1px solid RGBA(128,68,14,1);
+  text-decoration: line-through;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.btn-5 {
+  background: RGBA(255,223,114,1);
+  border: 1px solid RGBA(255,223,114,1);
+  color: RGBA(63,64,67,1);
+}
+.btn-5:hover, .btn-5.fhover {
+  background: RGBA(235,203,94,1);
+  border: 1px solid RGBA(235,203,94,1);
+  color: RGBA(43,44,47,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-5:active, .btn-5.factive {
+  background: RGBA(215,183,74,1);
+  border: 1px solid RGBA(215,183,74,1);
+  color: RGBA(43,44,47,1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn-5:disabled, btn-5[disabled], .btn-5.fdisabled {
+  background: RGBA(129,110,44,1);
+  border: 1px solid RGBA(129,110,44,1);
+  color: RGBA(46,16,18,1);
+  text-decoration: line-through;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+p.description {
+  margin: 16px 0 12px;
+  font-size: .7em;
+  font-style: italic;
+}
+hr.hr-1 {
+  border: dotted 1px rgba(123,123,123,.5);
+  border-bottom: 0;
+  margin: 24px 0;
+}
+
+.col3 { 
+  max-width : calc(33.3% - 54px);
+  min-width : 236px;
+  position: relative;
+  display: inline-block;
+  margin: 20px 12px;
+}
+.col4 { 
+  max-width : calc(25% -54px);
+  min-width : 204px;
+  position: relative;
+  display: inline-block;
+  margin: 20px 12px;
+}
+
+
+
+
+	
+</style>
+
+</head>
+
+<body>
+
+<nav>
+	<a href="#c1"><logo><img src="logo-CP-sq-wd-trans.svg" alt="WD"></logo></a>
+	<h1>WD</h1>
+	<li class="active"><a href="#c1"><span>01</span> COLOURS</a></li>
+	<li><a href="#c2"><span>02</span> BUTTONS</a></li>
+	<li class="colorboard-wrapper">
+		<div class="colorboard cloudy color-active" title="CLOUDY"><div class="thumb"></div></div>
+		<div class="colorboard white" title="WHITE"><div class="thumb"></div></div>
+		<div class="colorboard black" title="BLACK"><div class="thumb"></div></div>
+	</li>
+</nav>
+
+<section id="content">
+	<div id="c1">
+		<div class="label"><h6><small>01.</small>PRIMARY BUTTON</h6></div>
+
+        <div class="section" style="padding: 12px;"><!--/SECTION-START-->
+  
+            <h2>PRIMARY BUTTONS STATES</h2>
+            <br><br>
+          
+            
+            <div>
+                <h3>SMALL</h3>
+              <button class="btn btn-s btn-1 ">DEFAULT BUTTON</button>
+              <button class="btn btn-s btn-1"><i class="fa fa-left fa-chevron-left"></i> BACK</button>
+              <button class="btn btn-s btn-1">NEXT <i class="fa fa-right fa-chevron-right"></i></button>
+              <p class="description">24px max-height, 10px left/right padding, 11pt Noto Sans weight 400 </p>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+                <h3>REGULAR</h3>
+              <button class="btn btn-1">DEFAULT BUTTON</button>
+              <button class="btn btn-1"><i class="fa fa-left fa-chevron-left"></i> BACK</button>
+              <button class="btn btn-1">NEXT <i class="fa fa-right fa-chevron-right"></i></button>
+              <br><br>
+              <button class="btn btn-1">DOWNLOAD <i class="fa fa-right fa-caret-down"></i></button>
+              <button class="btn btn-1"><i class="fa fa-left fa-step-backward"></i> REVERSE</button>
+              <button class="btn btn-1"><i class="fa fa-left fa-pencil"></i> EDIT</button>
+              <button class="btn btn-1"><i class="fa fa-left fa-lock "></i> LOCK</button>
+              <button class="btn btn-1"><i class="fa fa-left fa-gears "></i> PROCESS</button>
+              <button class="btn btn-1"><i class="fa fa-left fa-check "></i> ACCEPT</button>
+              <p class="description">32px max-height, 16px left/right padding, 12pt Noto Sans weight 400 </p>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+                <h3>LARGE</h3>
+              <button class="btn btn-l btn-1">DEFAULT BUTTON</button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-chevron-left"></i> BACK</button>
+              <button class="btn btn-l btn-1">NEXT <i class="fa fa-right fa-chevron-right"></i></button>
+              <br><br>
+              <button class="btn btn-l btn-1">DOWNLOAD <i class="fa fa-right fa-caret-down"></i></button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-step-backward"></i> REVERSE</button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-pencil"></i> EDIT</button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-lock "></i> LOCK</button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-gears "></i> PROCESS</button>
+              <button class="btn btn-l btn-1"><i class="fa fa-left fa-check "></i> ACCEPT</button>
+              <p class="description">40px max-height, 20px left/right padding, 13pt Noto Sans weight 400 </p>
+            </div>
+            
+          </div><!--/SECTION-END-->
+
+	</div>
+
+	<div id="c2">
+		<div class="label"><h6><small>02.</small>ALTERNATIVE BUTTONS</h6></div>
+
+        <div class="section" style="padding: 12px;"><!--/SECTION-START-->
+  
+            <h2>PRIMARY AND ALTERNATIVE BUTTONS</h2>
+            <br><br>
+          
+            <div>
+              <div class="col4">
+                <h3>PRIMARY/ORANGE: DEFAULT</h3>
+                <button class="btn btn-1">BUTTON</button>
+                <button class="btn btn-1">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>HOVER STATE</h3>
+                <button class="btn btn-1 fhover">BUTTON</button>
+                <button class="btn btn-1 fhover">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>ACTIVE STATE</h3>
+                <button class="btn btn-1 factive">BUTTON</button>
+                <button class="btn btn-1 factive">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>DISABLED STATE</h3>
+                <button disabled class="btn btn-1 fdisabled">BUTTON</button>
+                <button disabled class="btn btn-1 fdisabled">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+              <div class="col4">
+                <h3>SECONDARY/GREY: DEFAULT</h3>
+                <button class="btn btn-2">BUTTON</button>
+                <button class="btn btn-2">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>HOVER</h3>
+                <button class="btn btn-2 fhover">BUTTON</button>
+                <button class="btn btn-2 fhover">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>ACTIVE</h3>
+                <button class="btn btn-2 factive">BUTTON</button>
+                <button class="btn btn-2 factive">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>DISABLED</h3>
+                <button disabled class="btn btn-2 fdisabled">BUTTON</button>
+                <button disabled class="btn btn-2 fdisabled">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+              <div class="col4">
+                <h3>SECONDARY/BLUE: DEFAULT</h3>
+                <button class="btn btn-3">BUTTON</button>
+                <button class="btn btn-3">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>HOVER</h3>
+                <button class="btn btn-3 fhover">BUTTON</button>
+                <button class="btn btn-3 fhover">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>ACTIVE</h3>
+                <button class="btn btn-3 factive">BUTTON</button>
+                <button class="btn btn-3 factive">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>DISABLED</h3>
+                <button disabled class="btn btn-3 fdisabled">BUTTON</button>
+                <button disabled class="btn btn-3 fdisabled">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+              <div class="col4">
+                <h3>TERTIARY/REVERSE DEFAULT</h3>
+                <button class="btn btn-4">BUTTON</button>
+                <button class="btn btn-4">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>HOVER</h3>
+                <button class="btn btn-4 fhover">BUTTON</button>
+                <button class="btn btn-4 fhover">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>ACTIVE</h3>
+                <button class="btn btn-4 factive">BUTTON</button>
+                <button class="btn btn-4 factive">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>DISABLED</h3>
+                <button disabled class="btn btn-4 fdisabled">BUTTON</button>
+                <button disabled class="btn btn-4 fdisabled">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+            </div>
+            <hr class="hr-1">
+            
+            <div>
+              <div class="col4">
+                <h3>TERTIARY/KOURN: DEFAULT</h3>
+                <button class="btn btn-5">BUTTON</button>
+                <button class="btn btn-5">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>HOVER</h3>
+                <button class="btn btn-5 fhover">BUTTON</button>
+                <button class="btn btn-5 fhover">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>ACTIVE</h3>
+                <button class="btn btn-5 factive">BUTTON</button>
+                <button class="btn btn-5 factive">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+              <div class="col4">
+                <h3>DISABLED</h3>
+                <button disabled class="btn btn-5 fdisabled">BUTTON</button>
+                <button disabled class="btn btn-5 fdisabled">BUTTON <i class="fa fa-right fa-chevron-right"></i></button>
+              </div>
+            </div>
+            
+            
+            
+          </div><!--/SECTION-END-->
+
+	</div>
+
+</section>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+	
+	
+	
+	/*
+	$('a[href*="#"]:not([href="#"])').click(function() {
+	  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		if (target.length) {
+		  $('html, body').animate({
+			scrollTop: target.offset().top
+		  }, 333);
+		  return false;
+		}
+	  }
+	});	
+	
+	$('nav a').click(function(e) {
+        e.preventDefault();
+        $('a').removeClass('active');
+        $(this).addClass('active');
+    });
+	*/
+	
+	// Cache selectors
+	var lastId,
+		topMenu = $("nav"),
+		topMenuHeight = topMenu.outerHeight()+15,
+		// All list items
+		menuItems = topMenu.find("a"),
+		// Anchors corresponding to menu items
+		scrollItems = menuItems.map(function(){
+		  var item = $($(this).attr("href"));
+		  if (item.length) { return item; }
+		});
+
+	// Bind click handler to menu items
+	// so we can get a fancy scroll animation
+	/*
+	menuItems.click(function(e){
+	  var href = $(this).attr("href"),
+		  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	  $('html, body').stop().animate({ 
+		  scrollTop: offsetTop
+	  }, 300);
+	  e.preventDefault();
+	});
+	*/
+	
+	// media query event handler  ---- inserted
+	if (matchMedia) {
+	  var mq = window.matchMedia("(min-width: 1281px)");
+	  mq.addListener(WidthChange);
+	  WidthChange(mq);
+	}
+
+	// media query change
+	function WidthChange(mq) {
+	  if (mq.matches) {
+		// window width is at least 1281px
+		menuItems.click(function(e){
+		  var href = $(this).attr("href"),
+			  offsetTop = href === "#" ? 0 : $(href).offset().top;
+		  $('html, body').stop().animate({ 
+			  scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+	  } else {
+		// window width is less than 1281px
+		menuItems.click(function(e){
+		  var topMenuHeight = topMenu.outerHeight()+15;
+		  var href = $(this).attr("href"),
+			  offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+15;
+		  $('html, body').stop().animate({ 
+			  scrollTop: offsetTop
+		  }, 300);
+		  e.preventDefault();
+		});
+	  }
+
+	}
+	
+
+	// Bind to scroll
+	$(window).scroll(function(){
+	   // Get container scroll position
+	   var fromTop = $(this).scrollTop()+topMenuHeight;
+
+	   // Get id of current scroll item
+	   var cur = scrollItems.map(function(){
+		 if ($(this).offset().top < fromTop)
+		   return this;
+	   });
+	   // Get the id of the current element
+	   cur = cur[cur.length-1];
+	   var id = cur && cur.length ? cur[0].id : "";
+
+	   if (lastId !== id) {
+		   lastId = id;
+		   // Set/remove active class
+		   menuItems
+			 .parent().removeClass("active")
+			 .end().filter("[href='#"+id+"']").parent().addClass("active");
+	   }                   
+	});
+	
+	
+	
+	 $(function() {
+		 $( ".colorboard.cloudy" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-trans");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.cloudy " ).addClass("color-active");
+		 });
+		 $( ".colorboard.white" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-white");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.white " ).addClass("color-active");
+		 });  
+		 $( ".colorboard.black" ).click(function() {
+				   $( " body, nav " ).removeClass();
+				   $( " body, nav " ).addClass("bg-black");
+				   $( " .colorboard " ).removeClass("color-active");
+				   $( " .colorboard.black " ).addClass("color-active");
+		 });  
+	 });  
+	
+	/*
+	 $(function() {  
+		 $( ".add-bg-1" ).click(function() {
+			 if ($( body ).hasClass("bg1") {
+				   $( " body " ).removeClass("bg-1");
+				   $( " body " ).addClass("bg-white");
+				}
+				else {
+				 }    
+			});   
+	 });  
+	*/
+	
+	
+</script>
+</body>
+</html>

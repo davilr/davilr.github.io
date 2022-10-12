@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login to CloudPay Payroll</title>
+
+<link rel="stylesheet" type="text/css" href="css/base.min.css">
+<link rel="stylesheet" type="text/css" href="css/kendo.min.css">
+<link rel="stylesheet" type="text/css" href="css/flags.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/img/cloudpay/favicon/cloudpay/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/img/cloudpay/favicon/cloudpay/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+</head>
+
+<body class="postlogin" style="background: #67686B">
+
+	
+
+<header class="layout-header" style="display: none;">
+    <div class="container-fluid">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="%PATH_TO_APP_HOME%"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-center" id="main-menu">
+                <ul class="nav navbar-nav navbar-right navbar-nav-user">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle text-capitalize">
+                            John Cloud <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+							<li><a href="401.html">My Profile</a></li>
+							<li><a href="404.html">My Favourites</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-submenu">
+                                <a href="#">More Options</a>
+                                <ul class="dropdown-menu">
+									<li><a href="500.html">Submit a Request</a></li>
+									<li><a href="500.html">Read Documentation</a></li>
+                                </ul>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>	
+<div class="layout-body">
+    <div class="container-fluid">
+
+        <div class="layout-content">
+            <!-- grid system -->
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                    <div id="bodycontent">
+                        <video poster="assets/vid/cloud.mp4" id="bgvid" playsinline autoplay muted loop>
+                            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                            <source src="assets/vid/cloud.mp4" type="video/mp4">
+                        </video>
+                        
+                        <div class="content">
+                            <div class="login-logo-container">
+                                <div class="app-icon" style="margin-top: -10px; margin-bottom: -10px;"><img src="assets/img/cloudpay/logos/products/logo-test-white.svg" height="80" ></div>
+                            </div>
+                            <div class="postlogin-wrapper">
+                                <h1>WELCOME TO CLOUDPAY</h1>
+                                <p class="subh">Login to your Account</p>
+                                <div class="postlogin-container">
+                                    <div class="form-group">
+                                        <h2>SIGN IN TO <span class="fblue">Self Service test02</span></h2>
+                                        <div class="m10"><input type="text" class="form-control form-control-large" id="exampleInput" placeholder="ID"></div>
+                                        <div class="m10"><input type="password" class="form-control form-control-large" id="exampleInput" placeholder="Password"></div>
+                                        <div class="m10 mt20">
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <div class="checkbox pl5"><label><input type="checkbox"> Remember me</label></div>
+                                                    <div class="pl5"><a href="javascript:void();">Trouble logging in</a></div>
+                                                </div>
+                                                <div class="col-xs-5" align="right"><button onclick="location.href='ss-home.html';" class="btn-login btn btn-tertiary btn-large pl30 pr30" type="submit">Login <i class="fa fa-chevron-right add-margin-l"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div class="ml10 mr10"><hr></div>
+                                        <div class="m10">
+                                            <div id="customBtn" class="customGPlusSignIn" onclick="location.href='ss-home.html';">
+                                                <span class="icon"></span>
+                                                <span class="buttonText">Sign in with Google</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-2" style="display: none;">
+                            <div class="postlogin-info">
+                                Welcome <strong>John</strong>, <br/>your last login was 1 January 2017, 13:49:02.
+                            </div>
+                            <div class="switchboardH postlogin-wrapper">
+                                <h1>WELCOME TO CLOUDPAY</h1>
+                                <p class="subh">Please select an application</p>
+                                <ul id="menu" class="applist">
+                                    <li><a href="index.html"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-payroll-teal.svg" ></div><span>PAYROLL</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-analytics-teal.svg" ></div><span>ANALYTICS</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-calendar-teal.svg" ></div><span>CALENDAR</span></a></li>
+                                    <li class="nonactive"><a href="#"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-collaborate-teal.svg" ></div><span>COLLABORATE</span></a></li>
+                                    <li><a href="ss-home.html"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-self-service-teal.svg" ></div><span>SELF SERVICE</span></a></li>
+                                    <li class="">
+                                        <a href="javascript:void(0);" data-toggle="dropdown"><div class="app-icon"><img src="assets/img/cloudpay/logos/products/logo-test-teal.svg" ></div><span>TEST SITES <i class="fa fa-caret-down"></i></span></a>
+                                        <ul class="sb-dropdown">
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test01 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test02 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-analytics-teal.svg" width="20" class="mr10"> Test03 Analytics</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test01 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test02 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-calendar-teal.svg" width="20" class="mr10"> Test03 Calendar</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test01 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test02 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test03 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test04 Payroll</a></li>
+                                            <li><a href="#"><img src="assets/img/cloudpay/logos/products-sm/logo-payroll-teal.svg" width="20" class="mr10"> Test05 Payroll</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+																	
+						
+                </div>
+            </div>
+            <!-- end: grid system -->
+        </div>
+    </div>
+</div>
+<footer class="layout-footer">
+    <div class="container-fluid">
+        <div class="copyright">&copy; CloudPay 2000&mdash;2017</div>
+    </div>
+</footer>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/kendo.all.min.js"></script>
+<script type="text/javascript" src="js/scripts.min.js"></script>
+<script type="text/javascript" src="js/scripts-2.js"></script>
+
+<script>
+
+        $(document).ready(function() {
+            $("#menu").kendoMenu();
+        });
+
+        $( ".btn-login, .customGPlusSignIn" ).click(function() {
+            $(".content ").animate({opacity:0}, {duration: 555})
+                .queue(function() {
+                $( this ).css({display: 'none'}).dequeue();
+                });
+            $(".content-2 ").css({opacity: 0,display: 'block'}).stop().delay(555).animate({opacity: 1,top: "-=50px"}, {duration: 555});
+            $("header ").css({opacity: 0,display: 'block',top: "-=30"}).stop().delay(555).animate({opacity: 1,top: "0"}, {duration: 555});
+            //$(".vt-2-l.l5 ").delay(1100).animate({opacity:1,height:"197px",top:"-=197px"},400);
+        });
+
+</script>
+
+</body>
+</html>`
