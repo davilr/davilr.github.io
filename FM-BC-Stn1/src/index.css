@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@400;700&family=Fuzzy+Bubbles:wght@700&family=IM+Fell+DW+Pica&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Beiruti:Bold';
+  src: url('https://static.figma.com/font/Beiruti_wght__2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Beiruti:Regular';
+  src: url('https://static.figma.com/font/Beiruti_wght__2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Beiruti_Regular';
+  src: url('https://static.figma.com/font/Beiruti_wght__2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuzzy Bubbles:Bold';
+  src: url('https://static.figma.com/font/FuzzyBubbles-Bold_1') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM FELL DW Pica:Regular';
+  src: url('https://static.figma.com/font/IMFePIrm28P_1') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuzzy Bubbles:Regular';
+  src: url('https://static.figma.com/font/FuzzyBubbles-Regular_1') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Aliases used inside the imported component */
+@font-face {
+  font-family: 'Fuzzy_Bubbles:Regular';
+  src: url('https://static.figma.com/font/FuzzyBubbles-Regular_1') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fuzzy_Bubbles:Bold';
+  src: url('https://static.figma.com/font/FuzzyBubbles-Bold_1') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM_FELL_DW_Pica:Regular';
+  src: url('https://static.figma.com/font/IMFePIrm28P_1') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+/* Leaves frame — fixed overlay so it doesn't scroll with the canvas */
+[data-name="leaves frame"] {
+  display: block !important;
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100vw !important;
+  height: min(100vh, 1080px) !important;
+  overflow: hidden !important;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Remove white drop-shadow on the cocoa pod in Group2 */
+[data-name="cocoa yellow closed"] {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Vertical scroll only when viewport is shorter than the 1080px canvas */
+.story-scroll {
+  overflow-y: hidden;
+}
+@media (max-height: 1079px) {
+  .story-scroll {
+    overflow-y: auto;
+  }
+}
+
+/* ── Cocoa-themed scrollbars ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Vertical (popup interior) — inset 12% top & bottom so thumb never
+   touches the dashed border; the track is transparent so only the
+   thumb itself is visible, floating in the centre of its lane */
+::-webkit-scrollbar-track:vertical {
+  background: transparent;
+  /* ~12% of popup frame height (770px) ≈ 92px each side */
+  margin-top: 92px;
+  margin-bottom: 92px;
+  border-radius: 99px;
+}
+
+/* Horizontal (main timeline) */
+::-webkit-scrollbar-track:horizontal {
+  background: rgba(59, 33, 6, 0.55);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c8823a 0%, #7b3f10 100%);
+  border-radius: 99px;
+  border: 2px solid rgba(249, 234, 221, 0.6);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #dfa05a 0%, #9b531a 100%);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #9b5320 transparent;
+}
