@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.7",
+    "bootstrap-sass": "3.4.1",
     "font-awesome": "4.7.0",
     "jquery": "3.2.1",
     "twitter-bootstrap-wizard": "git+https://github.com/VinceG/twitter-bootstrap-wizard.git#1.4.2"
